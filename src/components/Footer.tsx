@@ -16,19 +16,21 @@ export default function Footer() {
               className="mx-auto md:mx-0 w-32"
             />
 
-            <p className="text-sm mt-1">
-              <strong>
-                Centro <span className="text-red">Zoia Prestes</span> de
-                Educação Multidisciplinar
-              </strong>
-            </p>
+            <div className="font-archivo">
+              <p className="text-sm mt-1">
+                <strong>
+                  Centro <span className="text-red">Zoia Prestes</span> de
+                  Educação Multidisciplinar
+                </strong>
+              </p>
 
-            <p className="text-xs text-gray-300">
-              Frente de massas de educação do coletivo{" "}
-              <a href="https://soberana.tv" className="text-blue-300">
-                @soberana.tv
-              </a>
-            </p>
+              <p className="text-xs text-gray-300">
+                Frente de massas de educação do coletivo{" "}
+                <a href="https://soberana.tv" className="text-blue-300">
+                  @soberana.tv
+                </a>
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col gap-6 lg:gap-4">
@@ -74,7 +76,7 @@ export default function Footer() {
 
         {/* Direitos e Links Adicionais */}
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row justify-center items-center gap-12">
-          <div className="text-white flex mx-auto md:mx-0 flex-row items-center gap-1">
+          <div className="text-white font-archivo flex mx-auto md:mx-0 flex-row items-center gap-1">
             <span className="font-bold">CEZPEM</span>
             <span>|</span>
             <span>Do povo para o povo!</span>
