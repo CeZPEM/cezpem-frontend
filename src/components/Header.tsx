@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md">
       <Container className="!py-0">
-        <div className="mx-auto flex flex-col md:flex-row gap-5 justify-between items-center p-3">
+        <div className="mx-auto flex flex-col md:flex-row gap-5 justify-between items-center py-3">
           <div className="flex items-center justify-center rounded">
             <CezpemLogoText />
           </div>

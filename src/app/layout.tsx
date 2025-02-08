@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
-import { Petrona, Open_Sans } from "next/font/google";
 import "./globals.css";
+
+import type { Metadata } from "next";
+
+import { Petrona, Open_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
