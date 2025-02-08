@@ -14,7 +14,7 @@ export default function Footer() {
 
             <p className="text-sm mt-1">
               <strong>
-                Centro <span className="text-red-500">Zoia Prestes</span> de
+                Centro <span className="text-red">Zoia Prestes</span> de
                 Educação Multidisciplinar
               </strong>
             </p>
