@@ -35,7 +35,7 @@ export default function Footer() {
 
           <div className="flex flex-col gap-6 lg:gap-4">
             {/* Navegação */}
-            <Navbar className="mx-auto md:mx-0" />
+            <Navbar className="mx-auto md:mr-0" />
 
             {/* Ícones Sociais */}
             <div className="flex gap-8">
