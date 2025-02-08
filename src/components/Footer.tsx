@@ -76,7 +76,7 @@ export default function Footer() {
 
         {/* Direitos e Links Adicionais */}
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row justify-center items-center gap-12">
-          <div className="text-white font-archivo flex mx-auto md:mx-0 flex-row items-center gap-1">
+          <div className="text-white  flex mx-auto md:mx-0 flex-row items-center gap-1">
             <span className="font-bold">CEZPEM</span>
             <span>|</span>
             <span>Do povo para o povo!</span>
