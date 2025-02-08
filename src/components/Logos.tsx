@@ -3,6 +3,7 @@ import Image from "next/image";
 type LogoProps = {
   className?: string;
   size?: "small" | "medium" | "large";
+  variant?: "red" | "white";
 };
 
 /** --- CEZPEM LOGO --- **/
@@ -33,13 +34,30 @@ export function CezpemLogo({ className = "", size = "medium" }: LogoProps) {
   );
 }
 
-export function CezpemText({ className = "", size = "medium" }: LogoProps) {
+export function CezpemText({
+  className = "",
+  size = "medium",
+  variant = "red",
+}: LogoProps) {
   const { width, height } = cezpemTextSizes[size];
+
+  if (variant === "white") {
+    return (
+      <div className={`flex items-center justify-center rounded ${className}`}>
+        <Image
+          src="/Texto-CeZPEM-white.svg"
+          alt="Texto do CeZPEM"
+          width={width}
+          height={height}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={`flex items-center justify-center rounded ${className}`}>
       <Image
-        src="/Texto-CeZPEM.svg"
+        src="/Texto-CeZPEM-red.svg"
         alt="Texto do CeZPEM"
         width={width}
         height={height}
@@ -48,11 +66,15 @@ export function CezpemText({ className = "", size = "medium" }: LogoProps) {
   );
 }
 
-export function CezpemLogoText({ className = "", size = "medium" }: LogoProps) {
+export function CezpemLogoText({
+  className = "",
+  size = "medium",
+  variant,
+}: LogoProps) {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <CezpemLogo size={size} />
-      <CezpemText size={size} />
+      <CezpemText variant={variant} size={size} />
     </div>
   );
 }
