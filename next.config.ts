@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   images: {
     domains: ["placehold.co"],
+    unoptimized: true
   },
 };
 
