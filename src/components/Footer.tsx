@@ -9,7 +9,7 @@ export default function Footer() {
       <Container className="flex flex-col gap-10">
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo e Texto */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left space-y-2">
             <CezpemLogoText
               size="small"
               variant="white"
@@ -17,7 +17,7 @@ export default function Footer() {
             />
 
             <div className="font-archivo">
-              <p className="text-sm mt-1">
+              <p className="text-sm">
                 <strong>
                   Centro <span className="text-red">Zoia Prestes</span> de
                   Educação Multidisciplinar
