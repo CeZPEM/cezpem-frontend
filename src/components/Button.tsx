@@ -12,14 +12,16 @@ export function Button({
   variant = "primary",
   ...props
 }: ButtonProps) {
-  const variantClasses =
-    variant === "primary"
-      ? "bg-red text-white border-black"
-      : "bg-white text-red border-black";
-
   return (
     <button
-      className={`px-4 py-2 rounded-lg flex items-center border hover:opacity-80 transition ${variantClasses} ${className}`}
+      className={`px-4 py-2 rounded-lg flex items-center border transition-all
+        ${
+          variant === "primary"
+            ? "bg-red hover:bg-darkMaroon text-white border-black"
+            : "bg-white hover:bg-gray-100 text-red border-black"
+        }
+        ${className}
+      `}
       {...props}
     >
       {children}
