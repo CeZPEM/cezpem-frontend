@@ -36,7 +36,7 @@ export default function CourseCard({
   const { title, teacher, description, image, semester, classType } = course;
 
   return (
-    <div className={`pb-6 rounded-lg shadow-lg ${variantColor}`}>
+    <div className={`py-6 rounded-lg shadow-lg ${variantColor}`}>
       {/* Course Image */}
       <div className="relative">
         <div className="rounded-t-lg overflow-hidden">
