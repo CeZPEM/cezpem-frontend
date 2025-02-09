@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navbar({ className = "" }: { className?: string }) {
   return (
-    <nav className="flex space-x-6 text-sm md:text-base">
+    <nav className={`flex gap-6 text-sm md:text-base ${className || ""}`}>
       <Link
         href="/"
         className="underline lg:no-underline hover:underline font-bold"

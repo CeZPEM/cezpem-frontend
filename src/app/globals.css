@@ -22,6 +22,18 @@ body {
 }
 */
 
+.font-petrona {
+  font-family: var(--font-petrona), serif;
+}
+
+.font-openSans {
+  font-family: var(--font-openSans), sans-serif;
+}
+
+.font-archivo {
+  font-family: var(--font-archivo), sans-serif;
+}
+
 body {
-  font-family: Petrona, Open Sans, sans-serif, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
