@@ -6,7 +6,7 @@ import { Button } from "./Button";
 const getBgColor = (variant: string) => {
   switch (variant) {
     case "red":
-      return "bg-red text-white";
+      return "bg-red text-white focus-within:border-red border-2";
     case "transparent":
       return "bg-transparent";
     default:
@@ -36,7 +36,12 @@ export default function CourseCard({
   const { title, teacher, description, image, semester, classType } = course;
 
   return (
-    <div className={`py-6 rounded-lg shadow-lg ${variantColor}`}>
+    <div
+      className={`py-6 rounded-lg shadow-lg transition-all focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-red ${
+        bgVariant === "red" ? "border-2 border-transparent" : ""
+      } ${variantColor}`}
+      tabIndex={0} // Permite foco ao clicar no card
+    >
       {/* Course Image */}
       <div className="relative">
         <div className="rounded-t-lg overflow-hidden">
