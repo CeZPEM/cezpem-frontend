@@ -31,7 +31,9 @@ export default function FeaturedCoursesCarousel({
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
-          1600: { slidesPerView: 5 },
+          1536: { slidesPerView: 5 },
+          1920: { slidesPerView: 6 },
+          2560: { slidesPerView: 7 },
         }}
         navigation={{
           nextEl: "#next-button",
