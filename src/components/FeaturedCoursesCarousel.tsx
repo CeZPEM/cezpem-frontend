@@ -18,7 +18,7 @@ export default function FeaturedCoursesCarousel({
   return (
     <div className="relative w-full">
       <button
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
         id="prev-button"
       >
         <FaChevronLeft size={20} />
@@ -26,7 +26,7 @@ export default function FeaturedCoursesCarousel({
 
       <Swiper
         slidesPerView={1.2}
-        spaceBetween={16}
+        spaceBetween={24}
         breakpoints={{
           640: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
@@ -54,7 +54,7 @@ export default function FeaturedCoursesCarousel({
       </Swiper>
 
       <button
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
         id="next-button"
       >
         <FaChevronRight size={20} />
