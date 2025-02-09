@@ -16,7 +16,7 @@ export const courses = [
     teacher: "Victor Hugo não Faria",
     description: "Descrição do curso...",
     image: "https://placehold.co/440x266",
-    semester: "2 Semestre",
+    semester: "2 Semestres",
     classType: "Individual",
   },
   {
@@ -25,7 +25,7 @@ export const courses = [
     teacher: "Mais um Professor",
     description: "Mais detalhes...",
     image: "https://placehold.co/440x266",
-    semester: "2 Semestre",
+    semester: "2 Semestres",
     classType: "Turma",
   },
   {
@@ -43,7 +43,7 @@ export const courses = [
     teacher: "Professor 5",
     description: "Descrição do curso...",
     image: "https://placehold.co/440x266",
-    semester: "2 Semestre",
+    semester: "2 Semestres",
     classType: "Turma",
   },
   {
@@ -61,7 +61,7 @@ export const courses = [
     teacher: "Professor 7",
     description: "Descrição do curso...",
     image: "https://placehold.co/440x266",
-    semester: "2 Semestre",
+    semester: "2 Semestres",
     classType: "Turma",
   },
   {
@@ -79,7 +79,7 @@ export const courses = [
     teacher: "Professor 9",
     description: "Descrição do curso...",
     image: "https://placehold.co/440x266",
-    semester: "2 Semestre",
+    semester: "2 Semestres",
     classType: "Turma",
   },
   {
