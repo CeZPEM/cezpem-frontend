@@ -1,29 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import { useState } from "react";
 import { CourseCardProps } from "@/types";
 import { FaChalkboardTeacher, FaUsers } from "react-icons/fa";
 import { Button } from "./Button";
-
-const getBgColor = (variant: string) => {
-  switch (variant) {
-    case "red":
-      return "bg-red text-white";
-    case "transparent":
-      return "bg-transparent";
-    default:
-      return "bg-white";
-  }
-};
-
-const getTextColor = (variant: string) => {
-  switch (variant) {
-    case "white":
-      return "text-white";
-    case "red":
-      return "text-red";
-    default:
-      return "text-black";
-  }
-};
 
 export default function CourseCard({
   course,
@@ -31,12 +10,26 @@ export default function CourseCard({
   bgVariant = "white",
   textVariant = "black",
 }: CourseCardProps) {
-  const variantColor = getBgColor(bgVariant);
+  const [isActive, setIsActive] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const { title, teacher, description, image, semester, classType } = course;
 
   return (
-    <div className={`py-6 rounded-lg shadow-lg ${variantColor}`}>
+    <div
+      className={`py-6 rounded-lg shadow transition-all border-2 ${
+        !isActive && isHovered && bgVariant === "white"
+          ? "border-red/30"
+          : "border-transparent"
+      } ${bgVariant === "red" ? "border-transparent" : "border-transparent"} ${
+        isActive ? "border-red" : "border-transparent"
+      }`}
+      tabIndex={0}
+      onFocus={() => setIsActive(true)}
+      onBlur={() => setIsActive(false)}
+      onMouseEnter={() => !isActive && setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Course Image */}
       <div className="relative">
         <div className="rounded-t-lg overflow-hidden">
@@ -55,9 +48,7 @@ export default function CourseCard({
       </div>
 
       {/* Course Info */}
-      <div
-        className={`flex flex-col px-6 mt-6 gap-2 ${getTextColor(textVariant)}`}
-      >
+      <div className={`flex flex-col px-6 mt-6 gap-2`}>
         <div className="w-full">
           <h2 className="text-lg font-bold">{title}</h2>
           <p
@@ -70,9 +61,14 @@ export default function CourseCard({
           <p className="text-sm mt-2">{description}</p>
         </div>
 
-        {/* Enroll Button (only in Red variant) */}
+        {/* Enroll Button - Hover só funciona se isActive for false */}
         {showCta && (
-          <Button className="w-auto mr-auto -mb-11 !py-1">Inscreva-se</Button>
+          <Button
+            variant={isActive || isHovered ? "primary" : "secondary"}
+            className="w-auto mr-auto -mb-11 !py-1"
+          >
+            Inscreva-se
+          </Button>
         )}
       </div>
     </div>
