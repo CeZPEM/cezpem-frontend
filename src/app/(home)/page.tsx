@@ -22,7 +22,7 @@ export default function Home() {
       </Section>
 
       <Section className="bg-red">
-        <Container className="px-0">
+        <Container className="!w-full !max-w-none !px-0">
           <FeaturedCoursesCarousel courses={courses} />
         </Container>
       </Section>
