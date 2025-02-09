@@ -77,7 +77,9 @@ export default function CourseCard({
 
         {/* Enroll Button (only in Red variant) */}
         {showCta && (
-          <Button className="w-auto mr-auto -mb-11 !py-1">Inscreva-se</Button>
+          <Button variant="secondary" className="w-auto mr-auto -mb-11 !py-1">
+            Inscreva-se
+          </Button>
         )}
       </div>
     </div>
