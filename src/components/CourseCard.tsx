@@ -17,17 +17,13 @@ export default function CourseCard({
 
   return (
     <div
-      className={`py-6 rounded-lg shadow transition-all border-2 ${
-        !isActive && isHovered && bgVariant === "white"
-          ? "border-red/30"
-          : "border-transparent"
-      } ${bgVariant === "red" ? "border-transparent" : "border-transparent"} ${
-        isActive ? "border-red" : "border-transparent"
-      }`}
+      className={`py-6 rounded-lg shadow transition-all border-2 border-transparent ${
+        !isActive && isHovered && bgVariant === "white" ? "!border-red/30" : ""
+      } ${isActive ? "!border-red" : ""}`}
       tabIndex={0}
       onFocus={() => setIsActive(true)}
       onBlur={() => setIsActive(false)}
-      onMouseEnter={() => !isActive && setIsHovered(true)}
+      onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Course Image */}
