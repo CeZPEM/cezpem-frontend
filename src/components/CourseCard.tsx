@@ -34,34 +34,38 @@ export default function CourseCard({
 
         {/* Semester and Class Type Labels */}
         <div className="absolute -top-4 left-4 flex gap-2">
-          <div className="flex items-center gap-1 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
+          <div className="flex items-center font-archivo font-16px gap-1 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
             <FaChalkboardTeacher /> {semester}
           </div>
-          <div className="flex items-center gap-1 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
+          <div className="flex items-center font-archivo font-16px gap-1 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
             <FaUsers /> {classType}
           </div>
         </div>
       </div>
 
       {/* Course Info */}
-      <div className={`flex flex-col px-6 mt-6 gap-2`}>
-        <div className="w-full">
-          <h2 className="text-lg font-bold">{title}</h2>
+      <div className={`flex flex-col px-4 mt-3 gap-2`}>
+        <div
+          className={`w-full gap-4 ${
+            textVariant === "white" ? "text-white" : "text-black"
+          }`}
+        >
+          <h2 className="text-l font-archivo font-24px font-bold">{title}</h2>
           <p
-            className={`font-semibold ${
+            className={`font-petrona text-15px font-semibold ${
               textVariant === "white" ? "text-white" : "text-red"
             }`}
           >
             {teacher}
           </p>
-          <p className="text-sm mt-2">{description}</p>
+          <p className="font-archivo text-15px">{description}</p>
         </div>
 
         {/* Enroll Button - Hover só funciona se isActive for false */}
         {showCta && (
           <Button
             variant={isActive || isHovered ? "primary" : "secondary"}
-            className="w-auto mr-auto -mb-11 !py-1"
+            className="font-archivo font-bold font-16px w-auto mr-auto -mb-11 !py-1"
           >
             Inscreva-se
           </Button>
