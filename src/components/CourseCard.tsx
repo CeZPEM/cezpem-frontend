@@ -34,11 +34,11 @@ export default function CourseCard({
 
         {/* Semester and Class Type Labels */}
         <div className="absolute -top-4 left-4 flex gap-2">
-          <div className="flex items-center font-archivo font-16px gap-1 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaChalkboardTeacher /> {semester}
+          <div className="flex items-center font-archivo font-16px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
+            <FaChalkboardTeacher size={18} /> {semester}
           </div>
-          <div className="flex items-center font-archivo font-16px gap-1 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaUsers /> {classType}
+          <div className="flex items-center font-archivo font-16px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
+            <FaUsers size={18} /> {classType}
           </div>
         </div>
       </div>
