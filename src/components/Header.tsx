@@ -16,10 +16,12 @@ export default function Header() {
 
           <Navbar />
 
-          <Button className="flex items-center gap-2 mt-4 md:mt-0">
-            <IconStar />
-            Seja um professor!
-          </Button>
+          <Link target="_blank" href="#" className="hidden md:block">
+            <Button className="flex items-center gap-2 mt-4 md:mt-0">
+              <IconStar />
+              Apoie o projeto!
+            </Button>
+          </Link>
         </div>
       </Container>
     </header>

@@ -76,13 +76,7 @@ export default function Footer() {
 
         {/* Direitos e Links Adicionais */}
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row justify-center items-center gap-12">
-          <div className="text-white flex mx-auto md:mx-0 flex-row items-center gap-1">
-            <span className="font-bold">CEZPEM</span>
-            <span>|</span>
-            <span>Do povo para o povo!</span>
-          </div>
-
-          <div className="flex flex-row items-center gap-3 text-gray-300">
+          <div className="flex flex-row items-center gap-3 md:gap-12 text-gray-300">
             <a
               href="#"
               className="underline lg:no-underline hover:underline hover:opacity-80"

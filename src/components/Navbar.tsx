@@ -19,7 +19,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
         href="/cursinho"
         className="underline lg:no-underline hover:underline"
       >
-        Cursinho
+        Cursinho popular
       </Link>
       <Link href="/sobre" className="underline lg:no-underline hover:underline">
         Sobre
