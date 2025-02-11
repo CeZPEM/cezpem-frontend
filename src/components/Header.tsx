@@ -16,7 +16,11 @@ export default function Header() {
 
           <Navbar />
 
-          <Link target="_blank" href="#" className="hidden md:block">
+          <Link
+            target="_blank"
+            href="http://apoia.se/cezpem"
+            className="hidden md:block"
+          >
             <Button className="flex items-center gap-2 mt-4 md:mt-0">
               <IconStar />
               Apoie o projeto!
