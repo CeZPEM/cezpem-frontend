@@ -16,7 +16,7 @@ export default function CourseList({ courses }: CourseListProps) {
         </p>
       </div>
 
-      <div className="my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+      <div className="my-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-12 md:gap-16">
         {courses.map((course, index) => (
           <CourseCard
             key={index}
