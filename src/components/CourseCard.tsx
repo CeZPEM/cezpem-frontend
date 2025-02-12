@@ -25,6 +25,7 @@ export default function CourseCard({
       onBlur={() => setIsActive(false)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      title={`Curso: ${title}`}
     >
       {/* Course Image */}
       <div className="relative">

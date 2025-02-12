@@ -29,7 +29,7 @@ export default function CourseList({ courses }: CourseListProps) {
       </div>
 
       <div className="mt-20 flex justify-center">
-        <button className="px-6 py-3 border border-black rounded-lg text-black bg-white hover:bg-gray-200 transition">
+        <button className="px-7 font-petrona text-24px py-2 border border-black rounded-lg text-black bg-white hover:bg-gray-200 transition">
           Mostrar mais cursos
         </button>
       </div>
