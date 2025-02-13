@@ -5,7 +5,6 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import Container from "./Container";
 
 type FeaturedCoursesCarouselProps = {
   courses: CourseSimple[];
@@ -18,10 +17,6 @@ export default function FeaturedCoursesCarousel({
 
   return (
     <div className="relative w-full">
-      <Container className="!p-0">
-        <h1 className="text-white text-40px font-bold">Cursos em destaques</h1>
-      </Container>
-
       <button
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
         id="prev-button"
