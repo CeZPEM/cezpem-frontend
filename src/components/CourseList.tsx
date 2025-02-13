@@ -1,6 +1,7 @@
 import { CourseSimple } from "@/types";
 import CourseCard from "./CourseCard";
 import SearchBar from "./SearchBar";
+import { PageTitle } from "./PageTitle";
 
 type CourseListProps = {
   courses: CourseSimple[];
@@ -9,11 +10,9 @@ type CourseListProps = {
 export default function CourseList({ courses }: CourseListProps) {
   return (
     <div className="w-full mx-auto">
-      <div className="w-full flex flex-row flex-wrap gap-2 md:gap-8 items-center justify-center md:justify-between mt-16">
+      <div className="w-full flex flex-row flex-wrap gap-2 md:gap-8 items-center justify-center md:justify-between">
         <div className="flex-0 md:w-3/2 mx-auto md:ml-0">
-          <h2 className="leading-none text-40px font-bold text-black">
-            Todos os cursos
-          </h2>
+          <PageTitle>Todos os cursos</PageTitle>
           <p className="font-archivo text-15px text-gray-600">
             Encontre seu curso/professor dentro da sua respectiva área do
             conhecimento, ou use nossa ferramenta de busca.

@@ -22,11 +22,6 @@ export default function Home() {
       </Section>
 
       <Section className="bg-red !px-0">
-        <Container>
-          <h2 className="leading-none text-white text-40px font-bold">
-            Cursos em destaques
-          </h2>
-        </Container>
         <FeaturedCoursesCarousel courses={courses} />
       </Section>
 
