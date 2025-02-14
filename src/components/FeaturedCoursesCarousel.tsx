@@ -20,7 +20,7 @@ export default function FeaturedCoursesCarousel({
   return (
     <div className="w-full flex flex-col gap-2 py-12">
       <Container className="!py-0">
-        <PageTitle className="text-white">Cursos em destaques</PageTitle>
+        <PageTitle className="text-white">Destaques</PageTitle>
       </Container>
 
       <div className="relative w-full">
