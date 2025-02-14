@@ -75,7 +75,7 @@ export default function Footer() {
         <div className="border-t border-gray-500" />
 
         {/* Direitos e Links Adicionais */}
-        <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row justify-center items-center gap-12">
+        <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row justify-center items-center gap-12 pb-6 md:pb-0">
           <div className="flex flex-row items-center gap-3 md:gap-12 text-gray-300">
             <a
               href="#"
