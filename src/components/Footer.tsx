@@ -41,14 +41,14 @@ export default function Footer() {
             <div className="flex gap-8">
               <a
                 target="_blank"
-                href="https://www.instagram.com/centrozoiaprestes/"
+                href="https://www.instagram.com/centrozoiaprestes"
                 className="hover:opacity-80"
               >
                 <FaInstagram size={32} />
               </a>
               <a
                 target="_blank"
-                href="https://discord.gg/pw2CGQPM"
+                href="https://discord.gg/hjZtJmCmVh"
                 className="hover:opacity-80"
               >
                 <FaDiscord size={32} />
@@ -72,17 +72,11 @@ export default function Footer() {
         </div>
 
         {/* Linha Separadora */}
-        <div className="border-t border-gray-500"></div>
+        <div className="border-t border-gray-500" />
 
         {/* Direitos e Links Adicionais */}
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row justify-center items-center gap-12">
-          <div className="text-white flex mx-auto md:mx-0 flex-row items-center gap-1">
-            <span className="font-bold">CEZPEM</span>
-            <span>|</span>
-            <span>Do povo para o povo!</span>
-          </div>
-
-          <div className="flex flex-row items-center gap-3 text-gray-300">
+          <div className="flex flex-row items-center gap-3 md:gap-12 text-gray-300">
             <a
               href="#"
               className="underline lg:no-underline hover:underline hover:opacity-80"

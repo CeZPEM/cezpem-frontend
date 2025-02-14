@@ -21,10 +21,8 @@ export default function Home() {
         <BannerCTA />
       </Section>
 
-      <Section className="bg-red">
-        <Container className="!w-full !max-w-none !px-0">
-          <FeaturedCoursesCarousel courses={courses} />
-        </Container>
+      <Section className="bg-red !px-0">
+        <FeaturedCoursesCarousel courses={courses} />
       </Section>
 
       <Section>

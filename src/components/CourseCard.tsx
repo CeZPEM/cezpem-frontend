@@ -17,18 +17,15 @@ export default function CourseCard({
 
   return (
     <div
-      className={`py-6 rounded-lg shadow transition-all border-2 ${
-        !isActive && isHovered && bgVariant === "white"
-          ? "border-red/30"
-          : "border-transparent"
-      } ${bgVariant === "red" ? "border-transparent" : "border-transparent"} ${
-        isActive ? "border-red" : "border-transparent"
-      }`}
+      className={`py-6 rounded-lg shadow transition-all border-2 border-transparent ${
+        !isActive && isHovered && bgVariant === "white" ? "!border-red/30" : ""
+      } ${isActive ? "!border-red" : ""}`}
       tabIndex={0}
       onFocus={() => setIsActive(true)}
       onBlur={() => setIsActive(false)}
-      onMouseEnter={() => !isActive && setIsHovered(true)}
+      onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      title={`Curso: ${title}`}
     >
       {/* Course Image */}
       <div className="relative">
@@ -37,35 +34,39 @@ export default function CourseCard({
         </div>
 
         {/* Semester and Class Type Labels */}
-        <div className="absolute -top-4 left-4 flex gap-2">
-          <div className="flex items-center gap-1 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaChalkboardTeacher /> {semester}
+        <div className="absolute w-full -top-4 left-0 flex justify-between">
+          <div className="ml-auto flex items-center text-nowrap font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
+            <FaChalkboardTeacher size={18} /> {semester}
           </div>
-          <div className="flex items-center gap-1 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaUsers /> {classType}
+          <div className="mx-auto flex items-center text-nowrap font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
+            <FaUsers size={18} /> {classType}
           </div>
         </div>
       </div>
 
       {/* Course Info */}
-      <div className={`flex flex-col px-6 mt-6 gap-2`}>
-        <div className="w-full">
-          <h2 className="text-lg font-bold">{title}</h2>
+      <div className={`flex flex-col px-4 mt-3 gap-2`}>
+        <div
+          className={`w-full gap-4 ${
+            textVariant === "white" ? "text-white" : "text-black"
+          }`}
+        >
+          <h2 className="text-l font-archivo font-24px font-bold">{title}</h2>
           <p
-            className={`font-semibold ${
+            className={`font-petrona text-15px font-semibold ${
               textVariant === "white" ? "text-white" : "text-red"
             }`}
           >
             {teacher}
           </p>
-          <p className="text-sm mt-2">{description}</p>
+          <p className="font-archivo text-15px">{description}</p>
         </div>
 
         {/* Enroll Button - Hover só funciona se isActive for false */}
         {showCta && (
           <Button
             variant={isActive || isHovered ? "primary" : "secondary"}
-            className="w-auto mr-auto -mb-11 !py-1"
+            className="font-archivo font-bold font-16px w-auto mr-auto -mb-11 !py-1"
           >
             Inscreva-se
           </Button>

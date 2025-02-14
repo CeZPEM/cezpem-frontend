@@ -33,6 +33,17 @@ export default {
         "3xl": "1920px", // Custom breakpoint for larger screens
         "4k": "2560px", // Custom breakpoint for 4K screens
       },
+      fontSize: {
+        "15px": "15px",
+        "16px": "16px",
+        "20px": "20px",
+        "21px": "21px",
+        "24px": "24px",
+        "28px": "28px",
+        "32px": "32px",
+        "36px": "36px",
+        "40px": "40px",
+      },
     },
   },
   plugins: [],
