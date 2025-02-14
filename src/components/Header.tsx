@@ -1,20 +1,40 @@
+"use client";
+
 import { Button } from "./Button";
 import { IconStar } from "./Icons";
 import Navbar from "./Navbar";
 import { CezpemLogoText } from "./Logos";
 import Container from "./Container";
 import Link from "next/link";
+import { FiMenu } from "react-icons/fi";
+import Sidebar from "./Sidebar";
+import { useState } from "react";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="bg-white shadow-md">
-      <Container className="!py-0">
+    <header className="bg-white shadow-md relative">
+      <Container className="relative !py-0">
         <div className="mx-auto flex flex-col md:flex-row gap-5 justify-between items-center py-3">
-          <Link href="/" className="flex items-center justify-center">
-            <CezpemLogoText />
+          <Link
+            href="/"
+            className="flex mr-auto ml-0 md:ml-auto items-center justify-center"
+          >
+            <CezpemLogoText className="w-48" />
           </Link>
 
-          <Navbar className="gap-x-12 md:px-28" />
+          {/* Botão para abrir o Sidebar */}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="absolute right-7 top-6 md:hidden"
+          >
+            <FiMenu size={28} />
+          </button>
+
+          <Navbar className="hidden md:flex gap-x-12 md:px-28" />
+
+          <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
           <Link
             target="_blank"
@@ -28,6 +48,14 @@ export default function Header() {
           </Link>
         </div>
       </Container>
+
+      {/* Overlay para fechar o Sidebar ao clicar fora */}
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 bg-black/30 z-20"
+        />
+      )}
     </header>
   );
 }
