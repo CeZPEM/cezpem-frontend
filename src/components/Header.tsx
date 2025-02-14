@@ -14,7 +14,7 @@ export default function Header() {
             <CezpemLogoText />
           </Link>
 
-          <Navbar />
+          <Navbar className="gap-x-12 md:px-28" />
 
           <Link
             target="_blank"

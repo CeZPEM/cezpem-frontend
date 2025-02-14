@@ -33,12 +33,12 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 lg:gap-4">
+          <div className="flex flex-1 md:max-w-[50%] flex-col gap-6 lg:gap-4">
             {/* Navegação */}
-            <Navbar className="mx-auto md:mr-0" />
+            <Navbar className="mx-auto w-full !gap-x-12  md:mr-0 !px-0 md:!px-8" />
 
             {/* Ícones Sociais */}
-            <div className="flex gap-8">
+            <div className="flex w-full md:w-auto justify-between mx-auto md:gap-16 md:mr-0">
               <a
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
