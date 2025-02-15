@@ -20,12 +20,12 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      {/* Header with Logo and Toggle */}
+      {/* Header com Logo e Botão de Fechar */}
       <div className="flex items-center justify-between p-4">
         <div className="flex items-center gap-3">
           <CezpemLogoText className="w-36" />
         </div>
-        <button onClick={() => setIsOpen(false)} className="p-2">
+        <button onClick={() => setIsOpen(false)} className="p-2 text-red-600">
           <FiArrowLeft size={24} />
         </button>
       </div>
@@ -38,10 +38,14 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className={`block p-2 rounded hover:bg-gray-200 ${
-                    pathname === item.href ? "bg-gray-200" : ""
-                  }`}
                   onClick={() => setIsOpen(false)}
+                  className={`block p-2 rounded transition-colors duration-200 text-20px
+                    ${
+                      pathname === item.href
+                        ? "bg-red/10 text-darkRed font-extrabold"
+                        : "hover:bg-red/10 hover:text-darkRed"
+                    }
+                  `}
                 >
                   {item.label}
                 </Link>

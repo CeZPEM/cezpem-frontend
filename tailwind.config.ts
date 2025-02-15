@@ -13,15 +13,15 @@ export default {
         foreground: "var(--foreground)",
         black: "#010101",
         red: "#D81843",
+        darkRed: "#A61830",
         yellow: "#FBBE48",
         brown: "#C2752B",
         white: "#FFFFFF",
         lightBlue: "#61AAB9",
-        darkRed: "#BD3818",
         navyBlue: "#222146",
         deepBlue: "#29306C",
-        darkMaroon: "#A61830",
         orange: "#EA5A13",
+        darkOrange: "#BD3818",
       },
       screens: {
         xs: "380px", // Extra small devices
