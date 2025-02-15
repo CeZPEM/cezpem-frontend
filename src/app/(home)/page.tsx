@@ -13,7 +13,7 @@ export default function Home() {
     <div className="w-full">
       <Section className="bg-navyBlue">
         <Container>
-          <SearchBar />
+          <SearchBar variant="dark" />
         </Container>
       </Section>
 
