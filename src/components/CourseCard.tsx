@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
 import { CourseCardProps } from "@/types";
 import { FaChalkboardTeacher, FaUsers } from "react-icons/fa";
 import { Button } from "./Button";
@@ -10,21 +9,15 @@ export default function CourseCard({
   bgVariant = "white",
   textVariant = "black",
 }: CourseCardProps) {
-  const [isActive, setIsActive] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-
   const { title, teacher, description, image, semester, classType } = course;
 
   return (
     <div
-      className={`py-6 rounded-lg shadow transition-all border-2 border-transparent ${
-        !isActive && isHovered && bgVariant === "white" ? "!border-red/30" : ""
-      } ${isActive ? "!border-red" : ""}`}
-      tabIndex={0}
-      onFocus={() => setIsActive(true)}
-      onBlur={() => setIsActive(false)}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={`group py-6 rounded-lg hover:shadow-xl transition-all border-2 border-transparent ${
+        bgVariant === "white" ? "hover:!border-red" : ""
+      } ${
+        ["red", "transparent"].includes(bgVariant) ? "hover:!border-white/30" : ""
+      }`}
       title={`Curso: ${title}`}
     >
       {/* Course Image */}
@@ -35,17 +28,17 @@ export default function CourseCard({
 
         {/* Semester and Class Type Labels */}
         <div className="absolute w-full -top-4 left-0 flex justify-between">
-          <div className="ml-auto flex items-center text-nowrap font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
+          <div className="ml-auto flex items-center font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
             <FaChalkboardTeacher size={18} /> {semester}
           </div>
-          <div className="mx-auto flex items-center text-nowrap font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
+          <div className="mx-auto flex items-center font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
             <FaUsers size={18} /> {classType}
           </div>
         </div>
       </div>
 
       {/* Course Info */}
-      <div className={`flex flex-col px-4 mt-3 gap-2`}>
+      <div className="flex flex-col px-4 mt-3 gap-2">
         <div
           className={`w-full gap-4 ${
             textVariant === "white" ? "text-white" : "text-black"
@@ -62,11 +55,14 @@ export default function CourseCard({
           <p className="font-archivo text-15px">{description}</p>
         </div>
 
-        {/* Enroll Button - Hover só funciona se isActive for false */}
+        {/* Enroll Button */}
         {showCta && (
           <Button
-            variant={isActive || isHovered ? "primary" : "secondary"}
-            className="font-archivo font-bold font-16px w-auto mr-auto -mb-11 !py-1"
+            // Definindo a variante padrão e sobrescrevendo no hover via group-hover:
+            variant="secondary"
+            className="
+              font-archivo font-bold font-16px w-auto mr-auto -mb-11 !py-1
+              group-hover:!bg-red group-hover:!text-white group-hover:!shadow-xl"
           >
             Inscreva-se
           </Button>

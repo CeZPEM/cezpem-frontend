@@ -42,7 +42,7 @@ export default function BannerCTA() {
       {/* Botão Esquerdo */}
       <button
         id="prev-banner"
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 hover:bg-opacity-80 transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 border border-gray-400 bg-black bg-opacity-20 md:bg-opacity-40 text-white p-2 rounded-full z-10 hover:bg-opacity-80 transition"
       >
         <AiOutlineLeft size={24} />
       </button>
@@ -50,7 +50,7 @@ export default function BannerCTA() {
       {/* Botão Direito */}
       <button
         id="next-banner"
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-10 hover:bg-opacity-80 transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 border border-gray-400 bg-black bg-opacity-20 md:bg-opacity-40 text-white p-2 rounded-full z-10 hover:bg-opacity-80 transition"
       >
         <AiOutlineRight size={24} />
       </button>
