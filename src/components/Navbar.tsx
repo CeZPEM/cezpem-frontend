@@ -13,9 +13,7 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
   const pathname = usePathname();
 
   const textColorByVariant =
-    variant === "red"
-      ? "text-black hover:text-red"
-      : "text-white hover:font-extrabold";
+    variant === "red" ? "text-black hover:text-red" : "text-white";
   const activeColorByVariant = variant === "red" ? "!text-red" : "";
 
   return (
