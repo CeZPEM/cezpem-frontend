@@ -25,7 +25,7 @@ export default function FeaturedCoursesCarousel({
 
       <div className="relative w-full">
         <button
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black border border-gray-400 bg-opacity-20 md:bg-opacity-40 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
           id="prev-button"
         >
           <FaChevronLeft size={20} />
@@ -60,7 +60,7 @@ export default function FeaturedCoursesCarousel({
           ))}
         </Swiper>
         <button
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black border border-gray-400 bg-opacity-20 md:bg-opacity-40 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
           id="next-button"
         >
           <FaChevronRight size={20} />
