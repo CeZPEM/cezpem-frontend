@@ -26,7 +26,11 @@ export default function Footer() {
 
               <p className="text-sm text-gray-300">
                 Frente de massas de educação do coletivo{" "}
-                <a href="https://soberana.tv" className="text-blue-300">
+                <a
+                  target="_blank"
+                  href="https://soberana.tv"
+                  className="text-blue-300"
+                >
                   @soberana.tv
                 </a>
               </p>
