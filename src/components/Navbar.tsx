@@ -4,8 +4,19 @@ import { menuItems } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Navbar({ className = "" }: { className?: string }) {
+type NavbarProps = {
+  className?: string;
+  variant: "white" | "red";
+};
+
+export default function Navbar({ className = "", variant }: NavbarProps) {
   const pathname = usePathname();
+
+  const textColorByVariant =
+    variant === "red"
+      ? "text-black hover:text-red"
+      : "text-white hover:font-extrabold";
+  const activeColorByVariant = variant === "red" ? "!text-red" : "";
 
   return (
     <nav
@@ -18,8 +29,10 @@ export default function Navbar({ className = "" }: { className?: string }) {
           key={item.label}
           href={item.href}
           className={`underline text-24px lg:no-underline hover:underline ${
-            pathname === item.href ? "font-extrabold" : ""
-          }`}
+            pathname === item.href
+              ? `font-extrabold ${activeColorByVariant}`
+              : ""
+          } ${textColorByVariant}`}
         >
           {item.label}
         </Link>

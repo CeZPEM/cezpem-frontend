@@ -19,9 +19,9 @@ export default function Header() {
         <div className="mx-auto flex flex-col md:flex-row gap-5 justify-between items-center py-3">
           <Link
             href="/"
-            className="flex mr-auto ml-0 md:ml-auto items-center justify-center"
+            className="flex mr-auto ml-0 items-center justify-center"
           >
-            <CezpemLogoText className="w-48" />
+            <CezpemLogoText className="w-48 mr-auto" />
           </Link>
 
           {/* Botão para abrir o Sidebar */}
@@ -32,7 +32,10 @@ export default function Header() {
             <FiMenu size={28} />
           </button>
 
-          <Navbar className="hidden md:flex gap-x-12 md:px-28" />
+          <Navbar
+            variant="red"
+            className="hidden max-w-4xl md:flex gap-x-12 md:px-28"
+          />
 
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
