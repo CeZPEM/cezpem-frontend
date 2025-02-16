@@ -20,7 +20,7 @@ export default function CourseList({ courses }: CourseListProps) {
         </div>
 
         <div className="flex-1 md:w-1/3">
-          <SearchBar />
+          <SearchBar id="courses-search-bar" />
         </div>
       </div>
 
