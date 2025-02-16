@@ -16,12 +16,8 @@ function Toggle({ title, children, open }: ToggleProps) {
   return (
     <div className="mb-4">
       <div className=" flex flex-row-reverse gap-4 justify-center items-center">
-        <Button
-          variant="primary"
-          onClick={handleToggle}
-          className="flex items-center justify-between w-full"
-        >
-          <span>{title}</span>
+        <Button variant="primary" onClick={handleToggle} className="w-full">
+          <span className="w-full text-left">{title}</span>
         </Button>
 
         <span className="flex justify-start items-center h-8 min-w-3 pl-1">
