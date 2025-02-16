@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import BannerImage from "./BannerImage";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -27,7 +27,7 @@ export default function BannerCTA() {
       >
         {banners.map((src, index) => (
           <SwiperSlide key={index} className="w-full h-full">
-            <Image
+            <BannerImage
               src={src}
               alt={`Banner ${index + 1}`}
               className="w-full h-full object-cover"
