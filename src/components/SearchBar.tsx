@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
 type SearchBarProps = {
+  id: string;
   onChange?: (query: string) => void;
   variant?: "white" | "dark";
 };
@@ -9,20 +10,20 @@ type SearchBarProps = {
 export default function SearchBar({
   onChange,
   variant,
+  id,
 }: Readonly<SearchBarProps>) {
   const [query, setQuery] = useState("");
-  const randomId = `search-${Math.random().toString(36).substring(7)}`;
 
   return (
     <div className="flex justify-center">
-      <label htmlFor={randomId} className="relative w-full max-w-2xl">
+      <label htmlFor={id} className="relative w-full max-w-2xl">
         <AiOutlineSearch
           size={22}
           className="absolute left-3 my-auto top-[13px] text-gray-500"
         />
         <input
           type="text"
-          id={randomId}
+          id={id}
           placeholder="Encontre um curso ou professor"
           value={query}
           onChange={(e) => {
