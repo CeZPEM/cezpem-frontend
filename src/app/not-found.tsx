@@ -12,7 +12,7 @@ export default function NotFound() {
       {/* Seção azul com a barra de busca */}
       <Section className="bg-navyBlue py-6">
         <Container>
-          <SearchBar />
+          <SearchBar id="main-search-bar" />
         </Container>
       </Section>
 
