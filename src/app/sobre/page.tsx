@@ -30,9 +30,9 @@ export default function Sobre() {
       </Section>
 
       <Section>
-        <div className="container max-w-[1600px] mx-auto px-4 md:px-12 py-6 md:py-12 3xl:px-2">
+        <Container>
           <PageTitle className="text-center">Quem somos</PageTitle>
-        </div>
+        </Container>
       </Section>
 
       <Section>
@@ -96,11 +96,11 @@ export default function Sobre() {
       </Section>
 
       <Section>
-        <div className="container max-w-[1600px] mx-auto px-4 md:px-12 py-6 md:py-12 3xl:px-2">
+        <Container>
           <PageTitle className="text-center">
             Quem é Zoia Prestes e por quê homenageá-la?
           </PageTitle>
-        </div>
+        </Container>
       </Section>
 
       <Section>
