@@ -13,10 +13,12 @@ export default function CourseCard({
 
   return (
     <div
-      className={`group py-6 rounded-lg hover:shadow-xl transition-all border-2 border-transparent ${
+      className={`group py-6 rounded-lg hover:shadow-lg transition-all border-2 border-transparent ${
         bgVariant === "white" ? "hover:!border-red" : ""
       } ${
-        ["red", "transparent"].includes(bgVariant) ? "hover:!border-white/30" : ""
+        ["red", "transparent"].includes(bgVariant)
+          ? "hover:!border-white/30"
+          : ""
       }`}
       title={`Curso: ${title}`}
     >

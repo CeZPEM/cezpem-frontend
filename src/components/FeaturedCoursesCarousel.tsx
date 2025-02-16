@@ -50,7 +50,7 @@ export default function FeaturedCoursesCarousel({
           className="w-full"
         >
           {courses.map((course, index) => (
-            <SwiperSlide className="pb-4" key={index}>
+            <SwiperSlide className="pb-3" key={index}>
               <CourseCard
                 course={course}
                 textVariant="white"
