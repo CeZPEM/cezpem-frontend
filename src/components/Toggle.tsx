@@ -40,7 +40,9 @@ function Toggle({ title, children, open }: ToggleProps) {
             <div className="w-full rounded-bl-lg border-l border-b border-black" />
             <div className="w-full" />
           </div>
-          <div className="w-full font-archivo font-20px">{children}</div>
+          <div className="w-full mb-[2px] font-archivo font-20px">
+            {children}
+          </div>
         </div>
       )}
     </div>
