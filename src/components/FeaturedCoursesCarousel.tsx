@@ -18,14 +18,14 @@ export default function FeaturedCoursesCarousel({
   if (!courses?.length) return null;
 
   return (
-    <div className="w-full flex flex-col gap-2 py-12">
+    <div className="w-full flex flex-col gap-2 py-8 md:py-12">
       <Container className="!py-0">
         <PageTitle className="text-white">Destaques</PageTitle>
       </Container>
 
       <div className="relative w-full">
         <button
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black border border-gray-400 bg-opacity-20 md:bg-opacity-40 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
+          className="absolute z-10 w-8 h-8 md:w-auto md:h-auto p-0 md:p-2 left-4 top-1/2 -translate-y-1/2 flex justify-center items-center border border-gray-400 bg-black bg-opacity-20 md:bg-opacity-40 text-white rounded-full hover:bg-opacity-80 transition"
           id="prev-button"
         >
           <FaChevronLeft size={20} />
@@ -50,7 +50,7 @@ export default function FeaturedCoursesCarousel({
           className="w-full"
         >
           {courses.map((course, index) => (
-            <SwiperSlide className="pb-4" key={index}>
+            <SwiperSlide className="pb-3" key={index}>
               <CourseCard
                 course={course}
                 textVariant="white"
@@ -60,7 +60,7 @@ export default function FeaturedCoursesCarousel({
           ))}
         </Swiper>
         <button
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black border border-gray-400 bg-opacity-20 md:bg-opacity-40 text-white p-3 rounded-full z-10 hover:bg-opacity-80 transition"
+          className="absolute z-10 w-8 h-8 md:w-auto md:h-auto p-0 md:p-2 right-4 top-1/2 -translate-y-1/2 flex justify-center items-center border border-gray-400 bg-black bg-opacity-20 md:bg-opacity-40 text-white rounded-full hover:bg-opacity-80 transition"
           id="next-button"
         >
           <FaChevronRight size={20} />

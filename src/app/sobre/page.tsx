@@ -19,22 +19,20 @@ export default function Sobre() {
       </Section>
 
       <Section>
-        <div className="relative w-full h-44 md:h-72 lg:h-80 xl:h-96 overflow-hidden">
-          <BannerImage
-            src="/about-cezpem-banner.jpg"
-            alt="Banner 1"
-            className="w-full h-full object-cover"
-            width={1920}
-            height={443}
-            priority
-          />
-        </div>
+        <BannerImage
+          src="/about-cezpem-banner.jpg"
+          alt="Banner 1"
+          className="w-full h-full object-cover"
+          width={1920}
+          height={443}
+          priority
+        />
       </Section>
 
       <Section>
-        <div className="container max-w-[1600px] mx-auto px-4 md:px-12 py-6 md:py-12 3xl:px-2">
+        <Container>
           <PageTitle className="text-center">Quem somos</PageTitle>
-        </div>
+        </Container>
       </Section>
 
       <Section>
@@ -98,11 +96,11 @@ export default function Sobre() {
       </Section>
 
       <Section>
-        <div className="container max-w-[1600px] mx-auto px-4 md:px-12 py-6 md:py-12 3xl:px-2">
+        <Container>
           <PageTitle className="text-center">
             Quem é Zoia Prestes e por quê homenageá-la?
           </PageTitle>
-        </div>
+        </Container>
       </Section>
 
       <Section>

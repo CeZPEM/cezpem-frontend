@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import BannerImage from "./BannerImage";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,7 +15,7 @@ const banners = [
 
 export default function BannerCTA() {
   return (
-    <div className="relative w-full h-44 md:h-72 lg:h-80 xl:h-96 overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       {/* Swiper Carrossel */}
       <Swiper
         slidesPerView={1}
@@ -42,17 +42,17 @@ export default function BannerCTA() {
       {/* Botão Esquerdo */}
       <button
         id="prev-banner"
-        className="absolute left-4 top-1/2 -translate-y-1/2 border border-gray-400 bg-black bg-opacity-20 md:bg-opacity-40 text-white p-2 rounded-full z-10 hover:bg-opacity-80 transition"
+        className="absolute z-10 w-8 h-8 md:w-auto md:h-auto p-0 md:p-2 left-4 top-1/2 -translate-y-1/2 flex justify-center items-center border border-gray-400 bg-black bg-opacity-20 md:bg-opacity-40 text-white rounded-full hover:bg-opacity-80 transition"
       >
-        <AiOutlineLeft size={24} />
+        <FaChevronLeft className="w-full" size={20} />
       </button>
 
       {/* Botão Direito */}
       <button
         id="next-banner"
-        className="absolute right-4 top-1/2 -translate-y-1/2 border border-gray-400 bg-black bg-opacity-20 md:bg-opacity-40 text-white p-2 rounded-full z-10 hover:bg-opacity-80 transition"
+        className="absolute z-10 w-8 h-8 md:w-auto md:h-auto p-0 md:p-2 right-4 top-1/2 -translate-y-1/2 flex justify-center items-center border border-gray-400 bg-black bg-opacity-20 md:bg-opacity-40 text-white rounded-full hover:bg-opacity-80 transition"
       >
-        <AiOutlineRight size={24} />
+        <FaChevronRight className="w-full" size={20} />
       </button>
     </div>
   );

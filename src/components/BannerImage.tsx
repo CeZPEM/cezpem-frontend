@@ -18,13 +18,15 @@ export default function BannerImage({
   priority = false,
 }: BannerImageProps) {
   return (
-    <Image
-      src={src}
-      alt={alt}
-      className={`w-full h-full object-cover ${className || ""}`}
-      width={width}
-      height={height}
-      priority={priority}
-    />
+    <div className="relative w-full h-28 md:h-72 lg:h-80 2xl:h-96 overflow-hidden">
+      <Image
+        src={src}
+        alt={alt}
+        className={`w-full h-full object-cover ${className || ""}`}
+        width={width}
+        height={height}
+        priority={priority}
+      />
+    </div>
   );
 }
