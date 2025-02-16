@@ -19,7 +19,7 @@ export default function SearchBar({
       <label htmlFor={id} className="relative w-full max-w-2xl">
         <AiOutlineSearch
           size={22}
-          className="absolute left-3 my-auto top-[13px] text-gray-500"
+          className="absolute left-3 my-auto top-[9px] md:top-[13px] text-gray-500"
         />
         <input
           type="text"
@@ -30,7 +30,7 @@ export default function SearchBar({
             setQuery(e.target.value);
             onChange?.(e.target.value);
           }}
-          className={`w-full focus:ring-2 font-archivo text-20px pl-10 pr-3 py-2 rounded-lg bg-white text-gray-900 border outline-none shadow-sm ${
+          className={`w-full focus:ring-2 font-archivo text-16px md:text-20px pl-10 pr-3 py-2 rounded-lg bg-white text-gray-900 border outline-none shadow-sm ${
             variant === "dark"
               ? "border-blue-200 focus:ring-lightBlue"
               : "border-gray-200 focus:ring-darkOrange"
