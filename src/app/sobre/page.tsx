@@ -19,16 +19,14 @@ export default function Sobre() {
       </Section>
 
       <Section>
-        <div className="relative w-full h-44 md:h-72 lg:h-80 xl:h-96 overflow-hidden">
-          <BannerImage
-            src="/about-cezpem-banner.jpg"
-            alt="Banner 1"
-            className="w-full h-full object-cover"
-            width={1920}
-            height={443}
-            priority
-          />
-        </div>
+        <BannerImage
+          src="/about-cezpem-banner.jpg"
+          alt="Banner 1"
+          className="w-full h-full object-cover"
+          width={1920}
+          height={443}
+          priority
+        />
       </Section>
 
       <Section>
