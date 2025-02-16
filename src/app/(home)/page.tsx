@@ -14,7 +14,7 @@ export default function Home() {
     <Page>
       <Section className="bg-navyBlue">
         <Container>
-          <SearchBar variant="dark" />
+          <SearchBar id="main-search-bar" variant="dark" />
         </Container>
       </Section>
 
