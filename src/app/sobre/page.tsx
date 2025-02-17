@@ -69,26 +69,19 @@ export default function Sobre() {
 
             <div className="w-full">
               <Toggle title="Como funcionam as aulas no CeZPEM?">
-                <p>Resposta...</p>
+                <p className="text-gray-700">Resposta...</p>
               </Toggle>
 
               <Toggle title="Sou trabalhador da educação, como posso participar do CeZPEM?">
-                <p>
-                  Estamos sempre precisando de mais mãos para nos ajudar a
-                  construir o CeZPEM. Não importa a sua profissão, se você quer
-                  fazer parte da nossa equipe, pode se inscrever no nosso banco
-                  de recrutamento através do nosso formulário. Fazemos chamadas
-                  de acordo com as necessidades que vão surgindo com o avançar
-                  do projeto.
-                </p>
+                <p className="text-gray-700">Resposta...</p>
               </Toggle>
 
               <Toggle title="Como o CeZPEM se mantém?">
-                <p>Resposta...</p>
+                <p className="text-gray-700">Resposta...</p>
               </Toggle>
 
               <Toggle title="Sou trabalhador de outras áreas, como posso participar do CeZPEM?">
-                <p>Resposta...</p>
+                <p className="text-gray-700">Resposta...</p>
               </Toggle>
             </div>
           </div>
