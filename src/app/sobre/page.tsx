@@ -67,7 +67,7 @@ export default function Sobre() {
               </p>
             </div>
 
-            <div className="w-full">
+            <div className="w-full flex flex-col gap-4">
               <Toggle title="Como funcionam as aulas no CeZPEM?">
                 <p className="text-gray-700">Resposta...</p>
               </Toggle>

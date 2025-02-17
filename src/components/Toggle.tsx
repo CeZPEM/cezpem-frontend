@@ -14,7 +14,7 @@ function Toggle({ title, children, open }: ToggleProps) {
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="mb-4">
+    <div className="w-full">
       <div className=" flex flex-row-reverse gap-4 justify-center items-center">
         <Button
           variant="primary"
