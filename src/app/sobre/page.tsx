@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import BannerImage from "@/components/BannerImage";
 import Container from "@/components/Container";
 import Page from "@/components/Page";
@@ -7,9 +9,34 @@ import { PageTitle } from "@/components/PageTitle";
 import SearchBar from "@/components/SearchBar";
 import Section from "@/components/Section";
 import Toggle from "@/components/Toggle";
+import FaqService from "@/services/faqService";
+import { FaqItem, FaqResponse } from "@/types";
 import Image from "next/image";
+import { parseFaqContent } from "@/parsers";
+
+function FaqToggle(faqItem: FaqItem) {
+  return <Toggle title={faqItem.title}>{parseFaqContent(faqItem)}</Toggle>;
+}
 
 export default function Sobre() {
+  const [faqArray, setFaqArray] = useState<FaqResponse["data"] | null>(null);
+
+  const FetchFaqs = async () => {
+    const { data } = await FaqService.getFaqs(
+      {
+        "filters[area][name][$eq]": "sobre",
+        populate: "area",
+      },
+      "order:asc"
+    );
+
+    setFaqArray(data);
+  };
+
+  useEffect(() => {
+    FetchFaqs();
+  }, []);
+
   return (
     <Page>
       <Section className="bg-navyBlue">
@@ -67,29 +94,10 @@ export default function Sobre() {
               </p>
             </div>
 
-            <div className="w-full">
-              <Toggle title="Como funcionam as aulas no CeZPEM?">
-                <p>Resposta...</p>
-              </Toggle>
-
-              <Toggle title="Sou trabalhador da educação, como posso participar do CeZPEM?">
-                <p>
-                  Estamos sempre precisando de mais mãos para nos ajudar a
-                  construir o CeZPEM. Não importa a sua profissão, se você quer
-                  fazer parte da nossa equipe, pode se inscrever no nosso banco
-                  de recrutamento através do nosso formulário. Fazemos chamadas
-                  de acordo com as necessidades que vão surgindo com o avançar
-                  do projeto.
-                </p>
-              </Toggle>
-
-              <Toggle title="Como o CeZPEM se mantém?">
-                <p>Resposta...</p>
-              </Toggle>
-
-              <Toggle title="Sou trabalhador de outras áreas, como posso participar do CeZPEM?">
-                <p>Resposta...</p>
-              </Toggle>
+            <div className="w-full flex flex-col gap-4">
+              {faqArray?.map((faqItem, index) => (
+                <FaqToggle key={index} {...faqItem} />
+              ))}
             </div>
           </div>
         </Container>
