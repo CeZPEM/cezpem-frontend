@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import BannerImage from "@/components/BannerImage";
 import Container from "@/components/Container";
 import Page from "@/components/Page";
@@ -7,9 +9,34 @@ import { PageTitle } from "@/components/PageTitle";
 import SearchBar from "@/components/SearchBar";
 import Section from "@/components/Section";
 import Toggle from "@/components/Toggle";
+import FaqService from "@/services/faqService";
+import { FaqItem, FaqResponse } from "@/types";
 import Image from "next/image";
+import { parseFaqContent } from "@/parsers";
+
+function FaqToggle(faqItem: FaqItem) {
+  return <Toggle title={faqItem.title}>{parseFaqContent(faqItem)}</Toggle>;
+}
 
 export default function Sobre() {
+  const [faqArray, setFaqArray] = useState<FaqResponse["data"] | null>(null);
+
+  const FetchFaqs = async () => {
+    const { data } = await FaqService.getFaqs(
+      {
+        "filters[area][name][$eq]": "sobre",
+        populate: "area",
+      },
+      "order:asc"
+    );
+
+    setFaqArray(data);
+  };
+
+  useEffect(() => {
+    FetchFaqs();
+  }, []);
+
   return (
     <Page>
       <Section className="bg-navyBlue">
@@ -68,21 +95,9 @@ export default function Sobre() {
             </div>
 
             <div className="w-full flex flex-col gap-4">
-              <Toggle title="Como funcionam as aulas no CeZPEM?">
-                <p className="text-gray-700">Resposta...</p>
-              </Toggle>
-
-              <Toggle title="Sou trabalhador da educação, como posso participar do CeZPEM?">
-                <p className="text-gray-700">Resposta...</p>
-              </Toggle>
-
-              <Toggle title="Como o CeZPEM se mantém?">
-                <p className="text-gray-700">Resposta...</p>
-              </Toggle>
-
-              <Toggle title="Sou trabalhador de outras áreas, como posso participar do CeZPEM?">
-                <p className="text-gray-700">Resposta...</p>
-              </Toggle>
+              {faqArray?.map((faqItem, index) => (
+                <FaqToggle key={index} {...faqItem} />
+              ))}
             </div>
           </div>
         </Container>
