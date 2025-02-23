@@ -12,10 +12,35 @@ import Toggle from "@/components/Toggle";
 import FaqService from "@/services/faqService";
 import { FaqItem, FaqResponse } from "@/types";
 import Image from "next/image";
-import { parseFaqContent } from "@/parsers";
+import Markdown from "react-markdown";
 
 function FaqToggle(faqItem: FaqItem) {
-  return <Toggle title={faqItem.title}>{parseFaqContent(faqItem)}</Toggle>;
+  return (
+    <Toggle title={faqItem.title}>
+      <Markdown
+        components={{
+          a: ({ node, href, children, ...props }) => {
+            const isExternal = href?.includes("#targetBlank");
+            return node ? (
+              <a
+                className="text-red hover:underline"
+                href={href?.replace("#targetBlank", "")}
+                target={isExternal ? "_blank" : "_self"}
+                rel={isExternal ? "noopener noreferrer" : ""}
+                {...props}
+              >
+                {children}
+              </a>
+            ) : (
+              <></>
+            );
+          },
+        }}
+      >
+        {faqItem.answer}
+      </Markdown>
+    </Toggle>
+  );
 }
 
 export default function Sobre() {
