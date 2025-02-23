@@ -58,14 +58,16 @@ export default function CourseCard({
       {/* Course Info */}
       <div className="flex flex-col px-4 mt-3 gap-2">
         <div
-          className={`w-full gap-4 ${
+          className={`w-full flex flex-col gap-1 ${
             textVariant === "white" ? "text-white" : "text-black"
           }`}
         >
-          <h2 className="text-l font-archivo font-24px font-bold">{title}</h2>
+          <h2 className="text-l font-archivo text-20px font-bold">{title}</h2>
           <p
-            className={`font-petrona text-15px font-semibold ${
-              textVariant === "white" ? "text-white" : "text-red"
+            className={`font-petrona text-18px ${
+              textVariant === "white"
+                ? "font-bold text-white"
+                : "font-semibold text-red"
             }`}
           >
             {course_instructors
