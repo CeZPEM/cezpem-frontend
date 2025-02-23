@@ -99,19 +99,6 @@ const FaqResponse = {
 };
 */
 
-export type FaqItemChild = {
-  type: "text" | "link";
-  text: string;
-  url: string;
-  children: FaqItemChild[];
-};
-
-export type FaqAnswer = {
-  type: "paragraph" | "list";
-  format?: "ordered" | "unordered";
-  children: FaqItemChild[];
-};
-
 export type FaqItem = {
   id: number;
   documentId: string;
