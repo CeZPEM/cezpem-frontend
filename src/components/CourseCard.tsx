@@ -12,12 +12,12 @@ export default function CourseCard({
   if (!course) return null;
 
   const {
-    title,
-    course_instructors,
-    description,
     cover,
+    title,
     modality,
-    // duration_hours,
+    description,
+    description_short,
+    course_instructors,
     duration_period_label,
     duration_period_value,
   } = course;
@@ -74,7 +74,9 @@ export default function CourseCard({
               ?.map((instructor) => instructor.name)
               .join(", ")}
           </p>
-          <p className="font-archivo text-15px">{description}</p>
+          <p className="font-archivo text-15px">
+            {description_short || description}
+          </p>
         </div>
 
         {/* Enroll Button */}
