@@ -44,6 +44,15 @@ function FaqToggle(faqItem: FaqItem) {
               <></>
             );
           },
+          p: ({ node, children, ...props }) => {
+            return node ? (
+              <p {...props} className="text-justify">
+                {children}
+              </p>
+            ) : (
+              <></>
+            );
+          },
         }}
       >
         {faqItem.answer}
