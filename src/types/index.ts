@@ -1,103 +1,117 @@
-export type CourseSimple = {
+/*
+const CourseResponse = {
+  data: [
+    {
+      id: 9,
+      documentId: "tnw1pffvhx55o7lwzq2oeykz",
+      title: "Curso de Inglês Intermediário",
+      createdAt: "2025-02-23T21:27:23.653Z",
+      updatedAt: "2025-02-23T22:46:25.536Z",
+      publishedAt: "2025-02-23T22:46:25.624Z",
+      locale: "en",
+      slug: "curso-ingles-intermediario",
+      description:
+        "Curso completo para estudantes de nível intermediário, abordando gramática, vocabulário e conversação.",
+      active: true,
+      featured: true,
+      duration_hours: 60,
+      duration_period_label: "semestres",
+      duration_period_value: 2,
+      course_area: {
+        id: 2,
+        documentId: "qr59a2qhxs99md15j3fr9jmg",
+        name: "Linguagens e suas Tecnologias",
+        slug: "linguagens-tecnologias",
+        description: null,
+        createdAt: "2025-02-23T20:44:45.402Z",
+        updatedAt: "2025-02-23T20:44:45.402Z",
+        publishedAt: "2025-02-23T20:44:45.447Z",
+        locale: "en",
+      },
+      course_categories: [
+        {
+          id: 2,
+          documentId: "xzycc96jzn96vyxl5jzn26ei",
+          name: "Inglês",
+          slug: "ingles",
+          createdAt: "2025-02-23T20:56:45.918Z",
+          updatedAt: "2025-02-23T20:56:45.918Z",
+          publishedAt: "2025-02-23T20:56:45.958Z",
+          locale: "en",
+        },
+      ],
+      course_instructors: [
+        {
+          id: 2,
+          documentId: "u8eji8n6q8hocf6owos9g4w8",
+          name: "Nome do Professor de Exemplo",
+          active: true,
+          createdAt: "2025-02-23T21:57:39.864Z",
+          updatedAt: "2025-02-23T21:57:39.864Z",
+          publishedAt: "2025-02-23T21:57:39.905Z",
+        },
+      ],
+    },
+  ],
+  meta: { pagination: { page: 1, pageSize: 25, pageCount: 1, total: 1 } },
+};
+*/
+
+export type CourseItem = {
   id: number;
+  documentId: string;
   title: string;
-  teacher: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  locale: string;
+  featured: boolean;
+  slug: string;
+  cover: string;
   description: string;
-  image: string;
-  semester: string;
-  classType: string;
+  active: boolean;
+  duration_hours: number;
+  duration_period_label: string;
+  duration_period_value: number;
+  modality: string;
+  course_instructors: {
+    id: number;
+    documentId: string;
+    name: string;
+    active?: boolean;
+    createdAt?: string;
+    updatedAt?: string;
+    publishedAt?: string;
+  }[];
+  course_area: {
+    id: number;
+    documentId: string;
+    name: string;
+    slug: string;
+    description: string | null;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    locale: string;
+  };
+  course_categories: {
+    id: number;
+    documentId: string;
+    name: string;
+    slug: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    locale: string;
+  }[];
 };
 
 export type CourseCardProps = {
-  course: CourseSimple;
+  course: CourseItem;
   showCta?: boolean;
   bgVariant?: "white" | "red" | "transparent";
   textVariant?: "white" | "black" | "red";
 };
-
-/*
-const FaqResponse = {
-  data: [
-    {
-      id: 17,
-      documentId: "g8h4wywnydknnk4tyn902m4g",
-      title: "Como o CeZPEM se mantém?",
-      answer:
-        "O projeto é sustentado pelas contribuições dos professores, que recebem pelas aulas ministradas, e por financiamento coletivo por meio da plataforma [Apoia.se](http://apoia.se/cezpem).",
-      createdAt: "2025-02-19T23:52:48.509Z",
-      updatedAt: "2025-02-23T19:28:09.928Z",
-      publishedAt: "2025-02-23T19:28:10.067Z",
-      order: 3,
-      area: {
-        id: 10,
-        documentId: "ho8deftfrhlvfyabp1y71d1s",
-        name: "sobre",
-        createdAt: "2025-02-19T22:45:13.691Z",
-        updatedAt: "2025-02-19T22:45:13.691Z",
-        publishedAt: "2025-02-19T22:45:13.712Z",
-      },
-    },
-    {
-      id: 18,
-      documentId: "jmld05tl47op6tt3ossvuagm",
-      title: "Sou trabalhador da educação, como posso participar?",
-      answer:
-        "Inscreva-se através do formulário disponível no site.\nPara participar da nossa comunidade, é necessário ter uma conta no Discord, onde concentramos todas as nossas atividades.\n",
-      createdAt: "2025-02-19T23:51:28.005Z",
-      updatedAt: "2025-02-23T19:28:45.324Z",
-      publishedAt: "2025-02-23T19:28:45.358Z",
-      order: 2,
-      area: {
-        id: 10,
-        documentId: "ho8deftfrhlvfyabp1y71d1s",
-        name: "sobre",
-        createdAt: "2025-02-19T22:45:13.691Z",
-        updatedAt: "2025-02-19T22:45:13.691Z",
-        publishedAt: "2025-02-19T22:45:13.712Z",
-      },
-    },
-    {
-      id: 19,
-      documentId: "th2b90pojzs3l9evsuuh3lyv",
-      title: "Sou trabalhador de outras áreas, como posso participar?",
-      answer:
-        "Independentemente da sua área, se você deseja contribuir com a construção do CeZPEM, inscreva-se no nosso banco de recrutamento através do formulário.\nFazemos chamadas conforme as necessidades do projeto vão surgindo.\n",
-      createdAt: "2025-02-20T00:20:38.951Z",
-      updatedAt: "2025-02-23T19:29:17.392Z",
-      publishedAt: "2025-02-23T19:29:17.420Z",
-      order: 4,
-      area: {
-        id: 10,
-        documentId: "ho8deftfrhlvfyabp1y71d1s",
-        name: "sobre",
-        createdAt: "2025-02-19T22:45:13.691Z",
-        updatedAt: "2025-02-19T22:45:13.691Z",
-        publishedAt: "2025-02-19T22:45:13.712Z",
-      },
-    },
-    {
-      id: 16,
-      documentId: "op7yq369e1z7vpcy6eb0jqvk",
-      title: "Como funcionam as aulas no CeZPEM?",
-      answer:
-        "**Os cursos são oferecidos online em duas modalidades:**\n- **Individual:** R$240,00 por mês (com opção de meia-entrada);\n- **Turma:** R$50,00 por mês (com opção de meia-entrada).\n\n**Há também a modalidade de valor social:** R$5,00 por mês, para alunos que comprovem condição socioeconômica, com vagas limitadas para garantir o pagamento mínimo ao professor.\n\n**As inscrições e detalhes dos cursos estão disponíveis no site.**  \n**O CeZPEM atua como intermediário, enquanto o pagamento e a execução das aulas são realizados diretamente entre professores e alunos.**",
-      createdAt: "2025-02-19T23:17:51.362Z",
-      updatedAt: "2025-02-23T19:26:48.176Z",
-      publishedAt: "2025-02-23T19:26:48.203Z",
-      order: 1,
-      area: {
-        id: 10,
-        documentId: "ho8deftfrhlvfyabp1y71d1s",
-        name: "sobre",
-        createdAt: "2025-02-19T22:45:13.691Z",
-        updatedAt: "2025-02-19T22:45:13.691Z",
-        publishedAt: "2025-02-19T22:45:13.712Z",
-      },
-    },
-  ],
-  meta: { pagination: { page: 1, pageSize: 25, pageCount: 1, total: 4 } },
-};
-*/
 
 export type FaqItem = {
   id: number;
@@ -111,6 +125,18 @@ export type FaqItem = {
 
 export type FaqResponse = {
   data: FaqItem[];
+  meta: {
+    pagination: {
+      page: number;
+      pageSize: number;
+      pageCount: number;
+      total: number;
+    };
+  };
+};
+
+export type CourseResponse = {
+  data: CourseItem[];
   meta: {
     pagination: {
       page: number;
