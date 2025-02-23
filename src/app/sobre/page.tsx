@@ -19,7 +19,7 @@ export default function Sobre() {
   const FetchFaqs = async () => {
     const { data } = await FaqService.getFaqs(
       {
-        "filters[area][name][$eq]": "sobre",
+        "filters[area][name][$eq]": "Sobre",
         populate: "area",
       },
       "order:asc"
