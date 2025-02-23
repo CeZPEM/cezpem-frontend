@@ -6,15 +6,16 @@ type ToggleProps = {
   title: string;
   children: React.ReactNode;
   open?: boolean;
+  className?: string;
 };
 
-function Toggle({ title, children, open }: ToggleProps) {
+function Toggle({ title, children, open, className }: ToggleProps) {
   const [isOpen, setIsOpen] = useState(open === true);
 
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="w-full">
+    <div className={`w-full ${className ? className : ""}`}>
       <div className=" flex flex-row-reverse gap-4 justify-center items-center">
         <Button
           variant="primary"
@@ -36,11 +37,11 @@ function Toggle({ title, children, open }: ToggleProps) {
 
       {isOpen && (
         <div className="pt-2 pl-[9px] justify-start flex flex-row gap-4">
-          <div className="min-w-[40px] max-w-[40px] justify-start grid grid-cols-1 gap-0">
+          <div className="min-w-4 max-w-4 sm:min-w-6 sm:max-w-6 md:min-w-8 md:max-w-8 justify-start grid grid-cols-1 gap-0">
             <div className="w-full rounded-bl-lg border-l border-b border-black" />
             <div className="w-full" />
           </div>
-          <div className="w-full mb-[2px] font-archivo font-20px">
+          <div className="w-full mb-[2px] font-archivo font-20px space-y-2">
             {children}
           </div>
         </div>

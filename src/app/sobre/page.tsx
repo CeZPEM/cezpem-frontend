@@ -8,40 +8,10 @@ import Page from "@/components/Page";
 import { PageTitle } from "@/components/PageTitle";
 import SearchBar from "@/components/SearchBar";
 import Section from "@/components/Section";
-import Toggle from "@/components/Toggle";
 import FaqService from "@/services/faqService";
-import { FaqItem, FaqResponse } from "@/types";
+import { FaqResponse } from "@/types";
 import Image from "next/image";
-import Markdown from "react-markdown";
-
-function FaqToggle(faqItem: FaqItem) {
-  return (
-    <Toggle title={faqItem.title}>
-      <Markdown
-        components={{
-          a: ({ node, href, children, ...props }) => {
-            const isExternal = href?.includes("#targetBlank");
-            return node ? (
-              <a
-                className="text-red hover:underline"
-                href={href?.replace("#targetBlank", "")}
-                target={isExternal ? "_blank" : "_self"}
-                rel={isExternal ? "noopener noreferrer" : ""}
-                {...props}
-              >
-                {children}
-              </a>
-            ) : (
-              <></>
-            );
-          },
-        }}
-      >
-        {faqItem.answer}
-      </Markdown>
-    </Toggle>
-  );
-}
+import { FaqToggle } from "@/components/FaqToggle";
 
 export default function Sobre() {
   const [faqArray, setFaqArray] = useState<FaqResponse["data"] | null>(null);
@@ -49,7 +19,7 @@ export default function Sobre() {
   const FetchFaqs = async () => {
     const { data } = await FaqService.getFaqs(
       {
-        "filters[area][name][$eq]": "sobre",
+        "filters[area][name][$eq]": "Sobre",
         populate: "area",
       },
       "order:asc"
