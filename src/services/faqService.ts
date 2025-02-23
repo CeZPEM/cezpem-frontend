@@ -1,18 +1,23 @@
+import { makeQueryString } from "@/functions";
 import { FaqResponse } from "@/types";
 import { httpClient } from "@/utils/httpClient";
 
-// /faqs?filters[area][name][$eq]=sobre&populate=area&sort=order:asc
-const makeQueryString = (params: Record<string, string>) => {
-  return Object.keys(params)
-    .map((key) => `${key}=${params[key]}`)
-    .join("&");
-};
-
+/**
+ * FaqService provides methods to interact with the FAQ API.
+ */
 const FaqService = {
+  /**
+   * Fetches FAQs from the API with optional filters and sorting.
+   *
+   * @param filters - An object containing key-value pairs to filter the FAQs.
+   * @param sortByParam - A string specifying the sorting parameter.
+   * @returns A promise that resolves to an FaqResponse object containing the FAQs.
+   */
   async getFaqs(
     filters: Record<string, string> = {},
     sortByParam: string = ""
   ): Promise<FaqResponse> {
+    // Implementation here
     const queryString = makeQueryString(filters);
     const sortBy = sortByParam ? `&sort=${sortByParam}` : "";
 
