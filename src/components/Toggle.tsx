@@ -37,7 +37,7 @@ function Toggle({ title, children, open, className }: ToggleProps) {
 
       {isOpen && (
         <div className="pt-2 pl-[9px] justify-start flex flex-row gap-4">
-          <div className="min-w-[40px] max-w-[40px] justify-start grid grid-cols-1 gap-0">
+          <div className="min-w-4 max-w-4 sm:min-w-6 sm:max-w-6 md:min-w-8 md:max-w-8 justify-start grid grid-cols-1 gap-0">
             <div className="w-full rounded-bl-lg border-l border-b border-black" />
             <div className="w-full" />
           </div>
