@@ -69,6 +69,7 @@ export type CourseItem = {
   slug: string;
   cover: string;
   description: string;
+  description_short: string;
   active: boolean;
   duration_hours: number;
   duration_period_label: string;
