@@ -8,58 +8,10 @@ import Page from "@/components/Page";
 import { PageTitle } from "@/components/PageTitle";
 import SearchBar from "@/components/SearchBar";
 import Section from "@/components/Section";
-import Toggle from "@/components/Toggle";
 import FaqService from "@/services/faqService";
-import { FaqItem, FaqResponse } from "@/types";
+import { FaqResponse } from "@/types";
 import Image from "next/image";
-import Markdown from "react-markdown";
-
-function FaqToggle(faqItem: FaqItem) {
-  return (
-    <Toggle title={faqItem.title}>
-      <Markdown
-        components={{
-          a: ({ node, href, children, ...props }) => {
-            const isExternal = href?.includes("#targetBlank");
-            return node ? (
-              <a
-                className="text-red hover:underline"
-                href={href?.replace("#targetBlank", "")}
-                target={isExternal ? "_blank" : "_self"}
-                rel={isExternal ? "noopener noreferrer" : ""}
-                {...props}
-              >
-                {children}
-              </a>
-            ) : (
-              <></>
-            );
-          },
-          ul: ({ node, children, ...props }) => {
-            return node ? (
-              <ul {...props} className="list-disc pl-4">
-                {children}
-              </ul>
-            ) : (
-              <></>
-            );
-          },
-          p: ({ node, children, ...props }) => {
-            return node ? (
-              <p {...props} className="text-left sm:text-justify">
-                {children}
-              </p>
-            ) : (
-              <></>
-            );
-          },
-        }}
-      >
-        {faqItem.answer}
-      </Markdown>
-    </Toggle>
-  );
-}
+import { FaqToggle } from "@/components/FaqToggle";
 
 export default function Sobre() {
   const [faqArray, setFaqArray] = useState<FaqResponse["data"] | null>(null);
