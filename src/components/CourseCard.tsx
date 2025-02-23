@@ -9,7 +9,18 @@ export default function CourseCard({
   bgVariant = "white",
   textVariant = "black",
 }: CourseCardProps) {
-  const { title, teacher, description, image, semester, classType } = course;
+  if (!course) return null;
+
+  const {
+    title,
+    course_instructors,
+    description,
+    cover,
+    modality,
+    // duration_hours,
+    duration_period_label,
+    duration_period_value,
+  } = course;
 
   return (
     <div
@@ -25,16 +36,21 @@ export default function CourseCard({
       {/* Course Image */}
       <div className="relative">
         <div className="rounded-t-lg overflow-hidden">
-          <img src={image} alt={title} className="w-full object-cover" />
+          <img
+            src={cover || "https://placehold.co/440x266"}
+            alt={title}
+            className="w-full object-cover"
+          />
         </div>
 
         {/* Semester and Class Type Labels */}
         <div className="absolute w-full -top-4 left-0 flex justify-between">
           <div className="ml-auto flex items-center font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaChalkboardTeacher size={18} /> {semester}
+            <FaChalkboardTeacher size={18} />{" "}
+            {`${duration_period_value} ${duration_period_label}`}
           </div>
           <div className="mx-auto flex items-center font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaUsers size={18} /> {classType}
+            <FaUsers size={18} /> {modality}
           </div>
         </div>
       </div>
@@ -52,7 +68,9 @@ export default function CourseCard({
               textVariant === "white" ? "text-white" : "text-red"
             }`}
           >
-            {teacher}
+            {course_instructors
+              ?.map((instructor) => instructor.name)
+              .join(", ")}
           </p>
           <p className="font-archivo text-15px">{description}</p>
         </div>

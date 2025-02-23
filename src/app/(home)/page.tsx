@@ -7,7 +7,6 @@ import FeaturedCoursesCarousel from "@/components/FeaturedCoursesCarousel";
 import Page from "@/components/Page";
 import SearchBar from "@/components/SearchBar";
 import Section from "@/components/Section";
-import { courses } from "@/mocks";
 
 export default function Home() {
   return (
@@ -23,12 +22,12 @@ export default function Home() {
       </Section>
 
       <Section className="bg-red !px-0">
-        <FeaturedCoursesCarousel courses={courses} />
+        <FeaturedCoursesCarousel />
       </Section>
 
       <Section>
         <Container>
-          <CourseList courses={courses} />
+          <CourseList />
         </Container>
       </Section>
     </Page>
