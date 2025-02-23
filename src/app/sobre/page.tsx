@@ -35,6 +35,15 @@ function FaqToggle(faqItem: FaqItem) {
               <></>
             );
           },
+          ul: ({ node, children, ...props }) => {
+            return node ? (
+              <ul {...props} className="list-disc pl-4">
+                {children}
+              </ul>
+            ) : (
+              <></>
+            );
+          },
         }}
       >
         {faqItem.answer}
