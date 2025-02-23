@@ -46,7 +46,7 @@ function FaqToggle(faqItem: FaqItem) {
           },
           p: ({ node, children, ...props }) => {
             return node ? (
-              <p {...props} className="text-justify">
+              <p {...props} className="text-left sm:text-justify">
                 {children}
               </p>
             ) : (
