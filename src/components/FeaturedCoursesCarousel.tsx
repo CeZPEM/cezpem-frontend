@@ -1,21 +1,51 @@
-import { CourseSimple } from "@/types";
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
+import { CourseItem } from "@/types";
 import CourseCard from "./CourseCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Container from "./Container";
 import { PageTitle } from "./PageTitle";
+import CourseService from "@/services/courseService";
 
 type FeaturedCoursesCarouselProps = {
-  courses: CourseSimple[];
+  courses?: CourseItem[];
 };
 
 export default function FeaturedCoursesCarousel({
-  courses,
+  courses = [],
 }: FeaturedCoursesCarouselProps) {
-  if (!courses?.length) return null;
+  const [featuredCourses, setFeaturedCourses] = useState<CourseItem[]>(courses);
+
+  const fetchFeaturedCourses = useCallback(async () => {
+    const response = await CourseService.getCourses({
+      "filters[featured][$eq]": "true",
+      "populate[1]": "course_area",
+      "populate[2]": "course_categories",
+      "populate[3]": "course_instructors",
+      limit: "6",
+    });
+
+    const coursesArr = response.data;
+
+    while (coursesArr.length < 6) {
+      coursesArr.push(coursesArr[0]);
+    }
+
+    setFeaturedCourses(coursesArr);
+  }, []);
+
+  useEffect(() => {
+    fetchFeaturedCourses();
+  }, [fetchFeaturedCourses]);
+
+  if (!featuredCourses?.length) return null;
 
   return (
     <div className="w-full flex flex-col gap-2 py-8 md:py-12">
@@ -49,7 +79,7 @@ export default function FeaturedCoursesCarousel({
           modules={[Navigation]}
           className="w-full"
         >
-          {courses.map((course, index) => (
+          {featuredCourses.map((course, index) => (
             <SwiperSlide className="pb-3" key={index}>
               <CourseCard
                 course={course}

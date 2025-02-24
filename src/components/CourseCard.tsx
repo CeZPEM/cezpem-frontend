@@ -9,7 +9,18 @@ export default function CourseCard({
   bgVariant = "white",
   textVariant = "black",
 }: CourseCardProps) {
-  const { title, teacher, description, image, semester, classType } = course;
+  if (!course) return null;
+
+  const {
+    cover,
+    title,
+    modality,
+    description,
+    description_short,
+    course_instructors,
+    duration_period_label,
+    duration_period_value,
+  } = course;
 
   return (
     <div
@@ -25,16 +36,21 @@ export default function CourseCard({
       {/* Course Image */}
       <div className="relative">
         <div className="rounded-t-lg overflow-hidden">
-          <img src={image} alt={title} className="w-full object-cover" />
+          <img
+            src={cover || "https://placehold.co/440x266"}
+            alt={title}
+            className="w-full object-cover"
+          />
         </div>
 
         {/* Semester and Class Type Labels */}
         <div className="absolute w-full -top-4 left-0 flex justify-between">
           <div className="ml-auto flex items-center font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaChalkboardTeacher size={18} /> {semester}
+            <FaChalkboardTeacher size={18} />{" "}
+            {`${duration_period_value} ${duration_period_label}`}
           </div>
           <div className="mx-auto flex items-center font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaUsers size={18} /> {classType}
+            <FaUsers size={18} /> {modality}
           </div>
         </div>
       </div>
@@ -42,19 +58,25 @@ export default function CourseCard({
       {/* Course Info */}
       <div className="flex flex-col px-4 mt-3 gap-2">
         <div
-          className={`w-full gap-4 ${
+          className={`w-full flex flex-col gap-1 ${
             textVariant === "white" ? "text-white" : "text-black"
           }`}
         >
-          <h2 className="text-l font-archivo font-24px font-bold">{title}</h2>
+          <h2 className="text-l font-archivo text-20px font-bold">{title}</h2>
           <p
-            className={`font-petrona text-15px font-semibold ${
-              textVariant === "white" ? "text-white" : "text-red"
+            className={`font-petrona text-18px ${
+              textVariant === "white"
+                ? "font-bold text-white"
+                : "font-semibold text-red"
             }`}
           >
-            {teacher}
+            {course_instructors
+              ?.map((instructor) => instructor.name)
+              .join(", ")}
           </p>
-          <p className="font-archivo text-15px">{description}</p>
+          <p className="font-archivo text-15px">
+            {description_short || description}
+          </p>
         </div>
 
         {/* Enroll Button */}

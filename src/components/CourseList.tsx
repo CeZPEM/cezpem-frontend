@@ -1,13 +1,43 @@
-import { CourseSimple } from "@/types";
+"use client";
+
+import { CourseItem } from "@/types";
 import CourseCard from "./CourseCard";
 import SearchBar from "./SearchBar";
 import { PageTitle } from "./PageTitle";
+import { useEffect, useState } from "react";
+import CourseService from "@/services/courseService";
 
 type CourseListProps = {
-  courses: CourseSimple[];
+  courses?: CourseItem[];
 };
 
-export default function CourseList({ courses }: CourseListProps) {
+export default function CourseList({ courses = [] }: CourseListProps) {
+  const [coursesArray, setCoursesArray] = useState<CourseItem[]>(courses);
+
+  const fetchCourses = async () => {
+    const response = await CourseService.getCourses({
+      "filters[featured][$eq]": "false",
+      "populate[1]": "course_area",
+      "populate[2]": "course_categories",
+      "populate[3]": "course_instructors",
+      limit: "6",
+    });
+
+    const coursesArr = response.data;
+
+    while (coursesArr.length < 12) {
+      coursesArr.push(coursesArr[0]);
+    }
+
+    setCoursesArray(coursesArr);
+  };
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
+
+  if (!coursesArray?.length) return null;
+
   return (
     <div className="w-full mx-auto">
       <div className="w-full flex flex-row flex-wrap gap-2 md:gap-8 items-center justify-center md:justify-between">
@@ -25,7 +55,7 @@ export default function CourseList({ courses }: CourseListProps) {
       </div>
 
       <div className="my-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-        {courses.map((course, index) => (
+        {coursesArray.map((course, index) => (
           <CourseCard
             key={index}
             course={course}
