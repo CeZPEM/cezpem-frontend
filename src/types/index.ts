@@ -71,9 +71,6 @@ export type CourseItem = {
   description: string;
   description_short: string;
   active: boolean;
-  duration_hours: number;
-  duration_period_label: string;
-  duration_period_value: number;
   modality: string;
   course_instructors: {
     id: number;
