@@ -1,5 +1,4 @@
 import { FaInstagram, FaYoutube, FaDiscord } from "react-icons/fa";
-import Navbar from "./Navbar";
 import Container from "./Container";
 import { CezpemLogoText, SoberanaLogoText } from "./Logos";
 
@@ -38,12 +37,6 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-1 md:max-w-[50%] flex-col gap-8 lg:gap-4">
-            {/* Navegação */}
-            <Navbar
-              variant="white"
-              className="mx-auto w-full !gap-x-12  md:mr-0 !px-0 md:!px-8"
-            />
-
             {/* Ícones Sociais */}
             <div className="flex w-full md:w-auto justify-between mx-auto md:gap-16 md:mr-0">
               <a

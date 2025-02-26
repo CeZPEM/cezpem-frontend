@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { CourseCardProps } from "@/types";
-import { FaChalkboardTeacher, FaUsers } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 import { Button } from "./Button";
 
 export default function CourseCard({
@@ -18,8 +18,6 @@ export default function CourseCard({
     description,
     description_short,
     course_instructors,
-    duration_period_label,
-    duration_period_value,
   } = course;
 
   return (
@@ -45,10 +43,6 @@ export default function CourseCard({
 
         {/* Semester and Class Type Labels */}
         <div className="absolute w-full -top-4 left-0 flex justify-between">
-          <div className="ml-auto flex items-center font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
-            <FaChalkboardTeacher size={18} />{" "}
-            {`${duration_period_value} ${duration_period_label}`}
-          </div>
           <div className="mx-auto flex items-center font-archivo text-15px gap-2 bg-lightBlue text-white px-3 py-1 rounded-md shadow">
             <FaUsers size={18} /> {modality}
           </div>
