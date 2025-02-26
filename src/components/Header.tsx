@@ -32,10 +32,7 @@ export default function Header() {
             <FiMenu size={28} />
           </button>
 
-          <Navbar
-            variant="red"
-            className="hidden max-w-4xl md:flex gap-x-12 md:px-28"
-          />
+          <Navbar variant="red" className="hidden max-w-4xl md:flex" />
 
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 

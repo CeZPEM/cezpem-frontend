@@ -18,7 +18,7 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
 
   return (
     <nav
-      className={`flex flex-1 gap-y-3 gap-6 flex-wrap justify-center md:justify-between md:text-base ${
+      className={`flex flex-1 gap-y-3 gap-16 flex-wrap justify-center md:text-base ${
         className || ""
       }`}
     >
