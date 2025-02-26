@@ -17,12 +17,14 @@ export default function Header() {
     <header className="bg-white shadow-md relative">
       <Container className="relative !py-0">
         <div className="mx-auto flex flex-col md:flex-row gap-5 justify-between items-center py-3">
-          <Link
-            href="/"
-            className="flex mr-auto ml-0 items-center justify-center"
-          >
-            <CezpemLogoText className="w-48 mr-auto" />
-          </Link>
+          <div className="w-full max-w-48">
+            <Link
+              href="/"
+              className="flex mr-auto ml-0 items-center justify-center"
+            >
+              <CezpemLogoText className="w-48 mr-auto" />
+            </Link>
+          </div>
 
           {/* Botão para abrir o Sidebar */}
           <button
@@ -32,20 +34,22 @@ export default function Header() {
             <FiMenu size={28} />
           </button>
 
-          <Navbar variant="red" className="hidden max-w-4xl md:flex" />
+          <Navbar variant="red" className="hidden md:flex" />
 
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
-          <Link
-            target="_blank"
-            href="http://apoia.se/cezpem"
-            className="hidden md:block"
-          >
-            <Button className="flex items-center gap-2 mt-4 md:mt-0">
-              <IconStar />
-              Apoie o projeto!
-            </Button>
-          </Link>
+          <div className="w-full max-w-48">
+            <Link
+              target="_blank"
+              href="http://apoia.se/cezpem"
+              className="hidden md:block"
+            >
+              <Button className="flex items-center gap-2 mt-4 md:mt-0">
+                <IconStar />
+                Apoie o projeto!
+              </Button>
+            </Link>
+          </div>
         </div>
       </Container>
 
