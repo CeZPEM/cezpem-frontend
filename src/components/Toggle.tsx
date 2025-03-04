@@ -16,11 +16,11 @@ function Toggle({ title, children, open, className }: ToggleProps) {
 
   return (
     <div className={`w-full ${className ? className : ""}`}>
-      <div className=" flex flex-row-reverse gap-4 justify-center items-center">
+      <div className="flex flex-row-reverse gap-4 justify-center items-center">
         <Button
           variant="primary"
           onClick={handleToggle}
-          className="w-full font-bold"
+          className="w-full font-bold !justify-start"
         >
           <span className="w-full text-left">{title}</span>
         </Button>

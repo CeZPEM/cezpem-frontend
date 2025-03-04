@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "./Button";
-import { IconStar } from "./Icons";
 import Navbar from "./Navbar";
 import { CezpemLogoText } from "./Logos";
 import Container from "./Container";
@@ -9,6 +8,7 @@ import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
 import Sidebar from "./Sidebar";
 import { useState } from "react";
+import { IoMdStar } from "react-icons/io";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,9 +44,11 @@ export default function Header() {
               href="http://apoia.se/cezpem"
               className="hidden md:block"
             >
-              <Button className="flex items-center gap-2 mt-4 md:mt-0">
-                <IconStar />
-                Apoie o projeto!
+              <Button className="mt-4 md:mt-0">
+                <span className="flex flex-row w-full items-center gap-2">
+                  <IoMdStar size={24} />
+                  Apoie o projeto!
+                </span>
               </Button>
             </Link>
           </div>
