@@ -21,7 +21,7 @@ export default function Home() {
                 <span className="relative flex h-[89px] mt-0">
                   <Image
                     alt="CeZPEM"
-                    src="/CeZPEM-selected.svg"
+                    src="/CeZPEM-highlight.svg"
                     className="w-auto absolute"
                     width={249}
                     height={89}
