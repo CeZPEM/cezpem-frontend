@@ -1,6 +1,6 @@
 export const menuItems = [
-  { label: "Home", href: "/" },
-  { label: "Cursos", href: "/cursos" },
-  { label: "Cursinho Popular", href: "/cursinho" },
-  { label: "Sobre", href: "/sobre" },
+  { released: true, label: "Home", href: "/" },
+  { released: false, label: "Cursos", href: "/cursos" },
+  { released: true, label: "Cursinho Popular", href: "/cursinho" },
+  { released: true, label: "Sobre", href: "/sobre" },
 ];
