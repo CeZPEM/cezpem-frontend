@@ -245,8 +245,8 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section id="" className="h-screen sm:h-[720px]">
-        <Container className="w-full h-full pt-20 md:pt-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8">
+      <Section id="" className="min-h-screen h-auto sm:min-h-[720px]">
+        <Container className="w-full h-full pt-20 md:pt-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12">
           <div className="w-full h-full flex flex-col items-center justify-center">
             <Image
               alt="CeZPEM"
@@ -257,7 +257,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="w-full h-full flex flex-col items-center justify-center gap-4">
+          <div className="w-full h-full flex flex-col items-center justify-center gap-12">
             <PageTitle className="w-auto relative text-center">
               <span className="relative z-10">Perguntas Frequentes</span>
               <Image
