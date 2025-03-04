@@ -38,7 +38,7 @@ export default function Footer() {
 
           <div className="flex flex-1 md:max-w-[50%] flex-col gap-8 lg:gap-4">
             {/* Ícones Sociais */}
-            <div className="flex w-full md:w-auto justify-between mx-auto md:gap-16 md:mr-0">
+            <div className="flex w-full md:w-auto justify-between mx-auto gap-8 md:gap-16 md:mr-0">
               <a
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
