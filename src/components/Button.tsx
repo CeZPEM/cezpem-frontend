@@ -17,10 +17,10 @@ export function Button({
     <button
       className={classNames(
         "relative px-4 py-2 font-archivo rounded-lg flex items-center justify-center border overflow-hidden transition-all",
-        "before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:transition-all before:duration-[450ms] hover:before:w-full",
+        "before:absolute before:top-0 before:left-0 before:w-0 before:h-full before:transition-all before:duration-[450ms] hover:before:w-full focus:before:w-full active:before:w-full",
         variant === "primary"
-          ? "before:bg-white bg-red text-white border-black hover:text-red"
-          : "before:bg-red bg-white text-red border-black hover:text-white",
+          ? "before:bg-white bg-red text-white border-black hover:text-red focus:text-red active:text-red"
+          : "before:bg-red bg-white text-red border-black hover:text-white focus:text-white active:text-white",
         className || ""
       )}
       {...props}

@@ -42,10 +42,10 @@ export default function Header() {
             <Link
               target="_blank"
               href="http://apoia.se/cezpem"
-              className="hidden md:block"
+              className="hidden md:flex"
             >
-              <Button className="mt-4 md:mt-0">
-                <span className="flex flex-row w-full items-center gap-2">
+              <Button className="w-full mt-4 md:mt-0">
+                <span className="flex flex-row w-full mx-auto text-center items-center gap-2">
                   <IoMdStar size={24} />
                   Apoie o projeto!
                 </span>
