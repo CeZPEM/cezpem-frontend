@@ -258,12 +258,12 @@ export default function Home() {
           </div>
 
           <div className="w-full h-full flex flex-col items-center justify-center gap-12">
-            <PageTitle className="w-auto relative text-center">
+            <PageTitle className="w-full max-w-none relative text-center">
               <span className="relative z-10">Perguntas Frequentes</span>
               <Image
                 alt="CeZPEM"
                 src="/details-text.png"
-                className="absolute h-1/2 z-0 w-auto transform -translate-x-1/2 top-8 left-1/2 ml-3"
+                className="absolute h-1/2 z-0 w-auto transform -translate-x-1/2 top-5 md:top-8 left-1/2 ml-3"
                 width={484}
                 height={28}
               />
