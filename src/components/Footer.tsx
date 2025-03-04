@@ -38,32 +38,32 @@ export default function Footer() {
 
           <div className="flex flex-1 md:max-w-[50%] flex-col gap-8 lg:gap-4">
             {/* Ícones Sociais */}
-            <div className="flex w-full md:w-auto justify-between mx-auto md:gap-16 md:mr-0">
+            <div className="flex w-full md:w-auto justify-between mx-auto gap-8 md:gap-16 md:mr-0">
               <a
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
-                className="hover:opacity-80"
+                className="hover:text-red"
               >
                 <FaInstagram size={32} />
               </a>
               <a
                 target="_blank"
                 href="https://discord.gg/hjZtJmCmVh"
-                className="hover:opacity-80"
+                className="hover:text-red"
               >
                 <FaDiscord size={32} />
               </a>
               <a
                 target="_blank"
                 href="https://www.youtube.com/@CeZPEM"
-                className="hover:opacity-80"
+                className="hover:text-red"
               >
                 <FaYoutube size={32} />
               </a>
               <a
                 target="_blank"
                 href="https://soberana.tv"
-                className="hover:opacity-80"
+                className="hover:text-red"
               >
                 <SoberanaLogoText size="small" className="w-32" />
               </a>
@@ -79,13 +79,13 @@ export default function Footer() {
           <div className="flex flex-row items-center gap-3 md:gap-12 text-gray-300">
             <a
               href="#"
-              className="underline lg:no-underline hover:underline hover:opacity-80"
+              className="underline lg:no-underline hover:underline hover:text-red"
             >
               Termos de privacidade
             </a>
             <a
               href="#"
-              className="underline lg:no-underline hover:underline hover:opacity-80"
+              className="underline lg:no-underline hover:underline hover:text-red"
             >
               Organize-se!
             </a>
