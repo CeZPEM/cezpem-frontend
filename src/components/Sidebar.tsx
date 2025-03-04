@@ -34,23 +34,31 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
       {isOpen && (
         <nav>
           <ul className="space-y-2 p-4">
-            {menuItems.map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`block p-2 rounded transition-colors duration-200 text-20px
+            {menuItems.map((item) => {
+              const newLink = item.href.replace("/", "") || "inicio";
+
+              return (
+                <li key={item.label}>
+                  <Link
+                    href={`#${newLink}`}
+                    onClick={() => setIsOpen(false)}
+                    className={`block p-2 rounded transition-colors duration-200 text-20px
                     ${
-                      pathname === item.href
+                      // pathname === item.href
+                      pathname === item.label
                         ? "bg-red/10 text-darkRed font-extrabold"
                         : "hover:bg-red/10 hover:text-darkRed"
                     }
                   `}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+                  >
+                    {item.label}
+                    {item.released ? null : (
+                      <span className="ml-2 text-md">(Em breve)</span>
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       )}

@@ -14,7 +14,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md relative">
+    <header className="bg-white shadow-md relative z-50">
       <Container className="relative !py-0">
         <div className="mx-auto flex flex-col md:flex-row md:gap-5 justify-between items-center py-3">
           <div className="w-full max-w-48">

@@ -22,37 +22,40 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
         className || ""
       }`}
     >
-      {menuItems.map((item) => (
-        <Link
-          key={item.label}
-          href={item.href}
-          className={`underline group text-24px lg:no-underline ${
-            // pathname === item.href
-            pathname === item.label
-              ? `font-extrabold ${activeColorByVariant}`
-              : ""
-          } ${textColorByVariant}`}
-        >
-          {item.released ? (
-            <span
-              className={
-                pathname === item.href
-                  ? ""
-                  : "tracking-normal group-hover:tracking-[-0.020em;] hover:font-semibold"
-              }
-            >
-              {item.label}
-            </span>
-          ) : (
-            <div className="text-center min-w-28">
-              <span className="group-hover:hidden">{item.label}</span>
-              <span className="hidden group-hover:block font-semibold">
-                Em breve
+      {menuItems.map((item) => {
+        const newLink = item.href.replace("/", "") || "inicio";
+        return (
+          <Link
+            key={item.label}
+            href={`#${newLink}`}
+            className={`underline group text-24px lg:no-underline ${
+              // pathname === item.href
+              pathname === item.label
+                ? `font-extrabold ${activeColorByVariant}`
+                : ""
+            } ${textColorByVariant}`}
+          >
+            {item.released ? (
+              <span
+                className={
+                  pathname === item.href
+                    ? ""
+                    : "tracking-normal group-hover:tracking-[-0.020em;] hover:font-semibold"
+                }
+              >
+                {item.label}
               </span>
-            </div>
-          )}
-        </Link>
-      ))}
+            ) : (
+              <div className="text-center min-w-28">
+                <span className="group-hover:hidden">{item.label}</span>
+                <span className="hidden group-hover:block font-semibold">
+                  Em breve
+                </span>
+              </div>
+            )}
+          </Link>
+        );
+      })}
     </nav>
   );
 }
