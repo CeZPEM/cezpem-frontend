@@ -246,7 +246,7 @@ export default function Home() {
       </Section>
 
       <Section id="sobre" className="min-h-screen h-auto sm:min-h-[720px] grid">
-        <Container className="w-full h-full pt-20 md:pt-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12">
+        <Container className="w-full h-full pt-20 sm:pt-32 md:pt-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12">
           <div className="order-last md:order-none w-full h-full flex flex-col items-center justify-center">
             <Image
               alt="CeZPEM"
