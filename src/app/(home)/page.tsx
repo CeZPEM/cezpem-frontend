@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/Button";
 import Container from "@/components/Container";
+import HotSiteFAQ from "@/components/HotSiteFAQ";
 import { SoberanaLogoText } from "@/components/Logos";
 import Page from "@/components/Page";
 import Section from "@/components/Section";
@@ -267,6 +268,8 @@ export default function Home() {
                 height={28}
               />
             </PageTitle>
+
+            <HotSiteFAQ />
           </div>
         </Container>
       </Section>
