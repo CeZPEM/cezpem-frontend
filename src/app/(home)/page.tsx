@@ -245,9 +245,9 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section id="" className="min-h-screen h-auto sm:min-h-[720px]">
-        <Container className="w-full h-full pt-20 md:pt-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12">
-          <div className="w-full h-full flex flex-col items-center justify-center">
+      <Section id="sobre" className="min-h-screen h-auto sm:min-h-[720px] grid">
+        <Container className="w-full h-full pt-20 sm:pt-32 md:pt-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12">
+          <div className="order-last md:order-none w-full h-full flex flex-col items-center justify-center">
             <Image
               alt="CeZPEM"
               src="/CeZPEM-colagem.png"
@@ -257,7 +257,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="w-full h-full flex flex-col items-center justify-center gap-12">
+          <div className="order-first md:order-none w-full h-full flex flex-col items-center justify-center gap-12">
             <PageTitle className="w-full max-w-none relative text-center">
               <span className="relative z-10">Perguntas Frequentes</span>
               <Image
