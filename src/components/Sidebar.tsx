@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiArrowLeft } from "react-icons/fi";
 import { CezpemLogoText } from "./Logos";
+import { scrollSmoothlyTo } from "@/functions";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -16,7 +17,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
 
   return (
     <aside
-      className={`fixed top-0 left-0 h-full w-72 bg-white shadow transition-transform duration-300 z-30 transform ${
+      className={`fixed top-0 left-0 h-full w-72 bg-white shadow transition-transform duration-300 z-[55] transform ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
@@ -41,7 +42,11 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                 <li key={item.label}>
                   <Link
                     href={`#${newLink}`}
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsOpen(false);
+                      scrollSmoothlyTo(`#${newLink}`);
+                    }}
                     className={`block p-2 rounded transition-colors duration-200 text-20px
                     ${
                       // pathname === item.href

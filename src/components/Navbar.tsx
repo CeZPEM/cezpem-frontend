@@ -1,6 +1,7 @@
 "use client";
 
 import { menuItems } from "@/constants";
+import { scrollSmoothlyTo } from "@/functions";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -34,6 +35,10 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
                 ? `font-extrabold ${activeColorByVariant}`
                 : ""
             } ${textColorByVariant}`}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollSmoothlyTo(`#${newLink}`);
+            }}
           >
             {item.released ? (
               <span

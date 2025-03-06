@@ -18,7 +18,7 @@ type PageTitleProps = {
 function PageTitle({ children, className }: PageTitleProps) {
   return (
     <h2
-      className={`w-full leading-tight mx-auto max-w-64 md:max-w-none text-28px md:text-48px ${
+      className={`w-full leading-tight mx-auto max-w-64 md:max-w-none text-32px md:text-48px ${
         className || ""
       }`.trim()}
     >
@@ -46,7 +46,7 @@ export default function Home() {
           <Image
             alt="CeZPEM"
             src="/details-1-bottom-left.png"
-            className="w-auto absolute -bottom-[1px] -left-[1px]"
+            className="absolute -bottom-[1px] -left-[1px]"
             width={249}
             height={89}
           />
@@ -246,7 +246,7 @@ export default function Home() {
       </Section>
 
       <Section id="sobre" className="min-h-screen h-auto sm:min-h-[720px] grid">
-        <Container className="w-full h-full pt-20 sm:pt-32 md:pt-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12">
+        <Container className="w-full h-full pt-28 sm:pt-44 md:pt-12 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12">
           <div className="order-last md:order-none w-full h-full flex flex-col items-center justify-center">
             <Image
               alt="CeZPEM"

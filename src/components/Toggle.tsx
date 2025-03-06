@@ -20,9 +20,9 @@ function Toggle({ title, children, open, className }: ToggleProps) {
         <Button
           variant="primary"
           onClick={handleToggle}
-          className="w-full font-bold !justify-start"
+          className="w-full font-bold !justify-start pl-4 pr-2"
         >
-          <span className="w-full text-left">{title}</span>
+          <span className="w-full flex text-left md:text-20px">{title}</span>
         </Button>
 
         <span className="flex justify-start items-center h-8 min-w-3 pl-1">
@@ -41,7 +41,7 @@ function Toggle({ title, children, open, className }: ToggleProps) {
             <div className="w-full rounded-bl-lg border-l border-b border-black" />
             <div className="w-full" />
           </div>
-          <div className="w-full mb-[2px] font-archivo font-20px space-y-2">
+          <div className="w-full mb-[2px] font-archivo md:text-20px space-y-2">
             {children}
           </div>
         </div>
