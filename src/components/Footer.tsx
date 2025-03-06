@@ -5,7 +5,7 @@ import { CezpemLogoText, SoberanaLogoText } from "./Logos";
 export default function Footer() {
   return (
     <footer className="bg-navyBlue text-white">
-      <Container className="flex flex-col gap-10">
+      <Container className="flex flex-col md:gap-10 lg:gap-12">
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo e Texto */}
           <div className="text-center md:text-left space-y-2">
