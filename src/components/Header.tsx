@@ -42,11 +42,14 @@ export default function Header() {
             <Link
               target="_blank"
               href="http://apoia.se/cezpem"
-              className="hidden md:flex"
+              className="hidden md:flex group"
             >
               <Button className="w-full mt-4 md:mt-0">
                 <span className="flex flex-row w-full mx-auto text-center items-center gap-2">
-                  <IoMdStar size={24} />
+                  <IoMdStar
+                    className="group-hover:rotate-[216deg] transition-all duration-300 ease-in-out"
+                    size={24}
+                  />
                   Apoie o projeto!
                 </span>
               </Button>
