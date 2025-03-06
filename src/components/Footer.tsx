@@ -28,7 +28,7 @@ export default function Footer() {
                 <a
                   target="_blank"
                   href="https://soberana.tv"
-                  className="text-blue-300"
+                  className="text-blue-300 hover:text-red"
                 >
                   @soberana.tv
                 </a>
@@ -63,9 +63,12 @@ export default function Footer() {
               <a
                 target="_blank"
                 href="https://soberana.tv"
-                className="hover:text-red"
+                className="hover:opacity-80 group"
               >
-                <SoberanaLogoText size="small" className="w-32" />
+                <SoberanaLogoText
+                  size="small"
+                  className="w-32 group-hover:scale-105 transition-transform duration-300 ease-in"
+                />
               </a>
             </div>
           </div>
