@@ -49,19 +49,19 @@ export default function Home() {
 
         <Container className="relative my-auto px-0 sm:px-4 pb-10 z-10">
           <div className="w-full text-white text-center flex flex-col items-center justify-center gap-2 px-4 sm:px-0">
-            <h1 className="text-40px md:text-64px font-bold">
+            <h1 className="text-40px sm:text-64px font-bold">
               Conheça o{" "}
-              <span className="ml-0 h-9 md:h-16 w-[120px] md:w-[249px] inline-block">
-                <span className="relative flex h-[89px] mt-0">
+              <span className="sm:-ml-2 h-7 md:h-16 w-[150px] sm:w-[249px] inline-block">
+                <span className="relative flex w-auto h-auto sm:h-[94px] mt-4 sm:mt-0">
                   <Image
-                    alt="CeZPEM"
+                    alt="Logo do CeZPEM"
                     src="/CeZPEM.svg"
-                    className="absolute z-[0] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto"
-                    width={249}
-                    height={89}
+                    className="absolute z-[1] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto h-auto"
+                    width={249 * 2}
+                    height={89 * 2}
                   />
 
-                  <div className="absolute z-[1] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[260px] h-[98px]">
+                  <div className="absolute z-[0] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[180px] h-[74px] sm:w-[264px] sm:h-[98px]">
                     <Lottie animationData={highlightAnimation} loop={false} />
                   </div>
                 </span>
@@ -131,12 +131,12 @@ export default function Home() {
                 />
               </PageTitle>
 
-              <p className="w-full leading-tight text-20px md:text-24px md:mt-6 text-center md:text-right">
+              <p className="w-full leading-tight font-archivo text-20px md:text-24px md:mt-6 text-center md:text-right">
                 O cursinho Popular do <b> CeZPEM </b> oferece aulas gratuitas
                 voltadas aos conteúdos da grade regular do Enem.
               </p>
 
-              <p className="w-full leading-tight md:my-6 text-16px md:text-20px text-center md:text-right">
+              <p className="w-full leading-tight md:my-6 font-archivo text-14px md:text-16px text-center md:text-right">
                 As aulas ocorrem ao vivo, para que adolescentes e adultos tenham
                 acesso ao conteúdo de um cursinho preparatório, e ainda possam
                 tirar suas dúvidas de forma direta com os professores.
@@ -209,7 +209,7 @@ export default function Home() {
               />
             </PageTitle>
 
-            <p className="w-full leading-tight text-20px md:text-24px text-center md:text-right">
+            <p className="w-full leading-tight font-archivo text-20px md:text-24px text-center md:text-left">
               O objetivo do cursinho é garantir o acesso gratuito dos alunes à
               educação, sem deixar de remunerar os professores. Nossos recursos
               virão exclusivamente do financiamento coletivo, por isso a sua

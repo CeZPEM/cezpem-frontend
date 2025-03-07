@@ -5,7 +5,7 @@ import { CezpemLogoText, SoberanaLogoText } from "./Logos";
 export default function Footer() {
   return (
     <footer className="bg-navyBlue text-white">
-      <Container className="flex flex-col md:gap-10 lg:gap-12">
+      <Container className="flex flex-col gap-6 md:gap-10 lg:gap-12">
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo e Texto */}
           <div className="text-center md:text-left space-y-2">
@@ -23,12 +23,25 @@ export default function Footer() {
                 </strong>
               </p>
 
-              <p className="text-sm text-gray-300">
-                Frente de massas de educação do coletivo{" "}
+              <p className="mx-auto max-w-52 sm:max-w-none text-xs sm:text-sm text-gray-300 mb-4 sm:mb-0">
+                <span>Frente de massas de educação do coletivo</span>
+
+                <span className="inline-block md:hidden relative text-center md:text-left h-4 min-w-[96px] ml-2">
+                  <span className="h-4">
+                    <a
+                      target="_blank"
+                      href="https://soberana.tv"
+                      className="md:hidden hover:opacity-80 inline-block absolute top-0 left-0"
+                    >
+                      <SoberanaLogoText size="small" className="w-24" />
+                    </a>
+                  </span>
+                </span>
+
                 <a
                   target="_blank"
                   href="https://soberana.tv"
-                  className="text-blue-300 hover:text-red"
+                  className="hidden md:inline-block text-blue-300 hover:text-red ml-1"
                 >
                   @soberana.tv
                 </a>
@@ -36,9 +49,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-1 md:max-w-[50%] flex-col gap-8 lg:gap-4">
+          <div className="flex flex-1 md:max-w-[50%] flex-col py-4 md:py-0">
             {/* Ícones Sociais */}
-            <div className="flex w-full md:w-auto justify-between mx-auto gap-8 md:gap-16 md:mr-0">
+            <div className="flex flex-col w-24 md:w-full sm:flex-row items-center justify-center md:justify-between mx-auto gap-8 md:gap-16 md:mr-0">
               <a
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
@@ -63,7 +76,7 @@ export default function Footer() {
               <a
                 target="_blank"
                 href="https://soberana.tv"
-                className="hover:opacity-80 group"
+                className="hidden md:block hover:opacity-80 group"
               >
                 <SoberanaLogoText
                   size="small"
@@ -75,11 +88,27 @@ export default function Footer() {
         </div>
 
         {/* Linha Separadora */}
-        <div className="border-t border-gray-500" />
+        <div className="hidden md:block border-t border-gray-500" />
 
         {/* Direitos e Links Adicionais */}
-        <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row justify-center items-center gap-12 pb-6 md:pb-0">
-          <div className="flex flex-row items-center gap-3 md:gap-12 text-gray-300">
+        <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row items-left justify-center">
+          <div className="w-full flex flex-col md:flex-row flex-wrap items-center gap-3 md:gap-12 text-gray-300">
+            <a
+              href="mailto:contato@cezpem.com.br"
+              className="underline lg:no-underline hover:underline hover:text-red"
+            >
+              contato@cezpem.com.br
+            </a>
+
+            <a
+              href="mailto:relacionamentoacademico@cezpem.com.br"
+              className="underline lg:no-underline hover:underline hover:text-red"
+            >
+              relacionamentoacademico@cezpem.com.br
+            </a>
+
+            <div className="hidden md:block flex-1" />
+
             <a
               href="#"
               className="underline lg:no-underline hover:underline hover:text-red"
@@ -87,7 +116,8 @@ export default function Footer() {
               Termos de privacidade
             </a>
             <a
-              href="#"
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf6qdWcaGJB9sKtX9Lf9k7i2ikAdAwzwwPw8yxeSuh6L7OE8g/viewform"
               className="underline lg:no-underline hover:underline hover:text-red"
             >
               Organize-se!
