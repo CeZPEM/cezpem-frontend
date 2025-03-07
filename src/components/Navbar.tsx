@@ -43,9 +43,7 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
             {item.released ? (
               <span
                 className={
-                  pathname === item.href
-                    ? ""
-                    : "tracking-normal group-hover:tracking-[-0.020em;] hover:font-semibold"
+                  "tracking-normal group-hover:tracking-[-0.020em;] hover:font-semibold"
                 }
               >
                 {item.label}
