@@ -56,12 +56,12 @@ export default function Home() {
                   <Image
                     alt="CeZPEM"
                     src="/CeZPEM.svg"
-                    className="absolute z-[1] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto"
+                    className="absolute z-[0] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto"
                     width={249}
                     height={89}
                   />
 
-                  <div className="absolute z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[260px] h-[98px]">
+                  <div className="absolute z-[1] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[260px] h-[98px]">
                     <Lottie animationData={highlightAnimation} loop={false} />
                   </div>
                 </span>
