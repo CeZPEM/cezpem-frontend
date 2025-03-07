@@ -7,8 +7,11 @@ import { SoberanaLogoText } from "@/components/Logos";
 import Page from "@/components/Page";
 import Section from "@/components/Section";
 import YoutubePlayer from "@/components/YoutubePlayer";
+import Lottie from "lottie-react";
 import Image from "next/image";
 import Link from "next/link";
+
+import highlightAnimation from "../../../public/highlight.json";
 
 type PageTitleProps = {
   children: React.ReactNode;
@@ -42,29 +45,25 @@ export default function Home() {
             width={249}
             height={89}
           />
-
-          <Image
-            alt="CeZPEM"
-            src="/details-1-bottom-left.png"
-            className="absolute -bottom-[1px] -left-[1px]"
-            width={249}
-            height={89}
-          />
         </div>
 
         <Container className="relative my-auto px-0 sm:px-4 pb-10 z-10">
           <div className="w-full text-white text-center flex flex-col items-center justify-center gap-2 px-4 sm:px-0">
             <h1 className="text-40px md:text-64px font-bold">
               Conheça o{" "}
-              <span className="ml-1 h-9 md:h-16 w-[120px] md:w-[249px] inline-block">
+              <span className="ml-0 h-9 md:h-16 w-[120px] md:w-[249px] inline-block">
                 <span className="relative flex h-[89px] mt-0">
                   <Image
                     alt="CeZPEM"
-                    src="/CeZPEM-highlight.svg"
-                    className="w-auto absolute"
+                    src="/CeZPEM.svg"
+                    className="absolute z-[0] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-auto"
                     width={249}
                     height={89}
                   />
+
+                  <div className="absolute z-[1] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[260px] h-[98px]">
+                    <Lottie animationData={highlightAnimation} loop={false} />
+                  </div>
                 </span>
               </span>
             </h1>
