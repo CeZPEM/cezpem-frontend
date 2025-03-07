@@ -92,22 +92,7 @@ export default function Footer() {
 
         {/* Direitos e Links Adicionais */}
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row items-left justify-center">
-          <div className="flex flex-col md:flex-row flex-wrap items-center gap-3 md:gap-12 text-gray-300">
-            <a
-              href="#"
-              className="underline lg:no-underline hover:underline hover:text-red"
-            >
-              Termos de privacidade
-            </a>
-
-            <a
-              target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSf6qdWcaGJB9sKtX9Lf9k7i2ikAdAwzwwPw8yxeSuh6L7OE8g/viewform"
-              className="underline lg:no-underline hover:underline hover:text-red"
-            >
-              Organize-se!
-            </a>
-
+          <div className="w-full flex flex-col md:flex-row flex-wrap items-center gap-3 md:gap-12 text-gray-300">
             <a
               href="mailto:contato@cezpem.com.br"
               className="underline lg:no-underline hover:underline hover:text-red"
@@ -120,6 +105,22 @@ export default function Footer() {
               className="underline lg:no-underline hover:underline hover:text-red"
             >
               relacionamentoacademico@cezpem.com.br
+            </a>
+
+            <div className="hidden md:block flex-1" />
+
+            <a
+              href="#"
+              className="underline lg:no-underline hover:underline hover:text-red"
+            >
+              Termos de privacidade
+            </a>
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf6qdWcaGJB9sKtX9Lf9k7i2ikAdAwzwwPw8yxeSuh6L7OE8g/viewform"
+              className="underline lg:no-underline hover:underline hover:text-red"
+            >
+              Organize-se!
             </a>
           </div>
         </div>
