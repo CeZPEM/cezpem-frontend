@@ -131,12 +131,12 @@ export default function Home() {
                 />
               </PageTitle>
 
-              <p className="w-full leading-tight text-20px md:text-24px md:mt-6 text-center md:text-right">
+              <p className="w-full leading-tight font-archivo text-20px md:text-24px md:mt-6 text-center md:text-right">
                 O cursinho Popular do <b> CeZPEM </b> oferece aulas gratuitas
                 voltadas aos conteúdos da grade regular do Enem.
               </p>
 
-              <p className="w-full leading-tight md:my-6 text-16px md:text-20px text-center md:text-right">
+              <p className="w-full leading-tight md:my-6 font-archivo text-14px md:text-16px text-center md:text-right">
                 As aulas ocorrem ao vivo, para que adolescentes e adultos tenham
                 acesso ao conteúdo de um cursinho preparatório, e ainda possam
                 tirar suas dúvidas de forma direta com os professores.
@@ -209,7 +209,7 @@ export default function Home() {
               />
             </PageTitle>
 
-            <p className="w-full leading-tight text-20px md:text-24px text-center md:text-right">
+            <p className="w-full leading-tight font-archivo text-20px md:text-24px text-center md:text-left">
               O objetivo do cursinho é garantir o acesso gratuito dos alunes à
               educação, sem deixar de remunerar os professores. Nossos recursos
               virão exclusivamente do financiamento coletivo, por isso a sua
