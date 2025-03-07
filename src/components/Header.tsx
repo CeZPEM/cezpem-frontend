@@ -23,7 +23,7 @@ export default function Header() {
         <FiMenu size={28} />
       </button>
 
-      <Sidebar className="" isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <header className="hidden md:flex bg-white shadow-md relative z-50">
         <Container className="relative !py-0">
