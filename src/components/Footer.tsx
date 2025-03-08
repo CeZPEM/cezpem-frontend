@@ -31,7 +31,7 @@ export default function Footer() {
               className="mx-auto md:mx-0 w-32"
             />
 
-            <div className="font-archivo flex flex-col items-center md:items-start gap-3 sm:gap-1">
+            <div className="font-archivo text-18px md:text-20px flex flex-col items-center md:items-start gap-3 sm:gap-1">
               <p className="text-md">
                 <strong>
                   Centro <span className="text-red">Zoia Prestes</span> de
@@ -39,14 +39,14 @@ export default function Footer() {
                 </strong>
               </p>
 
-              <div className="mx-auto w-full max-w-52 sm:max-w-none text-xs sm:text-sm text-gray-300 mb-4 sm:mb-0">
+              <div className="mx-auto w-full max-w-72 sm:max-w-none text-14px md:text-16px text-gray-300 mb-4 sm:mb-0">
                 <span>Frente de massas de educação do coletivo</span>
 
-                <span className="inline-block md:hidden relative text-center md:text-left h-4 min-w-[96px] ml-2">
-                  <span className="h-4">
+                <span className="inline-block md:hidden relative text-center md:text-left h-[18px] min-w-[96px] ml-2">
+                  <span className="h-2">
                     <a
                       target="_blank"
-                      href="https://soberana.tv"
+                      href="https://www.instagram.com/soberana.tv/"
                       className="md:hidden hover:opacity-80 inline-block absolute top-0 left-0"
                     >
                       <SoberanaLogoText size="small" className="w-24" />
@@ -56,7 +56,7 @@ export default function Footer() {
 
                 <a
                   target="_blank"
-                  href="https://soberana.tv"
+                  href="https://www.instagram.com/soberana.tv/"
                   className="hidden md:inline-block text-blue-300 hover:text-red ml-1"
                 >
                   @soberana.tv
