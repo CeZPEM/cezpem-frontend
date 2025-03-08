@@ -91,7 +91,7 @@ export default function Sobre() {
 
             <div className="w-full flex flex-col gap-4">
               {faqArray?.map((faqItem, index) => (
-                <FaqToggle key={index} {...faqItem} />
+                <FaqToggle key={index} faqItem={faqItem} />
               ))}
             </div>
           </div>
