@@ -45,7 +45,7 @@ export function CezpemText({
     return (
       <div className={`flex items-center justify-center rounded ${className}`}>
         <Image
-          src="/Texto-CeZPEM-white.svg"
+          src="/logo-CeZPEM-branco.svg"
           alt="Texto do CeZPEM"
           width={width}
           height={height}
@@ -57,7 +57,7 @@ export function CezpemText({
   return (
     <div className={`flex items-center justify-center rounded ${className}`}>
       <Image
-        src="/Texto-CeZPEM-red.svg"
+        src="/logo-CeZPEM-vermelho.svg"
         alt="Texto do CeZPEM"
         width={width}
         height={height}
