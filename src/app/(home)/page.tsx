@@ -35,7 +35,7 @@ export default function Home() {
     <Page>
       <Section
         id="inicio"
-        className="relative flex h-screen xs:h-[720px] bg-navyBlue"
+        className="relative flex h-screen xs:h-[720px] md:h-auto md:min-h-[846px] bg-navyBlue"
       >
         <div className="w-full h-full absolute hidden md:block top-0 left-0 z-0 overflow-hidden">
           <Image
@@ -95,21 +95,21 @@ export default function Home() {
 
       <Section
         id="cursinho"
-        className="h-screen xs:h-auto md:h-[660px] flex items-end"
+        className="h-auto md:h-[660px] lg:h-auto xl:h-auto flex items-end"
       >
-        <Container className="mt-8 md:mt-auto md:mb-0 !py-0 !px-0 md:px-4 overflow-hidden">
-          <div className="flex flex-col-reverse lg:flex-col-reverse xl:flex-row items-end gap-x-8">
-            <div className="relative w-full md:w-full min-h-[200px] md:min-w-96 flex md:flex-1 flex-1 right-0 overflow-hidden md:overflow-visible">
+        <Container className="mt-8 md:mt-auto lg:mt-0 md:mb-0 !py-0 !px-0 md:px-4">
+          <div className="flex flex-col-reverse xl:flex-row items-center md:items-end justify-center lg:gap-x-8">
+            <div className="relative w-full md:w-full mx-auto min-h-[200px] md:min-w-96 flex flex-1 right-0 overflow-hidden md:overflow-visible">
               <Image
                 alt="CeZPEM"
                 src="/enem-cezpem.png"
-                className="max-w-none absolute md:relative w-[120vw] md:w-full md:max-w-[926px] -left-8 top-4 md:left-12 md:top-0"
+                className="max-w-none absolute md:relative w-[120vw] md:w-full md:max-w-[926px] -left-8 top-4 mx-auto md:left-auto xl:left-12 md:top-0"
                 width={249 * 2}
                 height={89 * 2}
               />
             </div>
 
-            <div className="lg:w-[34%] mx-auto flex flex-col gap-3 md:gap-0 md:max-w-[460px] px-4 md:px-0">
+            <div className="xl:w-[34%] mx-auto flex flex-col gap-3 lg:gap-0 sm:mt-8 md:mt-16 md:max-w-[720px] px-4 md:px-0">
               <Image
                 alt="CeZPEM"
                 src="/CeZPEM-bottom.png"
@@ -125,7 +125,7 @@ export default function Home() {
                 <Image
                   alt="CeZPEM"
                   src="/details-text.png"
-                  className="absolute z-0 m-auto w-auto max-w-full transform -translate-y-1/2 top-7 -right-1 md:top-11 lg:-right-11"
+                  className="absolute z-0 w-auto max-w-full left-1/2 ml-8 top-7 md:top-12 lg:top-12 lg:-right-11 transform -translate-y-1/2 -translate-x-1/2"
                   width={484 * 2}
                   height={28 * 2}
                 />
@@ -146,7 +146,7 @@ export default function Home() {
                 <Link
                   target="_blank"
                   href="https://forms.gle/HvDTQTNZecfEvN6E8"
-                  className="w-full min-w-[320px] max-w-[320px] md:max-w-[360px] mx-auto md:mr-0"
+                  className="w-full min-w-[320px] max-w-[320px] md:max-w-[360px] mx-auto xl:mr-0"
                 >
                   <Button className="w-[80%] md:w-full mx-auto flex items-center justify-center gap-2 text-20px">
                     Quero me cadastrar!
@@ -197,7 +197,7 @@ export default function Home() {
           />
         </div>
 
-        <Container className="relative z-10 xl:h-[720px] grid grid-cols-1 xl:grid-cols-[36%_1fr] gap-8 md:gap-0 px-0">
+        <Container className="relative z-10 xl:min-h-[720px] grid grid-cols-1 xl:grid-cols-[36%_1fr] gap-8 md:gap-0 px-0">
           <div className="w-full h-auto my-auto flex flex-col gap-4 text-white">
             <PageTitle className="relative text-center w-auto mx-auto mt-20 md:mt-0">
               <span className="relative z-10">Apoie Nosso Projeto!</span>
