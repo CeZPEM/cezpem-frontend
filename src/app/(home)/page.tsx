@@ -45,6 +45,14 @@ export default function Home() {
             width={249}
             height={89}
           />
+
+          <Image
+            alt="CeZPEM"
+            src="/details-1-bottom-left.png"
+            className="absolute -bottom-[1px] -left-[1px]"
+            width={249}
+            height={89}
+          />
         </div>
 
         <Container className="relative my-auto px-0 sm:px-4 pb-10 z-10">
