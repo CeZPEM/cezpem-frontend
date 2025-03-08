@@ -85,7 +85,7 @@ export default function Home() {
 
           <div className="mx-auto max-w-[960px] mt-14 md:mt-8 rounded-md overflow-hidden">
             <YoutubePlayer
-              // thumbnail="/ajude-cezpem.png"
+              thumbnail="/video-cover.jpg"
               id="kRQkAR05kAI"
               title="Organize-se no CeZPEM"
             />
