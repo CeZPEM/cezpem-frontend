@@ -61,9 +61,9 @@ export default function Home() {
                     height={89 * 2}
                   />
 
-                  <div className="absolute z-[0] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[180px] h-[74px] sm:w-[264px] sm:h-[98px]">
+                  <span className="absolute z-[0] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[180px] h-[74px] sm:w-[264px] sm:h-[98px]">
                     <Lottie animationData={highlightAnimation} loop={false} />
-                  </div>
+                  </span>
                 </span>
               </span>
             </h1>
