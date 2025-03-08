@@ -52,7 +52,7 @@ export default function Footer() {
 
           <div className="flex flex-1 md:max-w-[50%] flex-col py-4 md:py-0 overflow-hidden">
             {/* Ícones Sociais */}
-            <div className="flex flex-col flex-wrap md:flex-row w-24 md:w-full items-center justify-center md:justify-between mx-auto gap-8 md:gap-16 md:mr-0">
+            <div className="flex flex-col flex-wrap sm:flex-row w-24 sm:w-full items-center justify-center md:justify-between mx-auto gap-8 md:gap-16 md:mr-0">
               <a
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
