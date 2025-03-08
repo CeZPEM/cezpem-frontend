@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 
 type ProtectedEmailProps = {
   email: string;
+  className?: string;
 };
 
-export function ProtectedEmail({ email }: ProtectedEmailProps) {
+export function ProtectedEmail({ email, className }: ProtectedEmailProps) {
   const [showEmail, setShowEmail] = useState(false);
 
   useEffect(() => {
@@ -18,7 +19,9 @@ export function ProtectedEmail({ email }: ProtectedEmailProps) {
   }, []);
 
   return email && showEmail ? (
-    <a href={`mailto:${email}`}>{email}</a>
+    <a className={className || undefined} href={`mailto:${email}`}>
+      {email}
+    </a>
   ) : (
     <span>...</span>
   );
