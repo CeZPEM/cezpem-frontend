@@ -109,7 +109,7 @@ export default function Home() {
                 title="Organize-se no CeZPEM"
                 aspectHeight={16}
                 aspectWidth={9}
-                activatedClass="w-[100vw] h-[100vh]"
+                activatedClass="w-[100vw] max-h-[100vh]"
               />
             </div>
           </div>
