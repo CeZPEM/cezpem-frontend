@@ -70,7 +70,7 @@ export default function Home() {
                 Proteção de Dados Pessoais).
               </p>
 
-              <div className="w-auto flex flex-col px-4 md:px-0 mx-auto gap-4">
+              <div className="w-auto flex flex-col mx-auto gap-4">
                 <p className="w-full leading-tight font-archivo text-18px md:text-24px">
                   A Receita Federal se compromete a cumprir as normas previstas
                   na Lei Geral de Proteção de Dados Pessoais (LGPD), e respeitar
