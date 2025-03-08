@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-navyBlue text-white">
       <Container className="flex flex-col gap-6 md:gap-10 lg:gap-12">
-        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center gap-6 md:gap-16">
           {/* Logo e Texto */}
           <div className="text-center md:text-left space-y-2">
             <CezpemLogoText
@@ -50,9 +50,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-1 md:max-w-[50%] flex-col py-4 md:py-0">
+          <div className="flex flex-1 md:max-w-[50%] flex-col py-4 md:py-0 overflow-hidden">
             {/* Ícones Sociais */}
-            <div className="flex flex-col w-24 md:w-full sm:flex-row items-center justify-center md:justify-between mx-auto gap-8 md:gap-16 md:mr-0">
+            <div className="flex flex-col flex-wrap md:flex-row w-24 md:w-full items-center justify-center md:justify-between mx-auto gap-8 md:gap-16 md:mr-0">
               <a
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
@@ -77,7 +77,7 @@ export default function Footer() {
               <a
                 target="_blank"
                 href="https://soberana.tv"
-                className="hidden md:block hover:opacity-80 group"
+                className="hidden md:block hover:opacity-80 group mx-auto lg:mx-0"
               >
                 <SoberanaLogoText
                   size="small"
@@ -93,8 +93,8 @@ export default function Footer() {
 
         {/* Direitos e Links Adicionais */}
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row items-left justify-center">
-          <div className="w-full flex flex-col md:flex-row flex-wrap items-center gap-3 md:gap-12 text-gray-300">
-            <div className="flex flex-col leading-tight md:flex-row md:gap-2">
+          <div className="w-full flex flex-col lg:flex-row items-center gap-5 md:gap-12 text-gray-300 mb-6 md:mb-0">
+            <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
               <span className="text-gray-400">Contato geral:</span>
               <a
                 href="mailto:contato@cezpem.com.br"
@@ -104,7 +104,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="flex flex-col leading-tight md:flex-row md:gap-2">
+            <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
               <span className="text-gray-400">Relacionamento acadêmico:</span>
               <a
                 href="mailto:relacionamentoacademico@cezpem.com.br"
@@ -114,7 +114,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="hidden md:block flex-1" />
+            <div className="hidden lg:block flex-1" />
 
             <Link
               href="/termos"
