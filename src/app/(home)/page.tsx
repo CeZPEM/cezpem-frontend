@@ -91,12 +91,26 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mx-auto max-w-[960px] mt-14 md:mt-8 rounded-md overflow-hidden">
-            <YoutubePlayer
-              thumbnail="/video-cover.jpg"
-              id="kRQkAR05kAI"
-              title="Organize-se no CeZPEM"
-            />
+          <div className="mx-auto w-full max-w-[960px] mt-14 md:mt-8 rounded-md overflow-hidden">
+            <div className="hidden md:block">
+              <YoutubePlayer
+                thumbnail="/video-cover.jpg"
+                id="kRQkAR05kAI"
+                title="Organize-se no CeZPEM"
+                aspectHeight={9}
+                aspectWidth={16}
+              />
+            </div>
+
+            <div className="md:hidden">
+              <YoutubePlayer
+                thumbnail="/video-cover.jpg"
+                id="fIo4NwZXIHU"
+                title="Organize-se no CeZPEM"
+                aspectHeight={16}
+                aspectWidth={9}
+              />
+            </div>
           </div>
         </Container>
       </Section>
