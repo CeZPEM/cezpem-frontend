@@ -1,6 +1,7 @@
 import { FaInstagram, FaYoutube, FaDiscord } from "react-icons/fa";
 import Container from "./Container";
 import { CezpemLogoText, SoberanaLogoText } from "./Logos";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -109,12 +110,13 @@ export default function Footer() {
 
             <div className="hidden md:block flex-1" />
 
-            <a
-              href="#"
+            <Link
+              href="/termos"
               className="underline lg:no-underline hover:underline hover:text-red"
             >
               Termos de privacidade
-            </a>
+            </Link>
+
             <a
               target="_blank"
               href="https://docs.google.com/forms/d/e/1FAIpQLSf6qdWcaGJB9sKtX9Lf9k7i2ikAdAwzwwPw8yxeSuh6L7OE8g/viewform"
