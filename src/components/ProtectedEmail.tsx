@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-type ObfuscatedEmailProps = {
-  reversedEmail: string;
+type ProtectedEmailProps = {
+  email: string;
 };
 
-export function ObfuscatedEmail({ reversedEmail }: ObfuscatedEmailProps) {
+export function ProtectedEmail({ email }: ProtectedEmailProps) {
   const [showEmail, setShowEmail] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,6 @@ export function ObfuscatedEmail({ reversedEmail }: ObfuscatedEmailProps) {
     return () => clearTimeout(timer);
   }, []);
 
-  const email = reversedEmail?.split("")?.reverse()?.join("");
   return email && showEmail ? (
     <a href={`mailto:${email}`}>{email}</a>
   ) : (

@@ -3,7 +3,7 @@ import Container from "./Container";
 import { CezpemLogoText, SoberanaLogoText } from "./Logos";
 import Link from "next/link";
 import { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
-import { ObfuscatedEmail } from "./ObfuscatedEmail";
+import { ProtectedEmail } from "./ProtectedEmail";
 
 function SocialMediaLink({
   className,
@@ -111,11 +111,11 @@ export default function Footer() {
           <div className="w-full flex flex-col lg:flex-row items-center gap-5 md:gap-12 text-gray-300 mb-6 md:mb-0">
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
               <span className="text-gray-400">Contato geral:</span>
-              <ObfuscatedEmail reversedEmail="rb.moc.mepzec@otatnoc" />
+              <ProtectedEmail email="contato@cezpem.com.br" />
             </div>
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
               <span className="text-gray-400">Relacionamento acadêmico:</span>
-              <ObfuscatedEmail reversedEmail="rb.moc.mepzec@ocimedaca" />
+              <ProtectedEmail email="academico@cezpem.com.br" />
             </div>
 
             <div className="hidden lg:block flex-1" />
