@@ -179,6 +179,7 @@ export default function Home() {
             height={89}
           />
         </div>
+
         <div className="w-full h-full absolute top-0 left-0 z-0 overflow-hidden md:overflow-visible">
           <Image
             alt="CeZPEM"
