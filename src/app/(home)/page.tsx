@@ -35,7 +35,7 @@ export default function Home() {
     <Page>
       <Section
         id="inicio"
-        className="relative flex h-auto xs:h-[720px] md:h-auto md:min-h-[846px] bg-navyBlue"
+        className="relative flex pt-10 md:pt-0 h-auto md:min-h-[846px] bg-navyBlue"
       >
         <div className="w-full h-full absolute hidden md:block top-0 left-0 z-0 overflow-hidden">
           <Image
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
 
           <div className="mx-auto w-full max-w-[960px] mt-14 md:mt-8 rounded-md overflow-hidden">
-            <div className="hidden md:block">
+            <div className="h-full w-full max-h-screen max-w-[100vw] hidden md:block">
               <YoutubePlayer
                 thumbnail="/video-cover.jpg"
                 id="kRQkAR05kAI"
@@ -102,13 +102,14 @@ export default function Home() {
               />
             </div>
 
-            <div className="md:hidden">
+            <div className="h-full w-full max-h-screen max-w-[100vw] table md:hidden">
               <YoutubePlayer
                 thumbnail="/video-cover.jpg"
                 id="fIo4NwZXIHU"
                 title="Organize-se no CeZPEM"
                 aspectHeight={16}
                 aspectWidth={9}
+                activatedClass="w-[100vw] h-[100vh]"
               />
             </div>
           </div>
