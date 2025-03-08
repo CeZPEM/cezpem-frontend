@@ -24,7 +24,7 @@ export default function Footer() {
                 </strong>
               </p>
 
-              <p className="mx-auto w-full max-w-52 sm:max-w-none text-xs sm:text-sm text-gray-300 mb-4 sm:mb-0">
+              <div className="mx-auto w-full max-w-52 sm:max-w-none text-xs sm:text-sm text-gray-300 mb-4 sm:mb-0">
                 <span>Frente de massas de educação do coletivo</span>
 
                 <span className="inline-block md:hidden relative text-center md:text-left h-4 min-w-[96px] ml-2">
@@ -46,7 +46,7 @@ export default function Footer() {
                 >
                   @soberana.tv
                 </a>
-              </p>
+              </div>
             </div>
           </div>
 
