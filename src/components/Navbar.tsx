@@ -21,7 +21,7 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
 
   return (
     <nav
-      className={`flex flex-1 gap-y-3 gap-12 flex-wrap mx-auto w-full max-w-[576px] justify-between md:text-base ${
+      className={`flex flex-1 px-3 gap-y-3 gap-x-0 xl:gap-x-12 mx-auto w-full max-w-[576px] justify-between md:text-base ${
         className || ""
       }`}
     >
@@ -31,7 +31,7 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
           <Link
             key={item.label}
             href={`/#${newLink}`}
-            className={`underline group text-24px lg:no-underline ${
+            className={`group text-24px text-nowrap lg:no-underline ${
               // pathname === item.href
               pathname === item.label
                 ? `font-extrabold ${activeColorByVariant}`
@@ -52,7 +52,7 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
                 {item.label}
               </span>
             ) : (
-              <div className="text-center min-w-28">
+              <div className="text-center min-w-none lg:min-w-28">
                 <span className="group-hover:hidden">{item.label}</span>
                 <span className="hidden group-hover:block font-semibold">
                   Em breve

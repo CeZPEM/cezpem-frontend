@@ -18,17 +18,17 @@ export default function Header() {
       {/* Botão para abrir o Sidebar */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed right-5 top-4 md:hidden z-[51] p-2 bg-white shadow-lg rounded-lg"
+        className="fixed right-5 top-4 lg:hidden z-[51] p-2 bg-white shadow-lg rounded-lg"
       >
         <FiMenu size={28} />
       </button>
 
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      <header className="hidden md:flex bg-white shadow-md relative z-50">
+      <header className="hidden lg:flex bg-white shadow-md relative z-50">
         <Container className="relative !py-0">
           <div className="mx-auto flex flex-col md:flex-row md:gap-5 justify-between items-center py-3">
-            <div className="w-full max-w-48">
+            <div className="w-full min-w-48 max-w-48">
               <Link
                 href="/"
                 className="flex mr-auto ml-0 items-center justify-center"
@@ -37,13 +37,13 @@ export default function Header() {
               </Link>
             </div>
 
-            <Navbar variant="red" className="hidden md:flex" />
+            <Navbar variant="red" className="hidden lg:flex mx-auto" />
 
-            <div className="w-full max-w-48">
+            <div className="w-full min-w-48 max-w-48">
               <Link
                 target="_blank"
                 href="http://apoia.se/cezpem"
-                className="hidden md:flex group"
+                className="hidden lg:flex group w-"
               >
                 <Button className="w-full mt-4 md:mt-0">
                   <span className="flex flex-row w-full mx-auto text-center items-center gap-2">
