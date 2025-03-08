@@ -15,6 +15,8 @@ type SidebarProps = {
 export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   const pathname = usePathname();
 
+  const isNotHome = pathname !== "/";
+
   return (
     <aside
       className={`fixed top-0 left-0 h-full w-72 bg-white shadow transition-transform duration-300 z-[55] transform ${
@@ -41,10 +43,12 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               return (
                 <li key={item.label}>
                   <Link
-                    href={`#${newLink}`}
+                    href={`/#${newLink}`}
                     onClick={(e) => {
-                      e.preventDefault();
                       setIsOpen(false);
+
+                      if (isNotHome) return;
+                      e.preventDefault();
                       scrollSmoothlyTo(`#${newLink}`);
                     }}
                     className={`block p-2 rounded transition-colors duration-200 text-20px

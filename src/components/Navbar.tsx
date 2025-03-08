@@ -17,6 +17,8 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
     variant === "red" ? "text-black hover:text-red" : "text-white";
   const activeColorByVariant = variant === "red" ? "!text-red" : "";
 
+  const isNotHome = pathname !== "/";
+
   return (
     <nav
       className={`flex flex-1 gap-y-3 gap-12 flex-wrap mx-auto w-full max-w-[576px] justify-between md:text-base ${
@@ -28,7 +30,7 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
         return (
           <Link
             key={item.label}
-            href={`#${newLink}`}
+            href={`/#${newLink}`}
             className={`underline group text-24px lg:no-underline ${
               // pathname === item.href
               pathname === item.label
@@ -36,6 +38,7 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
                 : ""
             } ${textColorByVariant}`}
             onClick={(e) => {
+              if (isNotHome) return;
               e.preventDefault();
               scrollSmoothlyTo(`#${newLink}`);
             }}
