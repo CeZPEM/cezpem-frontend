@@ -94,46 +94,42 @@ export default function Footer() {
         {/* Direitos e Links Adicionais */}
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row items-left justify-center">
           <div className="w-full flex flex-col md:flex-row flex-wrap items-center gap-3 md:gap-12 text-gray-300">
-            <div>
-              <div className="flex flex-col leading-tight md:flex-row md:gap-2">
-                <span className="text-gray-400">Contato geral:</span>
-                <a
-                  href="mailto:contato@cezpem.com.br"
-                  className="underline lg:no-underline hover:underline hover:text-red"
-                >
-                  contato@cezpem.com.br
-                </a>
-              </div>
+            <div className="flex flex-col leading-tight md:flex-row md:gap-2">
+              <span className="text-gray-400">Contato geral:</span>
+              <a
+                href="mailto:contato@cezpem.com.br"
+                className="underline lg:no-underline hover:underline hover:text-red"
+              >
+                contato@cezpem.com.br
+              </a>
+            </div>
 
-              <div className="flex flex-col leading-tight md:flex-row md:gap-2">
-                <span className="text-gray-400">Relacionamento acadêmico:</span>
-                <a
-                  href="mailto:relacionamentoacademico@cezpem.com.br"
-                  className="underline lg:no-underline hover:underline hover:text-red"
-                >
-                  academico@cezpem.com.br
-                </a>
-              </div>
+            <div className="flex flex-col leading-tight md:flex-row md:gap-2">
+              <span className="text-gray-400">Relacionamento acadêmico:</span>
+              <a
+                href="mailto:relacionamentoacademico@cezpem.com.br"
+                className="underline lg:no-underline hover:underline hover:text-red"
+              >
+                academico@cezpem.com.br
+              </a>
             </div>
 
             <div className="hidden md:block flex-1" />
 
-            <div className="flex flex-col leading-tight md:flex-row md:gap-2">
-              <Link
-                href="/termos"
-                className="underline lg:no-underline hover:underline hover:text-red"
-              >
-                Termos de privacidade
-              </Link>
+            <Link
+              href="/termos"
+              className="underline lg:no-underline hover:underline hover:text-red"
+            >
+              Termos de privacidade
+            </Link>
 
-              <a
-                target="_blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSf6qdWcaGJB9sKtX9Lf9k7i2ikAdAwzwwPw8yxeSuh6L7OE8g/viewform"
-                className="underline lg:no-underline hover:underline hover:text-red"
-              >
-                Organize-se!
-              </a>
-            </div>
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf6qdWcaGJB9sKtX9Lf9k7i2ikAdAwzwwPw8yxeSuh6L7OE8g/viewform"
+              className="underline lg:no-underline hover:underline hover:text-red"
+            >
+              Organize-se!
+            </a>
           </div>
         </div>
       </Container>
