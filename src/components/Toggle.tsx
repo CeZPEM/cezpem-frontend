@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { IoTriangleSharp } from "react-icons/io5";
 
@@ -7,19 +7,32 @@ type ToggleProps = {
   children: React.ReactNode;
   open?: boolean;
   className?: string;
+  onClick?: () => void;
 };
 
-function Toggle({ title, children, open, className }: ToggleProps) {
+function Toggle({ title, children, onClick, open, className }: ToggleProps) {
   const [isOpen, setIsOpen] = useState(open === true);
 
   const handleToggle = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    if (open !== undefined) {
+      setIsOpen(open);
+    }
+  }, [open]);
 
   return (
     <div className={`w-full ${className ? className : ""}`}>
       <div className="flex flex-row-reverse gap-4 justify-center items-center">
         <Button
           variant="primary"
-          onClick={handleToggle}
+          onClick={() => {
+            if (onClick) {
+              onClick();
+            } else {
+              handleToggle();
+            }
+          }}
           className="w-full font-bold !justify-start pl-4 pr-2"
         >
           <span className="w-full flex text-left md:text-20px">{title}</span>

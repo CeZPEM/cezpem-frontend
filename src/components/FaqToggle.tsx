@@ -2,9 +2,15 @@ import Markdown from "react-markdown";
 import Toggle from "./Toggle";
 import { FaqItem } from "@/types";
 
-export function FaqToggle(faqItem: FaqItem) {
+type FaqToggleProps = {
+  faqItem: FaqItem;
+  open?: boolean;
+  onClick?: () => void;
+};
+
+export function FaqToggle({ faqItem, onClick, open }: FaqToggleProps) {
   return (
-    <Toggle title={faqItem.title}>
+    <Toggle onClick={onClick} open={open} title={faqItem.title}>
       <Markdown
         components={{
           a: ({ node, href, children, ...props }) => {
