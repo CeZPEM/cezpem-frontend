@@ -16,7 +16,7 @@ export default function Footer() {
               className="mx-auto md:mx-0 w-32"
             />
 
-            <div className="font-archivo">
+            <div className="font-archivo flex flex-col items-center md:items-start gap-3 sm:gap-1">
               <p className="text-md">
                 <strong>
                   Centro <span className="text-red">Zoia Prestes</span> de
@@ -24,7 +24,7 @@ export default function Footer() {
                 </strong>
               </p>
 
-              <p className="mx-auto max-w-52 sm:max-w-none text-xs sm:text-sm text-gray-300 mb-4 sm:mb-0">
+              <p className="mx-auto w-full max-w-52 sm:max-w-none text-xs sm:text-sm text-gray-300 mb-4 sm:mb-0">
                 <span>Frente de massas de educação do coletivo</span>
 
                 <span className="inline-block md:hidden relative text-center md:text-left h-4 min-w-[96px] ml-2">
