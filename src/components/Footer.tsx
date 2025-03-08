@@ -2,6 +2,22 @@ import { FaInstagram, FaYoutube, FaDiscord } from "react-icons/fa";
 import Container from "./Container";
 import { CezpemLogoText, SoberanaLogoText } from "./Logos";
 import Link from "next/link";
+import { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
+import { ProtectedEmail } from "./ProtectedEmail";
+
+function SocialMediaLink({
+  className,
+  ...props
+}: DetailedHTMLProps<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  HTMLAnchorElement
+>) {
+  return (
+    <a className={`hover:text-red ${className || ""}`} {...props}>
+      {props.children}
+    </a>
+  );
+}
 
 export default function Footer() {
   return (
@@ -16,7 +32,7 @@ export default function Footer() {
               className="mx-auto md:mx-0 w-32"
             />
 
-            <div className="font-archivo flex flex-col items-center md:items-start gap-3 sm:gap-1">
+            <div className="font-archivo text-18px md:text-20px flex flex-col items-center md:items-start gap-3 sm:gap-1">
               <p className="text-md">
                 <strong>
                   Centro <span className="text-red">Zoia Prestes</span> de
@@ -24,14 +40,14 @@ export default function Footer() {
                 </strong>
               </p>
 
-              <div className="mx-auto w-full max-w-52 sm:max-w-none text-xs sm:text-sm text-gray-300 mb-4 sm:mb-0">
+              <div className="mx-auto w-full max-w-72 sm:max-w-none text-14px md:text-16px text-gray-300 mb-4 sm:mb-0">
                 <span>Frente de massas de educação do coletivo</span>
 
-                <span className="inline-block md:hidden relative text-center md:text-left h-4 min-w-[96px] ml-2">
-                  <span className="h-4">
+                <span className="inline-block md:hidden relative text-center md:text-left h-[18px] min-w-[96px] ml-2">
+                  <span className="h-2">
                     <a
                       target="_blank"
-                      href="https://soberana.tv"
+                      href="https://www.instagram.com/soberana.tv/"
                       className="md:hidden hover:opacity-80 inline-block absolute top-0 left-0"
                     >
                       <SoberanaLogoText size="small" className="w-24" />
@@ -41,7 +57,7 @@ export default function Footer() {
 
                 <a
                   target="_blank"
-                  href="https://soberana.tv"
+                  href="https://www.instagram.com/soberana.tv/"
                   className="hidden md:inline-block text-blue-300 hover:text-red ml-1"
                 >
                   @soberana.tv
@@ -53,28 +69,25 @@ export default function Footer() {
           <div className="flex flex-1 md:max-w-[50%] flex-col py-4 md:py-0">
             {/* Ícones Sociais */}
             <div className="flex flex-col flex-wrap sm:flex-row w-24 sm:w-full items-center justify-center md:justify-between mx-auto gap-8 md:gap-16 md:mr-0">
-              <a
+              <SocialMediaLink
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
-                className="hover:text-red"
               >
                 <FaInstagram size={32} />
-              </a>
-              <a
+              </SocialMediaLink>
+              <SocialMediaLink
                 target="_blank"
                 href="https://discord.gg/hjZtJmCmVh"
-                className="hover:text-red"
               >
                 <FaDiscord size={32} />
-              </a>
-              <a
+              </SocialMediaLink>
+              <SocialMediaLink
                 target="_blank"
                 href="https://www.youtube.com/@CeZPEM"
-                className="hover:text-red"
               >
                 <FaYoutube size={32} />
-              </a>
-              <a
+              </SocialMediaLink>
+              <SocialMediaLink
                 target="_blank"
                 href="https://soberana.tv"
                 className="hidden md:block hover:opacity-80 group mx-auto lg:mx-0"
@@ -83,7 +96,7 @@ export default function Footer() {
                   size="small"
                   className="w-32 group-hover:scale-105 transition-transform duration-300 ease-in"
                 />
-              </a>
+              </SocialMediaLink>
             </div>
           </div>
         </div>
@@ -98,22 +111,11 @@ export default function Footer() {
           <div className="w-full flex flex-col lg:flex-row items-center gap-5 md:gap-12 text-gray-300 mb-6 md:mb-0">
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
               <span className="text-gray-400">Contato geral:</span>
-              <a
-                href="mailto:contato@cezpem.com.br"
-                className="underline lg:no-underline hover:underline hover:text-red"
-              >
-                contato@cezpem.com.br
-              </a>
+              <ProtectedEmail email="contato@cezpem.com.br" />
             </div>
-
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
               <span className="text-gray-400">Relacionamento acadêmico:</span>
-              <a
-                href="mailto:relacionamentoacademico@cezpem.com.br"
-                className="underline lg:no-underline hover:underline hover:text-red"
-              >
-                academico@cezpem.com.br
-              </a>
+              <ProtectedEmail email="academico@cezpem.com.br" />
             </div>
 
             <div className="hidden lg:block flex-1" />
