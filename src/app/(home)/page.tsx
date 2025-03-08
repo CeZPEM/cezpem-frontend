@@ -35,7 +35,7 @@ export default function Home() {
     <Page>
       <Section
         id="inicio"
-        className="relative flex h-screen xs:h-[720px] md:h-auto md:min-h-[846px] bg-navyBlue"
+        className="relative flex h-auto xs:h-[720px] md:h-auto md:min-h-[846px] bg-navyBlue"
       >
         <div className="w-full h-full absolute hidden md:block top-0 left-0 z-0 overflow-hidden">
           <Image
@@ -55,7 +55,7 @@ export default function Home() {
           />
         </div>
 
-        <Container className="relative my-auto px-0 sm:px-4 pb-10 z-10">
+        <Container className="relative my-auto !px-2 md:px-4 pb-10 z-10">
           <div className="w-full text-white text-center flex flex-col items-center justify-center gap-2 px-4 sm:px-0">
             <h1 className="text-40px sm:text-64px font-bold">
               Conheça o{" "}
