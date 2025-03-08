@@ -2,6 +2,21 @@ import { FaInstagram, FaYoutube, FaDiscord } from "react-icons/fa";
 import Container from "./Container";
 import { CezpemLogoText, SoberanaLogoText } from "./Logos";
 import Link from "next/link";
+import { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
+
+function SocialMediaLink({
+  className,
+  ...props
+}: DetailedHTMLProps<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  HTMLAnchorElement
+>) {
+  return (
+    <a className={`hover:text-red ${className || ""}`} {...props}>
+      {props.children}
+    </a>
+  );
+}
 
 export default function Footer() {
   return (
@@ -53,28 +68,25 @@ export default function Footer() {
           <div className="flex flex-1 md:max-w-[50%] flex-col py-4 md:py-0">
             {/* Ícones Sociais */}
             <div className="flex flex-col flex-wrap sm:flex-row w-24 sm:w-full items-center justify-center md:justify-between mx-auto gap-8 md:gap-16 md:mr-0">
-              <a
+              <SocialMediaLink
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
-                className="hover:text-red"
               >
                 <FaInstagram size={32} />
-              </a>
-              <a
+              </SocialMediaLink>
+              <SocialMediaLink
                 target="_blank"
                 href="https://discord.gg/hjZtJmCmVh"
-                className="hover:text-red"
               >
                 <FaDiscord size={32} />
-              </a>
-              <a
+              </SocialMediaLink>
+              <SocialMediaLink
                 target="_blank"
                 href="https://www.youtube.com/@CeZPEM"
-                className="hover:text-red"
               >
                 <FaYoutube size={32} />
-              </a>
-              <a
+              </SocialMediaLink>
+              <SocialMediaLink
                 target="_blank"
                 href="https://soberana.tv"
                 className="hidden md:block hover:opacity-80 group mx-auto lg:mx-0"
@@ -83,7 +95,7 @@ export default function Footer() {
                   size="small"
                   className="w-32 group-hover:scale-105 transition-transform duration-300 ease-in"
                 />
-              </a>
+              </SocialMediaLink>
             </div>
           </div>
         </div>
