@@ -45,13 +45,6 @@ export default function Home() {
 
               <PageTitle className="relative text-center sm:!max-w-none !w-full mx-auto">
                 <span className="relative z-10">Política de Privacidade</span>
-                <Image
-                  alt="CeZPEM"
-                  src="/details-text.png"
-                  className="absolute z-0 m-auto w-full max-w-none sm:max-w-[360px] lg:max-w-[540px] transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-8 md:top-12"
-                  width={484 * 2}
-                  height={28 * 2}
-                />
               </PageTitle>
             </div>
 
