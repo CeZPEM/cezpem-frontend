@@ -113,14 +113,14 @@ export default function Footer() {
               <span className="text-gray-400">Contato Geral:</span>
               <ProtectedEmail
                 className="underline"
-                email="contato@cezpem.com.br"
+                email="Y29udGF0b0BjZXpwZW0uY29tLmJy"
               />
             </div>
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
               <span className="text-gray-400">Relacionamento Acadêmico:</span>
               <ProtectedEmail
                 className="underline"
-                email="academico@cezpem.com.br"
+                email="YWNhZGVtaWNvQGNlenBlbS5jb20uYnI="
               />
             </div>
 
