@@ -102,7 +102,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="h-full w-full max-h-[98vh] max-w-[100vw] md:hidden">
+            <div className="h-full w-full max-h-[98vh] max-w-[100vw] md:hidden [&>article]:max-h-[94vh] md:[&>article]:max-h-none">
               <YoutubePlayer
                 thumbnail="/video-cover.jpg"
                 id="fIo4NwZXIHU"
@@ -110,7 +110,6 @@ export default function Home() {
                 aspectHeight={16}
                 aspectWidth={9}
                 activatedClass="w-[100vw] max-h-[98vh] w-full h-full [&>button]:hidden"
-                wrapperClass="yt-lite"
               />
             </div>
           </div>
@@ -166,7 +165,7 @@ export default function Home() {
                 tirar suas dúvidas de forma direta com os professores.
               </p>
 
-              <div className="w-full mt-2 md:my-10 ml-auto flex ">
+              <div className="w-full mt-2 md:my-10 ml-auto flex">
                 <Link
                   target="_blank"
                   href="https://forms.gle/HvDTQTNZecfEvN6E8"
@@ -241,7 +240,7 @@ export default function Home() {
               colaboração é fundamental pra existência desse projeto.
             </p>
 
-            <div className="w-full md:my-10 ml-auto flex ">
+            <div className="w-full md:my-10 ml-auto flex">
               <Link
                 target="_blank"
                 href="http://apoia.se/cezpem"
