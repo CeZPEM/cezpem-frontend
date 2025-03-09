@@ -109,8 +109,8 @@ export default function Home() {
                 title="Organize-se no CeZPEM"
                 aspectHeight={16}
                 aspectWidth={9}
-                activatedClass="w-[100vw] max-h-[98vh]"
-                playerClass="w-full h-full"
+                activatedClass="w-[100vw] max-h-[98vh] w-full h-full [&>button]:hidden"
+                wrapperClass="yt-lite"
               />
             </div>
           </div>
