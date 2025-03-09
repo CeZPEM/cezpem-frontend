@@ -25,7 +25,10 @@ function PageTitle({ children, className }: PageTitleProps) {
 export default function Home() {
   return (
     <Page>
-      <Section id="termos" className="min-h-screen flex items-end">
+      <Section
+        id="termos"
+        className="min-h-screen flex items-end pb-10 md:pb-20"
+      >
         <Container className="mt-8 md:mt-auto md:mb-0 overflow-hidden">
           <div className="flex flex-col gap-4 md:gap-8">
             <div className="w-full flex flex-col px-0 md:px-0 mx-auto">
@@ -34,7 +37,7 @@ export default function Home() {
                 <Image
                   alt="CeZPEM"
                   src="/details-text.png"
-                  className="absolute z-0 m-auto w-full max-w-72 md:max-w-[480px] transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-8 md:top-12"
+                  className="absolute z-0 m-auto w-full max-w-72 md:max-w-[400px] transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-8 md:top-12"
                   width={484 * 2}
                   height={28 * 2}
                 />
@@ -45,7 +48,7 @@ export default function Home() {
                 <Image
                   alt="CeZPEM"
                   src="/details-text.png"
-                  className="absolute z-0 m-auto w-full max-w-none sm:max-w-80 md:max-w-[480px] transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-8 md:top-12"
+                  className="absolute z-0 m-auto w-full max-w-none sm:max-w-[360px] lg:max-w-[540px] transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-8 md:top-12"
                   width={484 * 2}
                   height={28 * 2}
                 />
