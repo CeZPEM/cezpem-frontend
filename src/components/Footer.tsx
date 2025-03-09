@@ -110,14 +110,14 @@ export default function Footer() {
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row items-left justify-center">
           <div className="w-full flex flex-col lg:flex-row items-center gap-5 md:gap-12 text-gray-300 mb-6 md:mb-0">
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
-              <span className="text-gray-400">Contato geral:</span>
+              <span className="text-gray-400">Contato Geral:</span>
               <ProtectedEmail
                 className="underline"
                 email="contato@cezpem.com.br"
               />
             </div>
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
-              <span className="text-gray-400">Relacionamento acadêmico:</span>
+              <span className="text-gray-400">Relacionamento Acadêmico:</span>
               <ProtectedEmail
                 className="underline"
                 email="academico@cezpem.com.br"
