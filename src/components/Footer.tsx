@@ -103,7 +103,7 @@ export default function Footer() {
       </Container>
 
       {/* Linha Separadora */}
-      <div className="hidden md:block border-t border-gray-500" />
+      <div className="hidden md:block border-t border-gray-500 " />
 
       <Container className="flex flex-col gap-6 md:gap-10 lg:gap-12">
         {/* Direitos e Links Adicionais */}
