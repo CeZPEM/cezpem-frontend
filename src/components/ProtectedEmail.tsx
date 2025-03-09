@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import SimpleLoader from "./SimpleLoader";
 
 type ProtectedEmailProps = {
   email: string;
@@ -35,6 +36,8 @@ export function ProtectedEmail({ email, className }: ProtectedEmailProps) {
       {decodedEmail}
     </a>
   ) : (
-    <span>...</span>
+    <div className="my-auto pt-1 flex items-center justify-center h-full leading-tight">
+      <SimpleLoader />
+    </div>
   );
 }
