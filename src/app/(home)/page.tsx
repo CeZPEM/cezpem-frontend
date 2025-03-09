@@ -104,13 +104,14 @@ export default function Home() {
 
             <div className="h-full w-full max-h-[98vh] max-w-[100vw] md:hidden">
               <YoutubePlayer
+                // ref={}
                 thumbnail="/video-cover.jpg"
                 id="fIo4NwZXIHU"
                 title="Organize-se no CeZPEM"
                 aspectHeight={16}
                 aspectWidth={9}
-                activatedClass="w-[100vw] max-h-[98vh]"
-                playerClass="w-full h-full"
+                activatedClass="w-[100vw] max-h-[98vh] w-full h-full [&>button]:hidden"
+                wrapperClass="yt-lite"
               />
             </div>
           </div>

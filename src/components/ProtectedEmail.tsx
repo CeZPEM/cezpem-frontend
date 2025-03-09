@@ -13,7 +13,7 @@ export function ProtectedEmail({ email, className }: ProtectedEmailProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowEmail(true);
-    }, 2000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
