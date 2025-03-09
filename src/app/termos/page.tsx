@@ -48,7 +48,7 @@ export default function Home() {
               </PageTitle>
             </div>
 
-            <div className="w-auto flex flex-col px-4 md:px-0 mx-auto gap-4 md:gap-8">
+            <div className="w-auto flex text-justify flex-col px-4 md:px-0 mx-auto gap-4 md:gap-8">
               <div className="w-full flex flex-col gap-4">
                 {/* Seção 1 - Termos de Uso */}
                 <h3 className="font-archivo text-24px md:text-28px font-bold">
