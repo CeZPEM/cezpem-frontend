@@ -8,19 +8,24 @@ type ProtectedEmailProps = {
 };
 
 export function ProtectedEmail({ email, className }: ProtectedEmailProps) {
-  const [showEmail, setShowEmail] = useState(false);
+  const [decodedEmail, setDecodedEmail] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowEmail(true);
+      try {
+        const decoded = atob(email);
+        setDecodedEmail(decoded);
+      } catch (error) {
+        console.error("Erro ao decodificar o email:", error);
+      }
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [email]);
 
-  return email && showEmail ? (
-    <a className={className || undefined} href={`mailto:${email}`}>
-      {email}
+  return decodedEmail ? (
+    <a className={className} href={`mailto:${decodedEmail}`}>
+      {decodedEmail}
     </a>
   ) : (
     <span>...</span>
