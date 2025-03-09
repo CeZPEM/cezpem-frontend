@@ -104,7 +104,6 @@ export default function Home() {
 
             <div className="h-full w-full max-h-[98vh] max-w-[100vw] md:hidden">
               <YoutubePlayer
-                // ref={}
                 thumbnail="/video-cover.jpg"
                 id="fIo4NwZXIHU"
                 title="Organize-se no CeZPEM"
