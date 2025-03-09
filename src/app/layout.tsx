@@ -21,8 +21,7 @@ const archivo = Archivo({
 
 const isDevEnvironment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
 
-const siteTitle =
-  "CeZPEM - Educação Popular e Multidisciplinar com Consciência de Classe";
+const siteTitle = "CeZPEM - Centro Zoia Prestes de Educação Multidisciplinar";
 const siteDescription =
   "O CeZPEM é um centro de educação popular que oferece cursos acessíveis e formação política para estudantes e professores, promovendo a organização da classe docente e o acesso ao ensino de qualidade.";
 
