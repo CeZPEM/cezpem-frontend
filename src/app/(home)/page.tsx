@@ -244,7 +244,7 @@ export default function Home() {
               <Link
                 target="_blank"
                 href="http://apoia.se/cezpem"
-                className="w-full min-w-[320px] max-w-[320px] md:max-w-[360px] mx-auto md:mr-0"
+                className="w-full min-w-[320px] max-w-[320px] md:max-w-[360px] mx-auto md:ml-0"
               >
                 <Button
                   variant="secondary"
