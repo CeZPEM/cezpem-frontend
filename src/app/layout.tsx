@@ -1,5 +1,6 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { Petrona, Archivo } from "next/font/google";
 import Header from "@/components/Header";
@@ -19,9 +20,73 @@ const archivo = Archivo({
   variable: "--font-archivo",
 });
 
+const isDevEnvironment = process.env.NEXT_PUBLIC_ENVIRONMENT === "development";
+
+const siteTitle = "CeZPEM - Centro Zoia Prestes de Educação Multidisciplinar";
+const siteDescription =
+  "O CeZPEM é um centro de educação popular que oferece cursos acessíveis e formação política para estudantes e professores, promovendo a organização da classe docente e o acesso ao ensino de qualidade.";
+
+export const viewport: Viewport = {
+  themeColor: "#D81843",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+  userScalable: true,
+  interactiveWidget: "resizes-visual",
+};
+
 export const metadata: Metadata = {
-  title: "CeZPEM",
-  description: "Centro Zoia Prestes de Educação Multidisciplinar",
+  title: siteTitle,
+  description: siteDescription,
+  metadataBase: new URL("https://cezpem.com.br"),
+  keywords: [
+    "CeZPEM",
+    "Centro Zoia Prestes",
+    "educação multidisciplinar",
+    "educação popular",
+    "ensino acessível",
+    "cursinho pré-vestibular",
+    "ENEM",
+    "formação política",
+    "aulas online",
+    "educação crítica",
+    "conscientização de classe",
+    "professores organizados",
+    "socialismo e educação",
+  ],
+  creator: "Soberana TV",
+  robots: {
+    "max-image-preview": "large",
+    index: !isDevEnvironment,
+    follow: !isDevEnvironment,
+    nocache: false,
+    noimageindex: false,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    locale: "pt_BR",
+    type: "website",
+    url: "https://cezpem.com.br",
+    siteName: "CeZPEM",
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: "/images/cezpem-cover.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "CeZPEM - Educação Popular e Multidisciplinar",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -40,6 +105,8 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
+
+      <GoogleAnalytics gaId="G-SRJD3JE52M" />
     </html>
   );
 }

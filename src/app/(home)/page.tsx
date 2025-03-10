@@ -102,15 +102,14 @@ export default function Home() {
               />
             </div>
 
-            <div className="h-full w-full max-h-[98vh] max-w-[100vw] md:hidden">
+            <div className="h-full w-full max-h-[98vh] max-w-[100vw] md:hidden [&>article]:max-h-[94vh] md:[&>article]:max-h-none">
               <YoutubePlayer
                 thumbnail="/video-cover.jpg"
                 id="fIo4NwZXIHU"
                 title="Organize-se no CeZPEM"
                 aspectHeight={16}
                 aspectWidth={9}
-                activatedClass="w-[100vw] max-h-[98vh]"
-                playerClass="w-full h-full"
+                activatedClass="w-[100vw] max-h-[98vh] w-full h-full [&>button]:hidden"
               />
             </div>
           </div>
@@ -166,7 +165,7 @@ export default function Home() {
                 tirar suas dúvidas de forma direta com os professores.
               </p>
 
-              <div className="w-full mt-2 md:my-10 ml-auto flex ">
+              <div className="w-full mt-2 md:my-10 ml-auto flex">
                 <Link
                   target="_blank"
                   href="https://forms.gle/HvDTQTNZecfEvN6E8"
@@ -208,14 +207,14 @@ export default function Home() {
           <Image
             alt="CeZPEM"
             src="/piggy-bank-right.png"
-            className="absolute -top-1 md:-top-12 md:right-auto left-1/3 md:left-1/4 w-32 blur-[2px]"
+            className="absolute -top-1 md:-top-12 md:right-auto left-1/3 md:left-1/4 w-32 blur-[1px]"
             width={249}
             height={89}
           />
           <Image
             alt="CeZPEM"
             src="/piggy-bank-left.png"
-            className="absolute bottom-1/3 left-auto -right-5 md:-bottom-8 md:right-auto md:left-1/3 w-24 md:w-32"
+            className="absolute bottom-[40%] left-auto -right-5 md:-bottom-8 md:right-auto md:left-1/3 w-24 md:w-32"
             width={249}
             height={89}
           />
@@ -241,11 +240,11 @@ export default function Home() {
               colaboração é fundamental pra existência desse projeto.
             </p>
 
-            <div className="w-full md:my-10 ml-auto flex ">
+            <div className="w-full md:my-10 ml-auto flex">
               <Link
                 target="_blank"
                 href="http://apoia.se/cezpem"
-                className="w-full min-w-[320px] max-w-[320px] md:max-w-[360px] mx-auto md:mr-0"
+                className="w-full min-w-[320px] max-w-[320px] md:max-w-[360px] mx-auto md:ml-0"
               >
                 <Button
                   variant="secondary"
@@ -260,7 +259,7 @@ export default function Home() {
           <div className="w-full h-auto my-auto">
             <Image
               alt="CeZPEM"
-              src="/ajude-cezpem.png"
+              src="/piggy-bank-center.png"
               className="m-auto w-auto relative -left-8 md:-left-16 -bottom-6"
               width={484 * 2}
               height={28 * 2}

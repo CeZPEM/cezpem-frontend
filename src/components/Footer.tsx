@@ -103,28 +103,28 @@ export default function Footer() {
       </Container>
 
       {/* Linha Separadora */}
-      <div className="hidden md:block border-t border-gray-500" />
+      <div className="hidden md:block border-t border-gray-500 " />
 
       <Container className="flex flex-col gap-6 md:gap-10 lg:gap-12">
         {/* Direitos e Links Adicionais */}
         <div className="w-ful md:w-auto text-center text-md flex flex-col md:flex-row items-left justify-center">
           <div className="w-full flex flex-col lg:flex-row items-center gap-5 md:gap-12 text-gray-300 mb-6 md:mb-0">
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
-              <span className="text-gray-400">Contato geral:</span>
+              <span className="text-gray-400">Contato Geral:</span>
               <ProtectedEmail
                 className="underline"
-                email="contato@cezpem.com.br"
+                email="Y29udGF0b0BjZXpwZW0uY29tLmJy"
               />
             </div>
             <div className="flex flex-col leading-tight xl:flex-row md:gap-2 lg:items-start">
-              <span className="text-gray-400">Relacionamento acadêmico:</span>
+              <span className="text-gray-400">Relacionamento Acadêmico:</span>
               <ProtectedEmail
                 className="underline"
-                email="academico@cezpem.com.br"
+                email="YWNhZGVtaWNvQGNlenBlbS5jb20uYnI="
               />
             </div>
 
-            <div className="hidden lg:block flex-1" />
+            <div className="hidden lg:block flex-1 " />
 
             <Link
               href="/termos"
