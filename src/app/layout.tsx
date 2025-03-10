@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { Petrona, Archivo } from "next/font/google";
 import Header from "@/components/Header";
@@ -104,6 +105,8 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
+
+      <GoogleAnalytics gaId="G-SRJD3JE52M" />
     </html>
   );
 }
