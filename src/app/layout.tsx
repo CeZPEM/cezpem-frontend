@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import { Petrona, Archivo } from "next/font/google";
 import Header from "@/components/Header";
@@ -25,9 +25,20 @@ const siteTitle = "CeZPEM - Centro Zoia Prestes de Educação Multidisciplinar";
 const siteDescription =
   "O CeZPEM é um centro de educação popular que oferece cursos acessíveis e formação política para estudantes e professores, promovendo a organização da classe docente e o acesso ao ensino de qualidade.";
 
+export const viewport: Viewport = {
+  themeColor: "#D81843",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+  userScalable: true,
+  interactiveWidget: "resizes-visual",
+};
+
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
+  metadataBase: new URL("https://cezpem.com.br"),
   keywords: [
     "CeZPEM",
     "Centro Zoia Prestes",
@@ -43,11 +54,6 @@ export const metadata: Metadata = {
     "professores organizados",
     "socialismo e educação",
   ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   creator: "Soberana TV",
   robots: {
     "max-image-preview": "large",
