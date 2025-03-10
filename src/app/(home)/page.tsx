@@ -207,14 +207,14 @@ export default function Home() {
           <Image
             alt="CeZPEM"
             src="/piggy-bank-right.png"
-            className="absolute -top-1 md:-top-12 md:right-auto left-1/3 md:left-1/4 w-32 blur-[2px]"
+            className="absolute -top-1 md:-top-12 md:right-auto left-1/3 md:left-1/4 w-32 blur-[1px]"
             width={249}
             height={89}
           />
           <Image
             alt="CeZPEM"
             src="/piggy-bank-left.png"
-            className="absolute bottom-1/3 left-auto -right-5 md:-bottom-8 md:right-auto md:left-1/3 w-24 md:w-32"
+            className="absolute bottom-[40%] left-auto -right-5 md:-bottom-8 md:right-auto md:left-1/3 w-24 md:w-32"
             width={249}
             height={89}
           />
