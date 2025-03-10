@@ -259,7 +259,7 @@ export default function Home() {
           <div className="w-full h-auto my-auto">
             <Image
               alt="CeZPEM"
-              src="/ajude-cezpem.png"
+              src="/piggy-bank-center.png"
               className="m-auto w-auto relative -left-8 md:-left-16 -bottom-6"
               width={484 * 2}
               height={28 * 2}
