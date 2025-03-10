@@ -130,7 +130,7 @@ export default function Footer() {
               href="/termos"
               className="underline lg:no-underline hover:underline hover:text-red"
             >
-              Termos de privacidade
+              Termos de Uso
             </Link>
 
             <a
