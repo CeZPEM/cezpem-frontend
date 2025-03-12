@@ -95,7 +95,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${petrona.variable} ${archivo.variable}`}>
+    <html lang="pt-BR" className={`${petrona.variable} ${archivo.variable}`}>
       <body className="font-petrona antialiased">
         <div className="w-full min-h-screen">
           <Header />
