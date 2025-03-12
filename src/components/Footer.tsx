@@ -124,13 +124,13 @@ export default function Footer() {
               />
             </div>
 
-            <div className="hidden lg:block flex-1 " />
+            <div className="hidden lg:block flex-1" />
 
             <Link
               href="/termos"
               className="underline lg:no-underline hover:underline hover:text-red"
             >
-              Termos de privacidade
+              Termos de Uso
             </Link>
 
             <a
