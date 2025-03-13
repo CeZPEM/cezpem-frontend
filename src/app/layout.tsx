@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { Petrona, Archivo } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleAnalyticsWrapper from "@/components/GoogleAnalyticsWrapper";
 
 const petrona = Petrona({
   weight: ["400", "500", "600", "700"],
@@ -106,7 +106,7 @@ export default function RootLayout({
         </div>
       </body>
 
-      <GoogleAnalytics gaId="G-SRJD3JE52M" />
+      <GoogleAnalyticsWrapper />
     </html>
   );
 }
