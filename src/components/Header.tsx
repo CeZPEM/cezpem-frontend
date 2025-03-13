@@ -1,32 +1,18 @@
-"use client";
-
 import { Button } from "./Button";
 import Navbar from "./Navbar";
 import { CezpemLogoText } from "./Logos";
 import Container from "./Container";
 import Link from "next/link";
-import { FiMenu } from "react-icons/fi";
-import Sidebar from "./Sidebar";
-import { useState } from "react";
+
 import { IoMdStar } from "react-icons/io";
+import MobileMenu from "./MobileMenu";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
-      {/* Botão para abrir o Sidebar */}
-      <button
-        name="Abrir menu"
-        onClick={() => setIsOpen(true)}
-        className="fixed right-5 top-4 lg:hidden z-[51] p-2 bg-white shadow-lg rounded-lg"
-      >
-        <FiMenu size={28} />
-      </button>
+      <MobileMenu />
 
-      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-
-      <header className="hidden lg:flex bg-white shadow-md relative z-50">
+      <header className="hidden lg:flex bg-white shadow-md relative z-50 h-[78px]">
         <Container className="relative !py-0">
           <div className="mx-auto flex flex-col md:flex-row md:gap-5 justify-between items-center py-3">
             <div className="w-full min-w-48 max-w-48">
@@ -60,14 +46,6 @@ export default function Header() {
           </div>
         </Container>
       </header>
-
-      {/* Overlay para fechar o Sidebar ao clicar fora */}
-      {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black/30 z-[52]"
-        />
-      )}
     </>
   );
 }
