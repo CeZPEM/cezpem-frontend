@@ -17,6 +17,7 @@ export default function Header() {
     <>
       {/* Botão para abrir o Sidebar */}
       <button
+        name="Abrir menu"
         onClick={() => setIsOpen(true)}
         className="fixed right-5 top-4 lg:hidden z-[51] p-2 bg-white shadow-lg rounded-lg"
       >
