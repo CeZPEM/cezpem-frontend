@@ -124,7 +124,7 @@ export default function Home() {
 
       <Section
         id="cursinho"
-        className="h-auto md:h-[660px] lg:h-auto xl:h-auto flex items-end"
+        className="h-auto md:h-[660px] lg:h-auto xl:h-auto flex items-end overflow-hidden"
       >
         <Container className="mt-8 md:mt-auto lg:mt-0 md:mb-0 !py-0 !px-0 md:px-4">
           <div className="flex flex-col-reverse xl:flex-row items-center md:items-end justify-center lg:gap-x-8">
