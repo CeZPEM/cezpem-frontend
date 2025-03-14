@@ -1,9 +1,9 @@
 "use client";
 
-import Page from "@/components/Page";
-
-import Section1 from "./components/Section1";
 import dynamic from "next/dynamic";
+
+import Page from "@/components/Page";
+import Section1 from "./components/Section1";
 
 // lazy-loaded
 const Section2 = dynamic(() => import("./components/Section2"));
