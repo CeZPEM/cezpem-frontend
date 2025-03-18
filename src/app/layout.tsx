@@ -36,9 +36,9 @@ export const viewport: Viewport = {
   interactiveWidget: "resizes-visual",
 };
 
-const BASE_URL = isDevEnvironment
-  ? "https://dev.cezpem.com.br"
-  : "https://cezpem.com.br";
+// const BASE_URL = isDevEnvironment
+//   ? "https://dev.cezpem.com.br"
+//   : "https://cezpem.com.br";
 
 export const metadata: Metadata = {
   title: siteTitle,
@@ -78,11 +78,23 @@ export const metadata: Metadata = {
   openGraph: {
     locale: "pt_BR",
     type: "website",
-    url: BASE_URL,
+    url: new URL("https://cezpem.com.br"),
     siteName: "CeZPEM",
     title: siteTitle,
     description: siteDescription,
     images: [
+      {
+        url: "/cezpem-og-twitter.png",
+        width: 1200,
+        height: 675,
+        alt: "CeZPEM - Educação Popular e Multidisciplinar",
+      },
+      {
+        url: "/cezpem-og-facebook.png",
+        width: 1200,
+        height: 630,
+        alt: "CeZPEM - Educação Popular e Multidisciplinar",
+      },
       {
         url: "/cezpem-og-512.png",
         width: 512,
@@ -90,15 +102,15 @@ export const metadata: Metadata = {
         alt: "CeZPEM - Educação Popular e Multidisciplinar",
       },
       {
-        url: "/cezpem-og-192.png",
-        width: 192,
-        height: 192,
+        url: "/cezpem-og-300.png",
+        width: 300,
+        height: 300,
         alt: "CeZPEM - Educação Popular e Multidisciplinar",
       },
       {
-        url: "/cezpem-og-128.png",
-        width: 128,
-        height: 128,
+        url: "/cezpem-og-200.png",
+        width: 200,
+        height: 200,
         alt: "CeZPEM - Educação Popular e Multidisciplinar",
       },
     ],
