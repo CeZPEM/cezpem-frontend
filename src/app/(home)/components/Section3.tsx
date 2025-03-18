@@ -63,7 +63,7 @@ export default function Section3() {
             <Image
               alt="CeZPEM"
               src="/details-text-2.png"
-              className="absolute z-0 w-auto transform -translate-y-1/2 top-7 left-0 md:top-12 md:-right-4"
+              className="absolute z-0 w-auto transform -translate-y-1/2 top-7 left-0 md:top-9 md:-right-4"
               width={484 * 2}
               height={28 * 2}
             />
