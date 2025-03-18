@@ -36,6 +36,10 @@ export const viewport: Viewport = {
   interactiveWidget: "resizes-visual",
 };
 
+const BASE_URL = isDevEnvironment
+  ? "https://dev.cezpem.com.br"
+  : "https://cezpem.com.br";
+
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
@@ -74,15 +78,27 @@ export const metadata: Metadata = {
   openGraph: {
     locale: "pt_BR",
     type: "website",
-    url: "https://cezpem.com.br",
+    url: BASE_URL,
     siteName: "CeZPEM",
     title: siteTitle,
     description: siteDescription,
     images: [
       {
-        url: "/images/cezpem-cover.jpg",
-        width: 1920,
-        height: 1080,
+        url: "/cezpem-og-512.png",
+        width: 512,
+        height: 512,
+        alt: "CeZPEM - Educação Popular e Multidisciplinar",
+      },
+      {
+        url: "/cezpem-og-192.png",
+        width: 192,
+        height: 192,
+        alt: "CeZPEM - Educação Popular e Multidisciplinar",
+      },
+      {
+        url: "/cezpem-og-128.png",
+        width: 128,
+        height: 128,
         alt: "CeZPEM - Educação Popular e Multidisciplinar",
       },
     ],
