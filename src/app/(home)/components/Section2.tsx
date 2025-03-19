@@ -46,7 +46,7 @@ export default function Section2() {
                 loading="lazy"
                 alt="CeZPEM"
                 src="/details-text.png"
-                className="absolute z-0 w-auto max-w-full left-1/2 ml-8 top-7 md:top-12 lg:top-12 lg:-right-11 transform -translate-y-1/2 -translate-x-1/2"
+                className="absolute z-0 w-auto max-w-full xs:w-full sm:max-w-[90%] sm:ml-1 md:max-w-full transform -translate-y-1/2 -translate-x-1/2 left-1/2 top-7 md:h-9 md:top-[38px] md:ml-4 lg:top-9 lg:ml-16 xl:ml-4"
                 width={484 * 2}
                 height={28 * 2}
               />

@@ -29,7 +29,7 @@ export default function Section4() {
               loading="lazy"
               alt="CeZPEM"
               src="/details-text.png"
-              className="absolute h-1/2 z-0 w-auto transform -translate-x-1/2 top-5 md:top-8 left-1/2 ml-3"
+              className="absolute transform -translate-x-1/2 h-1/2 z-0 w-full max-w-96 md:w-full md:max-w-[440px] top-5 md:top-6 left-1/2 ml-3"
               width={484}
               height={28}
             />
