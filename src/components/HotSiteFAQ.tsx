@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import FaqService from "@/services/faqService";
 import { FaqResponse } from "@/types";
 import { FaqToggle } from "./FaqToggle";
 
@@ -9,13 +8,9 @@ export default function HotSiteFAQ() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const FetchFaqs = async () => {
-    const { data } = await FaqService.getFaqs(
-      {
-        "filters[area][name][$eq]": "Sobre",
-        populate: "area",
-      },
-      "order:asc"
-    );
+    const response = await fetch("/api/faqs");
+
+    const { data } = await response.json();
 
     setFaqArray(data);
   };
@@ -31,7 +26,7 @@ export default function HotSiteFAQ() {
           onClick={() => {
             setOpenFaqIndex(openFaqIndex === index ? null : index);
           }}
-          key={index}
+          key={`${faqItem.id}-${index}`}
           faqItem={faqItem}
           open={openFaqIndex === index}
         />
