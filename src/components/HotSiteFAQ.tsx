@@ -8,7 +8,7 @@ export default function HotSiteFAQ() {
   const [faqArray, setFaqArray] = useState<FaqResponse["data"] | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
-  const FetchFaqs = async () => {
+  const fetchFaqs = async () => {
     // for use with Nextjs API
     // const response = await fetch("/api/faqs");
     // const { data } = await response.json();
@@ -24,7 +24,7 @@ export default function HotSiteFAQ() {
   };
 
   useEffect(() => {
-    FetchFaqs();
+    fetchFaqs();
   }, []);
 
   return (
