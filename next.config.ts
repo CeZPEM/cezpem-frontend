@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
-  // distDir: "build",
+  output: "export",
   images: {
     domains: ["placehold.co"],
     unoptimized: true,
