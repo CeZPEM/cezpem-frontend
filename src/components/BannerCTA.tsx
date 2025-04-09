@@ -26,7 +26,7 @@ export default function BannerCTA() {
         className="w-full h-full"
       >
         {banners.map((src, index) => (
-          <SwiperSlide key={index} className="w-full h-full">
+          <SwiperSlide key={`${src}-${index}`} className="w-full h-full">
             <BannerImage
               src={src}
               alt={`Banner ${index + 1}`}
