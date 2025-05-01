@@ -27,6 +27,7 @@ export default function Section1Players() {
             thumbnail="/video-cover.jpg"
             id="kRQkAR05kAI"
             title="Organize-se no CeZPEM"
+            announce="Assista ao vídeo"
             aspectHeight={9}
             aspectWidth={16}
           />

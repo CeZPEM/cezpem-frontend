@@ -26,7 +26,8 @@ export function CezpemLogo({ className = "", size = "medium" }: LogoProps) {
     <div className={`flex items-center justify-center rounded ${className}`}>
       <Image
         src="/Logo-CeZPEM.svg"
-        alt="Logo do CeZPEM"
+        alt="" 
+        aria-hidden="true"
         width={width}
         height={height}
       />
@@ -46,7 +47,8 @@ export function CezpemText({
       <div className={`flex items-center justify-center rounded ${className}`}>
         <Image
           src="/logo-CeZPEM-branco.svg"
-          alt="Texto do CeZPEM"
+          alt="" 
+          aria-hidden="true"
           width={width}
           height={height}
         />
@@ -58,7 +60,8 @@ export function CezpemText({
     <div className={`flex items-center justify-center rounded ${className}`}>
       <Image
         src="/logo-CeZPEM-vermelho.svg"
-        alt="Texto do CeZPEM"
+        alt="" 
+        aria-hidden="true"
         width={width}
         height={height}
       />
@@ -99,7 +102,8 @@ export function LogoSoberana({ className = "", size = "medium" }: LogoProps) {
     <div className={`flex items-center justify-center rounded ${className}`}>
       <Image
         src="/Logo-Soberana.svg"
-        alt="Logo do Colégio Soberana"
+        alt="" 
+        aria-hidden="true"
         width={width}
         height={height}
       />
@@ -117,7 +121,8 @@ export function LogoSoberanaText({
     <div className={`flex items-center justify-center rounded ${className}`}>
       <Image
         src="/Texto-Soberana.svg"
-        alt="Texto do Colégio Soberana"
+        alt="" 
+        aria-hidden="true"
         width={width}
         height={height}
       />
