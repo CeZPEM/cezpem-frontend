@@ -50,6 +50,7 @@ export default function Footer() {
                       href="https://www.instagram.com/soberana.tv/"
                       className="md:hidden hover:opacity-80 inline-block absolute top-0 left-0"
                     >
+                      <span className="sr-only">Soberana.</span>
                       <SoberanaLogoText size="small" className="w-24" />
                     </a>
                   </span>
@@ -67,32 +68,38 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-1 md:max-w-[50%] flex-col py-4 md:py-0">
+            <span className="sr-only">Confira nossas redes sociais:</span>
             {/* Ícones Sociais */}
             <div className="flex flex-col flex-wrap sm:flex-row w-24 sm:w-full items-center justify-center md:justify-between mx-auto gap-8 md:gap-16 md:mr-0">
               <SocialMediaLink
                 target="_blank"
                 href="https://www.instagram.com/centrozoiaprestes"
               >
-                <FaInstagram size={32} />
+                <span className="sr-only">Instagram</span>
+                <FaInstagram aria-hidden="true" size={32} />
               </SocialMediaLink>
               <SocialMediaLink
                 target="_blank"
                 href="https://discord.gg/hjZtJmCmVh"
               >
-                <FaDiscord size={32} />
+                <span className="sr-only">Discord</span>
+                <FaDiscord aria-hidden="true" size={32} />
               </SocialMediaLink>
               <SocialMediaLink
                 target="_blank"
                 href="https://www.youtube.com/@CeZPEM"
               >
-                <FaYoutube size={32} />
+                <span className="sr-only">Youtube</span>
+                <FaYoutube aria-hidden="true" size={32} />
               </SocialMediaLink>
               <SocialMediaLink
                 target="_blank"
                 href="https://soberana.tv"
                 className="hidden md:block hover:opacity-80 group mx-auto lg:mx-0"
               >
+                <span className="sr-only">Site do Coletivo Soberana</span>
                 <SoberanaLogoText
+                  aria-hidden="true"
                   size="small"
                   className="w-32 group-hover:scale-105 transition-transform duration-300 ease-in"
                 />

@@ -21,6 +21,7 @@ export default function Header() {
                 className="flex mr-auto ml-0 items-center justify-center"
               >
                 <CezpemLogoText className="w-48 mr-auto" />
+                <span className="sr-only">Centro Zoia Prestes de Educação Multidisciplinar</span>
               </Link>
             </div>
 
@@ -34,7 +35,8 @@ export default function Header() {
               >
                 <Button className="w-full mt-4 md:mt-0">
                   <span className="flex flex-row w-full mx-auto text-center items-center gap-2">
-                    <IoMdStar
+                    <IoMdStar 
+                      aria-hidden="true"
                       className="group-hover:rotate-[216deg] transition-all duration-300 ease-in-out"
                       size={24}
                     />

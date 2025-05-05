@@ -35,7 +35,8 @@ export default function Home() {
               <PageTitle className="relative text-center sm:!max-w-none !w-full mx-auto">
                 <span className="relative z-10">Termos de Uso e</span>
                 <Image
-                  alt="CeZPEM"
+                  alt=""
+                  aria-hidden="true"
                   src="/details-text.png"
                   className="absolute z-0 m-auto w-full max-w-72 md:max-w-[400px] transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-8 md:top-12"
                   width={484 * 2}
