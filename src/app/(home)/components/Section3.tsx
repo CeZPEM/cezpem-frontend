@@ -16,7 +16,8 @@ export default function Section3() {
         <Image
           priority={false}
           loading="lazy"
-          alt="CeZPEM"
+          alt="" 
+          aria-hidden="true"
           src="/details-2-top-left.png"
           className="absolute -top-[1px] -left-[1px]"
           width={249}
@@ -26,7 +27,8 @@ export default function Section3() {
         <Image
           priority={false}
           loading="lazy"
-          alt="CeZPEM"
+          alt="" 
+          aria-hidden="true"
           src="/details-2-bottom-right.png"
           className="absolute -bottom-8 -right-[1px]"
           width={249}
@@ -38,7 +40,8 @@ export default function Section3() {
         <Image
           priority={false}
           loading="lazy"
-          alt="CeZPEM"
+          alt="" 
+          aria-hidden="true"
           src="/piggy-bank-right.png"
           className="absolute -top-1 md:-top-12 md:right-auto left-1/3 md:left-1/4 w-32 blur-[1px]"
           width={249}
@@ -48,7 +51,8 @@ export default function Section3() {
         <Image
           priority={false}
           loading="lazy"
-          alt="CeZPEM"
+          alt="" 
+          aria-hidden="true"
           src="/piggy-bank-left.png"
           className="absolute bottom-[40%] left-auto -right-5 md:-bottom-8 md:right-auto md:left-1/3 w-24 md:w-32"
           width={249}
@@ -58,10 +62,11 @@ export default function Section3() {
 
       <Container className="relative z-10 xl:min-h-[720px] grid grid-cols-1 xl:grid-cols-[36%_1fr] gap-8 md:gap-0 px-0">
         <div className="w-full h-auto my-auto flex flex-col gap-4 text-white">
-          <PageTitle className="relative text-center w-auto mx-auto mt-20 md:mt-0">
+          <PageTitle text="text-yellow" className="relative text-center w-auto mx-auto mt-20 md:mt-0">
             <span className="relative z-10">Apoie Nosso Projeto!</span>
             <Image
-              alt="CeZPEM"
+              alt="" 
+              aria-hidden="true"
               src="/details-text-2.png"
               className="absolute z-0 w-auto transform -translate-y-1/2 top-7 left-0 md:top-9 md:-right-4"
               width={484 * 2}
@@ -73,7 +78,7 @@ export default function Section3() {
             O objetivo do cursinho é garantir o acesso gratuito dos alunes à
             educação, sem deixar de remunerar os professores. Nossos recursos
             virão exclusivamente do financiamento coletivo, por isso a sua
-            colaboração é fundamental pra existência desse projeto.
+            colaboração é fundamental pra existência desse projeto. <span className="sr-only">Hoje já somos mais de 450 professores organizades, mais de 900 alunes, mais de 100 cursos ofertados e mais de 25 equipes.</span>
           </p>
 
           <div className="w-full md:my-10 ml-auto flex">
@@ -96,7 +101,8 @@ export default function Section3() {
           <Image
             priority={false}
             loading="lazy"
-            alt="CeZPEM"
+            alt="" 
+            aria-hidden="true"
             src="/piggy-bank-center.png"
             className="m-auto w-auto relative -left-8 md:-left-16 -bottom-6"
             width={484 * 2}
