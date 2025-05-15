@@ -39,7 +39,8 @@ function Toggle({ title, children, onClick, open, className }: ToggleProps) {
         </Button>
 
         <span className="flex justify-start items-center h-8 min-w-3 pl-1">
-          <IoTriangleSharp
+          <IoTriangleSharp 
+            aria-hidden="true"
             size={14}
             className={`transition-all duration-300 ease-in-out ${
               isOpen ? "transform rotate-180" : "transform rotate-90"

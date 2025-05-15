@@ -13,7 +13,8 @@ export default function Section4() {
           <Image
             priority={false}
             loading="lazy"
-            alt="CeZPEM"
+            alt="" 
+            aria-hidden="true"
             src="/CeZPEM-colagem.png"
             className="w-auto m-auto"
             width={1452}
@@ -27,7 +28,8 @@ export default function Section4() {
             <Image
               priority={false}
               loading="lazy"
-              alt="CeZPEM"
+              alt="" 
+              aria-hidden="true"
               src="/details-text.png"
               className="absolute transform -translate-x-1/2 h-1/2 z-0 w-full max-w-96 md:w-full md:max-w-[440px] top-5 md:top-6 left-1/2 ml-3"
               width={484}

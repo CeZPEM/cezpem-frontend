@@ -18,7 +18,8 @@ export default function Section2() {
             <Image
               priority={false}
               loading="lazy"
-              alt="CeZPEM"
+              alt="" 
+              aria-hidden="true"
               src="/enem-cezpem.png"
               className="max-w-none absolute md:relative w-[120vw] md:w-full md:max-w-[926px] -left-8 top-4 mx-auto md:left-auto xl:left-12 md:top-0"
               width={249 * 2}
@@ -30,7 +31,8 @@ export default function Section2() {
             <Image
               priority={false}
               loading="lazy"
-              alt="CeZPEM"
+              alt="" 
+              aria-hidden="true"
               src="/CeZPEM-bottom.png"
               className="w-full md:hidden max-w-[100px] mx-auto"
               width={249}
@@ -44,7 +46,8 @@ export default function Section2() {
               <Image
                 priority={false}
                 loading="lazy"
-                alt="CeZPEM"
+                alt="" 
+                aria-hidden="true"
                 src="/details-text.png"
                 className="absolute z-0 w-auto max-w-full xs:w-full sm:max-w-[90%] sm:ml-1 md:max-w-full transform -translate-y-1/2 -translate-x-1/2 left-1/2 top-7 md:h-9 md:top-[38px] md:ml-4 lg:top-9 lg:ml-16 xl:ml-4"
                 width={484 * 2}
@@ -53,7 +56,7 @@ export default function Section2() {
             </PageTitle>
 
             <p className="w-full leading-tight font-archivo text-20px md:text-24px md:mt-6 text-center lg:text-right">
-              O cursinho Popular do <b> CeZPEM </b> oferece aulas gratuitas
+              O cursinho Popular do <span className="sr-only">cezpem</span><b aria-hidden="true"> CeZPEM </b> oferece aulas gratuitas
               voltadas aos conteúdos da grade regular do Enem.
             </p>
 

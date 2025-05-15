@@ -1,6 +1,12 @@
 [build]
-  publish = "out"
   command = "yarn build"
+  publish = ".next"
+
+[functions]
+  directory = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "/*"
@@ -12,3 +18,7 @@
   to = "/404.html"
   status = 404
   force = true
+
+# https://docs.netlify.com/cli/manage-functions/#app
+# https://docs.netlify.com/configure-builds/file-based-configuration/#sample-netlify-toml-file
+# https://docs.netlify.com/configure-builds/file-based-configuration/#build-settings
