@@ -8,7 +8,11 @@ type FaqToggleProps = {
   onClick?: () => void;
 };
 
-export function FaqToggle({ faqItem, onClick, open }: FaqToggleProps) {
+export function FaqToggle({
+  faqItem,
+  onClick,
+  open,
+}: Readonly<FaqToggleProps>) {
   return (
     <Toggle onClick={onClick} open={open} title={faqItem.title}>
       <Markdown
