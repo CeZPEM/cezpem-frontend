@@ -10,7 +10,10 @@ type NavbarProps = {
   variant: "white" | "red";
 };
 
-export default function Navbar({ className = "", variant }: NavbarProps) {
+export default function Navbar({
+  className = "",
+  variant,
+}: Readonly<NavbarProps>) {
   const pathname = usePathname();
 
   const textColorByVariant =
@@ -27,18 +30,21 @@ export default function Navbar({ className = "", variant }: NavbarProps) {
     >
       {menuItems.map((item) => {
         const newLink = item.href.replace("/", "") || "inicio";
+        const isExternalLink = item.target === "_blank";
+        const link = isExternalLink ? item.href : `/#${newLink}`;
         return (
           <Link
             key={item.label}
-            href={`/#${newLink}`}
+            href={link}
             className={`group text-24px text-nowrap lg:no-underline ${
               // pathname === item.href
               pathname === item.label
                 ? `font-extrabold ${activeColorByVariant}`
                 : ""
             } ${textColorByVariant}`}
+            target={isExternalLink ? "_blank" : "_self"}
             onClick={(e) => {
-              if (isNotHome) return;
+              if (isNotHome || isExternalLink) return;
               e.preventDefault();
               scrollSmoothlyTo(`#${newLink}`);
             }}
