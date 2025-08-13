@@ -8,7 +8,7 @@ import Page from "@/components/Page";
 import { PageTitle } from "@/components/PageTitle";
 import SearchBar from "@/components/SearchBar";
 import Section from "@/components/Section";
-import FaqService from "@/services/faqService";
+import { FAQS } from "@/constants/faqs";
 import { FaqResponse } from "@/types";
 import Image from "next/image";
 import { FaqToggle } from "@/components/FaqToggle";
@@ -16,16 +16,9 @@ import { FaqToggle } from "@/components/FaqToggle";
 export default function Sobre() {
   const [faqArray, setFaqArray] = useState<FaqResponse["data"] | null>(null);
 
-  const FetchFaqs = async () => {
-    const { data } = await FaqService.getFaqs(
-      {
-        "filters[area][name][$eq]": "Sobre",
-        populate: "area",
-      },
-      "order:asc"
-    );
-
-    setFaqArray(data);
+  const FetchFaqs = () => {
+    // Using the local FAQS constant (previously fetched via service)
+    setFaqArray(FAQS.data);
   };
 
   useEffect(() => {
@@ -90,8 +83,8 @@ export default function Sobre() {
             </div>
 
             <div className="w-full flex flex-col gap-4">
-              {faqArray?.map((faqItem, index) => (
-                <FaqToggle key={index} faqItem={faqItem} />
+              {faqArray?.map((faqItem) => (
+                <FaqToggle key={faqItem.id} faqItem={faqItem} />
               ))}
             </div>
           </div>

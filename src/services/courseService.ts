@@ -1,10 +1,10 @@
+/**
+ * Service for handling course-related requests.
+
 import { makeQueryString } from "@/functions";
 import { CourseResponse } from "@/types";
 import { httpClient } from "@/utils/httpClient";
 
-/**
- * Service for handling course-related requests.
- */
 const CourseService = {
   /**
    * Fetches FAQs based on provided filters and sorting parameters.
@@ -12,7 +12,7 @@ const CourseService = {
    * @param {Record<string, string>} [filters={}] - An object containing filter key-value pairs.
    * @param {string} [sortByParam=""] - A string specifying the sorting parameter.
    * @returns {Promise<CourseResponse>} - A promise that resolves to the FAQ response.
-   */
+   *
   async getCourses(
     filters: Record<string, string> = {},
     sortByParam: string = ""
@@ -29,3 +29,4 @@ const CourseService = {
 };
 
 export default CourseService;
+ */

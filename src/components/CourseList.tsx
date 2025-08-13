@@ -1,3 +1,5 @@
+/**
+
 "use client";
 
 import { CourseItem } from "@/types";
@@ -11,7 +13,9 @@ type CourseListProps = {
   courses?: CourseItem[];
 };
 
-export default function CourseList({ courses = [] }: CourseListProps) {
+export default function CourseList({
+  courses = [],
+}: Readonly<CourseListProps>) {
   const [coursesArray, setCoursesArray] = useState<CourseItem[]>(courses);
 
   const fetchCourses = async () => {
@@ -74,3 +78,4 @@ export default function CourseList({ courses = [] }: CourseListProps) {
     </div>
   );
 }
+*/
