@@ -4,28 +4,14 @@ import { FaqResponse } from "@/types";
 import { FaqToggle } from "./FaqToggle";
 
 // Nextjs API
-import FaqService from "@/services/faqService";
+import { FAQS } from "@/constants/faqs";
 
 export default function HotSiteFAQ() {
   const [faqArray, setFaqArray] = useState<FaqResponse["data"] | null>(null);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
-  const fetchFaqs = async () => {
-    // const url = new URL(window.location.href);
-    // Netlify functions
-    // const response = await fetch(`${url}.netlify/functions/faqs`);
-    // const { data } = await response.json();
-
-    // Nextjs API
-    const { data } = await FaqService.getFaqs(
-      {
-        "filters[area][name][$eq]": "Sobre",
-        populate: "area",
-      },
-      "order:asc"
-    );
-
-    setFaqArray(data);
+  const fetchFaqs = () => {
+    setFaqArray(FAQS.data);
   };
 
   useEffect(() => {
@@ -39,7 +25,7 @@ export default function HotSiteFAQ() {
           onClick={() => {
             setOpenFaqIndex(openFaqIndex === index ? null : index);
           }}
-          key={`${faqItem.id}-${index}`}
+          key={faqItem.id}
           faqItem={faqItem}
           open={openFaqIndex === index}
         />
