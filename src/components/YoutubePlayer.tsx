@@ -1,6 +1,7 @@
 "use client";
 
 import { RefAttributes } from "react";
+import type { LiteYouTubeProps } from "react-lite-youtube-embed";
 import dynamic from "next/dynamic";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
