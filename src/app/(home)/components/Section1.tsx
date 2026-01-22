@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import Section from "@/components/Section";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import Image from "next/image";
 
 import highlightAnimation from "../../../../public/highlight.json";
