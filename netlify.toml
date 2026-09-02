@@ -15,15 +15,15 @@
     Content-Disposition = 'attachment; filename="Cartilha_ENEM_2026.pdf"'
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
   from = "/cartilha"
   to = "/cartilha/Cartilha_ENEM_2026.pdf"
   status = 302
   force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [[redirects]]
   from = "/*"
