@@ -8,10 +8,22 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# force the PDF to download instead of opening in the browser viewer
+[[headers]]
+  for = "/cartilha/Cartilha_ENEM_2026.pdf"
+  [headers.values]
+    Content-Disposition = 'attachment; filename="Cartilha_ENEM_2026.pdf"'
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/cartilha"
+  to = "/cartilha/Cartilha_ENEM_2026.pdf"
+  status = 302
+  force = true
 
 [[redirects]]
   from = "/*"
